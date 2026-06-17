@@ -1,0 +1,199 @@
+[
+  {
+    "path": "C:\\Users\\rauna\\Desktop\\Baby RAG\\RDA 2020.pdf",
+    "pages": 27,
+    "pages_excerpt": [
+      {
+        "page": 4,
+        "len": 2625,
+        "start": "SUMMARY OF RECOMMENDATIONS – ICMR - NIN, 2020 \nRDA and EAR - A SHORT REPORT \nThis RDA book short report deﬁnes nutrient distribution and \nrequirements for normal individuals of all age groups of Indian population. A \nfundamental part of deﬁning nutrient requirements is that the requirement is \nnot the same in all people. It can vary considerably in healthy individuals. In \norder to derive a single value for the requirement, two features of this \ndistribution of requirements are used. First, the median of this distribution is \ncalled the estimated average requirement (EAR). The EAR is the nutrient \nrequirement used in public health nutrition, to evaluate the nutrient intakes of \nth\na population. Second, the 97.5  percentile of the distribution is called the \nRecommended Daily Allowance. The RDA is for healthy individuals and \nmay be prescribed to satisfy the nutritional needs of speciﬁc nutrients in a \nspeciﬁc life stage and gender group and ensures that there is a very small risk \nof t"
+      },
+      {
+        "page": 5,
+        "len": 1774,
+        "start": "Diet planning for an individual\nThe diet planning for an individual aims to minimize the risk of \ninadequate intake of nutrient. One way to achieve this with a high level of \ncertainty is to use the RDA as a guide. If meeting the RDA for a particular \nnutrient is diﬃcult, the recommendation should ensure that the intake of that \nnutrient is between EAR and RDA. However, careful monitoring and follow-\nup are required for an individual whose intake is at or close to the RDA, such \nthat symptoms of excess intake are assessed, and nutrient intake modiﬁed \naccordingly. \nAssessing the risk of excess intake \nThe proportion of individuals at risk of excess nutrient intake in a \npopulation is assessed with the help of the TUL. Here, adverse health eﬀects \nare possible from excess nutrient intake. The method to assess the risk of \nexcess intake is similar to the cut-point approach, except that the TUL value is \nused, and the proportion to the right side of the TUL is considered as those at \nrisk"
+      },
+      {
+        "page": 6,
+        "len": 2500,
+        "start": "REFERENCE BODY WEIGHT\n \nEarlier Expert Committee on RDA (1989) used data generated on body \nweights and heights of well-to-do Indian children and adolescents, which was \nbased only on a segment of Indian population and did not have an all India \ncharacter. The reference weights for man and woman were 60 kg and 50 kg \nrespectively. \n \nThe previous committee (2010) has considered data on anthropometry \ncollected by NNMB/ India nutrition proﬁle from 10 states of India for \ncomputing reference body weights. Since the data collected was from rural \nth\nIndia, the committee decided to use the 95  centile values of heights and \nweights for a given age and gender which will be representative of well-\nnourished population of India. For computing RDA for children (0-3y), WHO \ngrowth standards for infants and preschool children were considered. \n \nThe present committee (2020) has considered the more recent, \nnationally representative datasets such as the National Nutrition Monitoring \nBureau (NNMB"
+      },
+      {
+        "page": 7,
+        "len": 2810,
+        "start": "FAO/WHO/UNU, 2004 report. The energy requirement for the population \n>60y of age has been provided as requirements decrease due to a reduction in \nBMR. Because of change in body weight, a proportionate increase in \nrequirement has been suggested in pregnancy. As data on pregnant Indian \nwomen is unavailable the present committee has retained the additional \nenergy requirement proposed by ICMR 2010. In the case of lactation, the \naverage energy utilization for milk production based on actual observation is \ntaken into consideration and an increase has been suggested. No changes \nfrom the previous recommendations have been made in the additional \nrequirements of lactating women. \n \nThe earlier committee had adopted the FAO/WHO/UNU, 2004 equations \nfor deriving the energy requirement of infants and children since there was an \nabsence of Indian data and also used the body weights reported in the above-\nmentioned document.  However, the present committee has used the WHO \nchild growth stan"
+      },
+      {
+        "page": 8,
+        "len": 2417,
+        "start": "children, obtained using dual tracer method has been included in the present \ndocument. \n \nDiets for sedentary and moderate active man and woman, and pregnant \nwoman have been modiﬁed based on the revised energy requirements. The \nnutritive values of each food are taken from recently published food \ncomposition tables (IFCT, 2017). In addition, the protein contents of each \nfood group have been corrected for true fecal digestibility values (WHO, \n2007) to ensure safe protein intakes. The cereal-legume-milk composition of \nthe diet has been improved to 3:1:2.5 as compared to the earlier 11:1:3 (ICMR \n2010). \nFATS AND OILS\n \nThe FAO/WHO recommendations on fat were taken into account for (i) \ntotal fat, individual fatty acids and health promoting non-glyceride \ncomponents (ii) sources of dietary fats in Indians (iii) availability of fat and \n(iv) energy requirements set on the basis of age, physiological status and \nphysical activity. The recommendations are directed towards meeting the \n"
+      },
+      {
+        "page": 9,
+        "len": 2753,
+        "start": "MINERALS\n \nThe present committee has done extensive deliberations on recommen-\ndations for minerals like calcium, phosphorus, zinc, selenium and iodine and \nhave been included as separate chapters in the new document. \nCalcium and Phosphorus: Calcium requirement proposed as RDA for adult \nman and adult woman is 1000 mg/d and is 1.5 times the value proposed by \nearlier expert group i.e., 600 mg/d for adult man and woman. For pregnant \nwomen, the calcium values proposed is similar to the value proposed for adult \nwoman i.e., 1000 mg/d. For lactating woman, an additional allowance of 200 \nmg is added to EAR of 800 mg and a total of 1000 mg has been set as EAR and \nadding 10% CV, the RDA is set at 1200 mg. For post-menopausal women the \nrecommendation is 1200 mg/d.\n \nThe recommended values for phosphorus for all age groups except for \ninfants are 1:1 ratio with calcium. For infants, it is 1.5 times the value \nrecommended for calcium.\nMagnesium: Data were available on intakes, faecal loss, "
+      },
+      {
+        "page": 10,
+        "len": 2827,
+        "start": "Iron: The daily physiological requirement for iron was calculated by \nsumming up all the iron losses from the body, which was then adjusted to iron \nbioavailability to obtain the EAR. For women of reproductive age group, the \ndistribution of iron requirements was obtained by convolution of the \nprobability distribution of daily basal and menstrual iron losses. The present \ncommittee considered 8% absorption for men, women and adolescents, and \n6% for children. And based on the available data, increased absorption of \n12% was considered for calculating EAR and RDA for pregnant women, \nwhich is in conformity with the absorption data generated in India. The \ncommittee recommended that the density of ascorbic acid in the daily diet \nshould be at least 20 mg/ 1000 kcal for improved iron absorption.\nZinc:  The EAR and RDA were derived by factorial approach that considered \nlosses in 1. Sweat 2. Urine 3. Seminal ﬂuid 4. Menstrual losses 5. Endogenous \nintestinal zinc excretion 6. Additional r"
+      },
+      {
+        "page": 11,
+        "len": 2575,
+        "start": "VITAMINS\nWater Soluble Vitamins\nThiamine B1: The requirement of thiamine was estimated by plotting \nerythrocyte transketolase activity coeﬃcient (ETK-AC) values versus \ndietary thiamine intake data obtained from healthy human adult population \nstudies. Average requirement (EAR) was calculated from regression analysis. \nThe acceptable cut-oﬀ used for ETK-AC is 1.15. The EAR of thiamine is \nestimated as 1.2 based on the ETK-AC cut-oﬀ and with assumed normal \ndistribution for adult men the corresponding RDA is set at 1.4. Similarly, \nEAR of thiamine is 1.1 and corresponding RDA is 1.4 for adult women. \nAdditional allowances of thiamine was made for pregnant and lactating \nwomen based on the additional calorie allowances of current recommen-\ndations. \nRiboﬂavin B2: The requirement of riboﬂavin was estimated by plotting \nerythrocyte glutathione reductase activity coeﬃcient (EGR-AC) values \nversus dietary riboﬂavin intake data obtained from human studies. Average \nrequirement (EAR) was calcu"
+      },
+      {
+        "page": 12,
+        "len": 2873,
+        "start": "dietary intake of B  was 1.6 mg/day with an EAST-AC cut oﬀ 1.8. \n6\nConsidering 1.6 mg as the requirement (EAR) of B /day, the RDA was \n6\ncalculated by considering CV of 10%, and RDA of 1.9 mg/day was arrived for \nadult men and women. The EAR and RDA thus derived for adults based on \nEAST-AC calculation was extrapolated for other physiological and age \ngroups based on the energy requirements. \nBiotin B7: For adults and pregnant women an AI of 40 µg/day is proposed; \nwith an additional allowance of 5 µg/day for lactating women to compensate \nfor losses through breast milk. The recommended AIs for age groups 1–3, \n4–10 and adolescents the AI proposed are 20, 25 and 35µg/day, respectively. \nFolate B9: The present committee revised the requirements of folate based on \nsome recent Indian data, which includes dietary intakes, and plasma folate \nand homocysteine levels as functional marker. Based on the available data on \nserum/plasma folate and the dietary folate intake among healthy Indian \n"
+      },
+      {
+        "page": 13,
+        "len": 2486,
+        "start": "2.9% per day, compensated for the urinary loss (25% per day), taking \nabsorption eﬃciency in Indian foods also into consideration. The EAR was \nset at 65mg per day and RDA at 80 mg per day for adult males. Due \nimportance of ascorbic acid in a meal to improve iron absorption among \nIndians on a vegetarian diet is also emphasized while making the \nrecommendations.\nFat Soluble Vitamins\nVitamin A: The present Committee revised the carotene conversion ratio to \naccount for tissue conversion, based on recent knowledge, and a general \nconversion factor of 6:1 is recommended for all carotenoids except β-\ncryptoxanthine and α-carotene where a CF of 12:1 is recommended.  Vitamin \nA requirements (RDA) for all groups were also revised upwards using \nfactorial computation method. \nConsidering the recent studies on vitamin A status carried out in India, an \nupward revision of retinol has been recommended. To ensure adequacy at \nleast in vulnerable groups like pregnant and lactating women, the Commi"
+      },
+      {
+        "page": 14,
+        "len": 1706,
+        "start": "body mass and for adolescent boys it ranges from 47-60 ml per kg body mass, \nwhile, for girls it is 39-49 ml per kg body mass. For pregnant woman, based on \nthe working intensity, the water required from beverages ranges from 2.1 to \n3.2 litres per day. For old-age, irrespective of gender, the present consensus \nfor water requirement from beverages is 33 ml per kg body mass for sedentary \nactivity and 38 ml per kg body mass for moderate activity.\nANTIOXIDANTS\n \nRealising the importance of dietary antioxidants, the committee \ndeliberated on the information on consumption of antioxidants and \nrecommended a minimum of 500 g/day of fruits and vegetables to obtain \nsuﬃcient amounts of antioxidant nutrients such as beta-carotene, vitamin C \nand certain non-nutrients like polyphenols and ﬂavonoids which may protect \nagainst chronic diseases. This should be complemented with suﬃcient \namount of vegetable oil so as to obtain vitamin E.\nRDA FOR ELDERLY\nThe recommended estimated energy requiremen"
+      },
+      {
+        "page": 15,
+        "len": 2420,
+        "start": "12\nSUMMARY OF EAR FOR INDIANS -ICMR- NIN, 2020\nAge Group\nCategory\nof work\nBody\nWt\n \nEnergy\n(**)\n \nProtein\n \nCal\ncium\n \nMagnes\nium\n \nIron\n \nZinc\n \nIodine\n \nThiamine\n \nRibo \nﬂavin\n \nNiacin\n \nVit\nB6\n \nFolate\n \nVit\nB12\n \nVit\nC\n \nVit\nA\nVit \nD \n(kg)\n \n(Kcal/\n \nd)\n \n(g/d)\n \n(mg/ d)\n \n(mg \n \n/d)\n \n(mg/ \nd)\n \n(mg/ \n \nd)\n \n(µg/ \nday)\n \n(mg/\n \nd)\n \n(mg/ \n \nd)\n \n(mg/d)\n \n(mg/ d)\n \n(µg \n \n/d)\n \n(µg/ d)\n \n(mg/ d)\n \n(µg/ d)\n(IU/d)\nMen\nSedentary\n65\n \n \n2110\n \n43.0\n \n800\n \n370\n \n11\n \n14.1\n \n95\n \n1.2\n \n1.6\n \n12\n \n1.6\n \n250\n \n2\n \n65\n \n460\n400\nModerate\n2710\n \n1.5\n \n2.1\n \n15\n \n2.1\n \nHeavy\n3470\n \n1.9\n \n2.7\n \n19\n \n2.6\n \nWomen\nSedentary\n55\n \n1660\n \n36.0\n \n800\n \n310\n \n15\n \n11.0\n \n95\n \n1.1\n \n1.6\n \n9\n \n1.6\n \n180\n \n2\n \n55\n \n390\n400\nModerate\n2130\n \n1.4\n \n2.0\n \n12\n \n1.6\n \nHeavy\n2720\n \n1.8\n \n2.6 \n15  \n2.1\n \nPregnant \nwoman\n55\n \n+\n \n10\n \n+ 350\n \n+7.6\n \n(2nd\n \ntrimester)\n \n+17.6\n \n(3rd\n \ntrimester)\n \n800\n \n370\n \n21\n \n12.0\n \n160\n \n1.6\n \n2.3 \n \n \n \n+2\n \n1.9\n \n480\n \n+0.2\n \n+10\n \n406\n400\nLactation\n0-6m\n7-12m\n-\n \n+600\n \n \n"
+      },
+      {
+        "page": 16,
+        "len": 2163,
+        "start": "13\nSUMMARY OF RDA FOR INDIANS - ICMR- NIN, 2020\nAge \nGroup\nCategory \nof work\nBody \nWt\nProtein\nDietary \nFiber*\nCal \ncium\nMagnes\nium\nIron\nZinc\nIodine\nThiamine\nRibo \nﬂavin\nNiacin\nVit\nB6\nFolate\nVit\nB12\nVit\nC\nVit\nA\nVit\nD\n(kg)\n(g/d)\n(g/d)\n(mg/ \nd)\n \n(mg/d)\n(mg/ d)\n(mg/d)\n(µg/ \nday)\n \n(mg/d)\n(mg/d)\n(mg/d)\n(mg/d)\n(µg/d)\n(µg/d)\n(mg/ \nd)\n(µg/     \nd)\n(IU/  d)\nMen\nSedentary\n65\n54.0\n \n30\n \n1000\n \n440\n \n19\n \n17\n \n140\n \n1.4\n \n2.0\n \n14\n \n1.9\n \n300\n \n2.2\n80\n1000\n600\nModerate\n40\n \n1.8\n \n2.5\n \n18\n \n2.4\n \nHeavy\n50\n \n2.3\n \n3.2\n \n23\n \n3.1\n \nWomen\nSedentary\n55\n46.0\n \n25\n \n1000\n \n370\n \n29\n \n13.2\n \n140\n \n1.4\n \n1.9\n \n11\n \n1.9\n \n220\n \n2.2\n65\n840\n600\nModerate\n30\n \n1.7\n \n2.4\n \n14\n \n1.9\n \nHeavy\n40\n \n2.2\n \n3.1\n \n18\n \n2.4\n \nPregnant \nwoman\n55\n+\n10\n+9.5\n \n(2nd\n \ntrimester)\n \n+22.0\n \n(3rd\n \ntrimester)\n \n \n \n \n-\n \n1000\n \n440\n \n27\n \n14.5\n \n220\n \n2.0\n \n2.7\n \n+2\n \n2.3\n \n570\n \n+0.25\n+15\n900\n600\nLactation\n0-6m\n7-12m\n+17.0\n \n \n+13.0\n \n \n \n-\n \n1200\n \n400\n \n23\n \n14.1 \n280  \n2.1\n \n3.0\n \n \n2.9\n \n+5\n \n+0.26\n \n \n+0.17\n \n330\n \n+1.0"
+      },
+      {
+        "page": 17,
+        "len": 809,
+        "start": "14\n \nRECOMMENDATIONS FOR DIETARY FAT INTAKE IN INDIANS\nAge/Gender/\n \nphysiological\n \ngroups\n \nPhysical activity\n \nMinimum level \nof Total fat (% \nE)\n \nMinimum level* of \nFat from foods \nother than visible \nfats % E\n \nVisible fat\n \n%E\n \ng/day\nAdult Men\n \nSedentary\n \n20\n \n10\n \n10\n 25\n \nModerate\n \n30\n \nHeavy\n \n40\n \nAdult Women\n \nSedentary\n \n20 \n10\n \n10\n 20\n \nModerate\n \n25\n \nHeavy\n \n30\n \nPregnant women\n \n20 \n10\n \n10\n 30\n \nLactating women\n \n30\n \nInfants\n \n0 –\n   \n6 m\n \n40-60 \nHuman milk\n \n6 -\n  \n24 m\n \n35 \n10c\n \n25\n 25\n \nChildren\n \n3-6 y\n \n25\n \n10\n \n15\n \n25\n \n7-9 y\n \n30\n \nBoys\n \n10 –\n \n12 y\n \n35\n \n13 –\n \n15 y\n \n45\n \n16 –\n \n18 y\n \n50\n \nGirls\n \n10 –\n \n12 y\n \n35\n \n13 –\n \n15 y\n \n40\n \n16 –\n \n18 y\n \n35\n \n* if higher than 10%E,  visible  fat requirement  proportionately reduces\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+      },
+      {
+        "page": 18,
+        "len": 720,
+        "start": "15\nDAILY NUTRIENT RECOMMENDATIONS FOR THE ELDERLY IN INDIA\n \nICMR-\n \nNIN, 2020\nNutrients\n \nEnergy\n \n(Kcal)\n \nDietary Fibre\n \nProtein\n \n(g)\n \nVit-A\n \n(μg)\n \nThiamin B1(mg)\n \nRibo\n  \nﬂavin B2\n \n(mg)\n \nNiacin (mg)\n \nVit-C\n \n(mg)\n \nVit-B6\n \n(mg)\n \nFolate\n \n(μg)\n \nVit-B12\n \n(μg)\n \nVit-D\n \n(IU)\n \nCal\n \ncium\n \n(mg)\n \nMagnesium (mg)\nIron (mg)\nZinc (mg)\nIodine (μg)\nMen    \n≥60 Yrs\n \nEAR\n \n1700\n \n-\n \n43.0\n \n460\n \n1.2\n \n1.6\n \n12\n \n65\n \n1.6\n \n250\n \n2.0\n \n400\n \n1000\n \n370\n11\n14\n95\nRDA\n \n-\n \n30\n \n54.0\n \n1000\n \n1.4\n \n2.0\n \n14\n \n80\n \n1.9\n \n300\n \n2.2\n \n800\n \n1200\n \n440\n19\n17\n140\nWomen \n≥60 Yrs\nEAR\n1500\n-\n36.3\n390\n1.1\n1.6\n9\n55\n1.6\n180\n2.0\n400\n1000\n310\n11\n11\n95\nRDA\n-\n25\n46.0\n840\n1.4\n1.9\n11\n65\n1.9\n200\n2.2\n800\n1200\n370\n19\n13.2\n140\n"
+      },
+      {
+        "page": 19,
+        "len": 909,
+        "start": "16\nAge group\nNutrients\n1-2 \nyears\n3-18 \nyears\nAdults\nPregnant \nand \nlactating \nwomen\nProtein\n(PE ratio)*\n5-15\n5-15\n5-15\n5-15\nTotal Fat\n \n30-40\n \n25-35\n15-35\n20-35\nn-6 PUFA#\n \n4-10\n \n4-10\n4-10\n4-10\nn-3-PUFA\n \n0.5-1\n \n0.5-1\n0.5-1\n0.5-1\nCarbohydrate\n \n40-60\n \n45-65\n45-65\n45-65\nACCEPTABLE MACRONUTRIENT DISTRIBUTION \nRANGE (AMDR) BY AGE AND PHYSIOLOGICAL \nGROUPS AS PERCENT OF ENERGY (%E)\nSUMMARY OF RECOMMENDED \nINTAKES FOR OTHER MINERALS AND \nTRACE ELEMENTS IN ADULTS\nSNo. \nMinerals/ \nTrace \nElement \nRecommended \nintake \n(per day) \n1 \nPhosphorous \n1000 mg \n2 \nSodium \n2000 mg \n3 \nPotassium \n3500 mg \n4 \nCopper \n1.7 mg \n5\n \nManganese\n \n4 mg\n \n6\n \nChromium\n \n50 µg\n \n7\n \nSelenium\n \n40 µg\n \n*Depends on protein quality and total energy intake  \n# n-6 to n-3 ratio should be between 5-10:1\nNote: For good health, adults should consume minimum of 100 to 130g\nof carbohydrates and atleast 20g fats (food sources)  \n"
+      },
+      {
+        "page": 20,
+        "len": 1702,
+        "start": "17\nTOLERABLE UPPER LIMIT (TUL) FOR NUTRIENTS- ICMR- NIN, 2020\nAge \nGroup\nCategory \nof work\nProtein\nCal \ncium\nMagne\nsium*\nIron\nZinc\nIodine\nNiacin\nVit. B6\nFolate\nVit. C\nVit. A\nVit. D\n(PE \nratio)\n(mg/ \nd)\n(mg\n/d)\n(mg/ \nd)\n(mg\n/d)\n(µg/\nday)\n(mg/d)\n(mg/ d)\n(µg/d)\n(mg/d)\n(µg/d)\n(IU/d)\nMen\nSedentary\n<40%\n2500\n350\n45\n40\n1100\n35\n100\n1000\n2000\n3000\n4000\nModerate\nHeavy\nWomen\n \nSedentary\n<40%\n \n2500\n \n350\n \n45\n \n40\n \n1100\n \n1000\n2000\n3000\nModerate\n \nHeavy\n \nPregnant \nwoman\n \n<30%\n \n2500\n \n350\n \n45\n \n40\n \n1100\n \n-\n \n-\n \n1000\n2000\n3000\n4000\nLactation\n \n0-6m\n \n7-12m\n \n<40%\n \n2500\n \n350\n \n45\n \n40\n \n1100\n \n-\n \n-\n \n1000\n2000\n3000\n4000\nInfants\n \n0-6 m\n \n<15%\n \n–\n \n-\n \n40\n \n4\n \n-\n \n-\n \n-\n \n-\n-\n600\n1000\n6-12m\n \n<15%\n \n–\n \n-\n \n40\n \n5\n \n-\n \n-\n \n-\n \n-\n-\n600\n1500\nChildren\n \n1-3y\n \n4-6y\n \n7-9 y\n \n<15%\n \n<15%\n \n<15%\n \n1500\n \n2500\n \n2500\n \n65\n \n110\n \n110\n \n40\n \n40\n \n40\n \n7\n \n12\n \n12\n \n200\n \n300\n \n400\n \n-\n \n-\n \n-\n-\n300\n350\n550\n800\n600\n900\n900\n2500\n3000\n3000\nBoys\n \n10-12y\n \n<15%\n \n3000\n \n350\n \n40\n \n23\n \n600\n \n-\n \n-"
+      },
+      {
+        "page": 21,
+        "len": 1320,
+        "start": "18\nBalanced diet for moderate active man \nwith nutrient content values\nNote: Total protein from the above diet = 88g, Digestible protein = 71g, PDCAAS = 84%\n1Pulses can be replaced with animal foods (egg, meat, ﬁsh and chicken) for non-vegetarians. \n* Retinol derived from β carotene from diet was also added to the total Vitamin A.\nFor cereals and millets, it is recommended to consume 50% as whole grains.\nFood \nComposition\n \nAmount\n \n(g /day)\n \nNutrient\n \nVegetarian\n \ndiet\n \nNon-\nvegetari\nan diet\nEAR\nRDA\nCereals & \nMillets\n \n360\n \nEnergy (kcal)\n \n2690\n \n2650\n2710\n-\nProtein (g)\n \n87.5\n \n81.7\n43\n54\nPulses \n(Legumes)/ \nﬂesh foods1\n \n120\n \nVisible fat (g)\n \n35\n \n35\n30\n30\nGreen leafy \nvegetables\n \n100\n \nCalcium (mg)\n \n1084\n \n1054\n800\n1000\nOther \nVegetables\n \n200\n \nIron (mg)\n \n33.3\n \n31.1\n11\n19.0\nRoots & Tubers\n \n(excluding \npotatoes)\n \n100\n \nZinc (mg)\n \n16.3\n \n15.9\n14.1\n17\nFruits\n \n150\n \nMagnesium \n(mg)\n \n968\n \n891\n370\n440\nMilk\n \n300\n \nVitamin A \n(µg)*\n \n1802\n \n1796\n460\n1000\nFats & Oils\n \n30"
+      },
+      {
+        "page": 22,
+        "len": 1328,
+        "start": "19\nBalanced diet for sedentary man \nwith nutrient content values\nNote: Total protein from the above diet = 71g, Digestible protein = 58g, PDCAAS = 85%\n1Pulses can be replaced with animal foods (egg, meat, ﬁsh and chicken) for non-vegetarians. \n* Retinol derived from β carotene from diet was also added to the total Vitamin A.\nFor cereals and millets, it is recommended to consume 50% as whole grains.\nFood \nComposition\n \nAmount\n \n(g /day)\n \nNutrient\n \nVegetarian\n \ndiet\n \nNon-\nvegetaria\nn diet\nEAR\nRDA\nCereals & \nMillets\n \n275\n \nEnergy (kcal)\n \n2130\n \n2084\n2110\n-\nProtein (g)\n \n67.2\n \n69.1\n43\n54\nPulses \n(Legumes)/\n \nﬂesh foods\n \n1\n \n80\n \nVisible fat (g)\n \n25\n \n25\n25\n25\nGreen leafy \nvegetables\n \n100\n \nCalcium (mg)\n \n968\n \n958\n800\n1000\nOther \nVegetables\n \n200\n \nIron (mg)\n \n27.4\n \n26.3\n11.0\n19.0\nRoots & \nTubers \n(excluding \npotatoes)\n \n100\n \nZinc (mg)\n \n13.5\n \n13.2\n14.1\n17.0\nFruits\n \n150\n \nMagnesium \n(mg)\n \n798\n \n762\n370\n440\nMilk\n \n300\n \nVitamin A \n(µg)*\n \n1768\n \n1765\n460\n1000\nFats & Oils\n \n25\n"
+      },
+      {
+        "page": 23,
+        "len": 1345,
+        "start": "20\nBalanced diet for moderate active woman \nwith nutrient content values\nFood \nComposition\n \nAmount \n(g /day)\n \nNutrient\n \nVegetarian\n \ndiet\n \nNon-\nvegetarian \ndiet\nEAR\nRDA\nCereals & \nMillets\n \n300\n \nEnergy (kcal)\n \n2135\n \n2084\n2130\n-\nProtein (g)\n \n74.2\n \n73.3\n36.0\n46.0\nPulses \n(Legumes)/\n \nﬂesh foods\n \n1\n \n90\n \nVisible fat (g)\n \n20\n \n20\n25\n20\nGreen leafy \nvegetables\n \n100\n \nCalcium (mg)\n \n999\n \n989\n800\n1000\nOther \nVegetables\n \n200\n \nIron (mg)\n \n29.0\n \n27.9\n15.0\n29.0\nRoots & Tubers\n \n(excluding \npotatoes)\n \n100\n \nZinc (mg)\n \n14.0\n \n13.6\n11.0\n13.2\nFruits\n \n150\n \nMagnesium \n(mg)\n \n841\n \n806\n310\n370\nMilk\n \n300\n \nVitamin A \n(µg)\n \n*\n \n1804\n \n1741\n390\n840\nFats & Oils\n \n20\n \nΒ-carotene \n(µg)\n \n9489\n \n9457\n-\n-\nOil seeds& Nuts\n \n(gingely seeds \n& \n \nPea nuts)\n \n30\n \nThiamine \n(mg)\n \n1.75\n \n1.70\n1.4\n1.7\nspices\n10\nRiboﬂavin \n(mg)\n1.65\n1.64\n2.0\n2.4\nNiacin (mg)\n16.3\n16.8\n12\n14\nVitamin B6\n(mg)\n1.96\n1.97\n1.6\n1.9\nVitamin C \n(mg)\n187\n187\n55\n65\nTotal Folates \n(µg)\n191\n459\n180\n220\nVitamin B12\n(µg)\n1.5\n2"
+      },
+      {
+        "page": 24,
+        "len": 1308,
+        "start": "21\nBalanced diet for sedentary woman \nwith nutrient content values\nNote: Total protein from the above diet = 60g, Digestible protein = 50g, PDCAAS = 87%\n1Pulses can be replaced with animal foods (egg, meat, ﬁsh and chicken) for non-vegetarians. \n* Retinol derived from β carotene from diet was also added to the total Vitamin A.\nFor cereals and millets, it is recommended to consume 50% as whole grains.\nFood Composition\n \nAmount \n(g /day)\n \nNutrient\n \nVegetarian\n \ndiet\n \nNon-\nvegetarian \ndiet\nEAR\nRDA\nCereals & Millets\n \n200\n \nEnergy (kcal)\n \n1690\n \n1650\n1660\n-\nProtein (g)\n \n58.2\n \n57.4\n36.0\n46.0\nPulses (Legumes)1\n \n60\n \nVisible fat (g)\n \n15\n \n15\n20\n20\nGreen leafy \nvegetables\n \n100\n \nCalcium (mg)\n \n905\n \n895\n800\n1000\nOther Vegetables\n \n200\n \nIron (mg)\n \n23.8\n \n22.8\n15.0\n29.0\nRoots & Tubers\n \n(excluding \npotatoes)\n \n100\n \nZinc (mg)\n \n11.0\n \n10.5\n11.0\n13.2\nFruits\n \n150\n \nMagnesium (mg)\n \n684\n \n649\n310\n370\nMilk\n \n300\n \nVitamin A (µg)\n \n*\n \n1730\n \n1727\n390\n840\nFats & Oils\n \n15\n \nΒ-carotene (µg"
+      },
+      {
+        "page": 25,
+        "len": 1310,
+        "start": "22\nBalanced diet for pregnant woman \nwith nutrient content values\nNote: Total protein from the above diet = 78.8g, Digestible protein = 70g, PDCAAS = 88%\n1Pulses can be replaced with animal foods (egg, meat, ﬁsh and chicken) for non-vegetarians.\n* Retinol derived from β carotene from diet was also added to the total Vitamin A.\nFor cereals and millets, it is recommended to consume 50% as whole grains.\nFood \nComposition\n \n \nAmount \n(g /day)\n \nNutrient\n \nVegetarian\n \ndiet\n \nNon-\nvegetarian \ndiet\nEAR\nRDA\nCereals & \nMillets\n \n325\n \nEnergy (kcal)\n \n2060\n \n2040\n2480\n-\nProtein (g)\n  \n71.7\n \n71.6\n54\n68\nPulses \n(Legumes)1\n \n90\n \nVisible fat (g)\n \n15\n \n15\n30\n30\nGreen leafy \nvegetables\n \n100\n \nCalcium (mg)\n \n980\n \n970\n800\n100\n0\nOther \nVegetables\n \n200\n \nIron (mg)\n \n27.2\n \n26.0\n21\n27\nRoots & Tubers\n \n(excluding \npotatoes)\n \n100\n \nZinc (mg)\n \n13.1\n \n12.8\n12.0\n14.5\nFruits\n \n150\n \nMagnesium \n(mg)\n \n786\n \n747\n370\n440\nMilk\n \n400\n \nVitamin A (µg)\n \n*\n \n1821\n \n1818\n406\n900\nFats & Oils\n \n25\n \nΒ-carotene (µ"
+      },
+      {
+        "page": 26,
+        "len": 2009,
+        "start": "23\nKey micronutrients in diﬀerent food groups\n(All values are for 100g edible portion)\nMicro-\nnutrients \nCerealsa \nPulsesb \nLeafy \nVegetables c \nOther \nvegetables \nRoots & \nTubersd \nFruitse \nMilk \n(Buﬀalo)f  \nMilk (Cow)f \nEgg \nChicken \nMutton \nBeef \nFish \nLiver \n(Sheep, \nGoat, Lamb) \nIron (mg)  \n3.00 \n5 \n8.5 \n2.12 \n0.6 \n0.56 \n0.2 \n0.2 \n1.82 \n1.5 \n1.3 \n2.2 \n0.6 \n6.3 \nZinc (mg)\n \n2.16\n \n2.1\n \n0.2\n \n0.3\n \n0.3\n \n0.11\n \n0.4\n \n0.3\n \n1.2\n \n1.7\n \n3\n \n4.6\n \n0.6\n \n3.6\n \nVitamin A\n \n(µg)\n \n2.43\n \n8.6\n \n259.1\n \n22.4\n \n70.0\n \n32.36\n \n49.8\n \n58.3\n \n198\n \n21.4\n \n9\n \n15.5\n \n5.6\n \n6690\n \nRiboﬂavin\n \n(mg)\n \n0.15\n \n0.14\n \n0.1\n \n0.07\n \n0.0\n \n0.01\n \n0.13\n \n0.11\n \n0.2\n \n0.09\n \n0.16\n \n0.12\n \n0.03\n \n0.36\n \nDietary \nfolate\n \n(µg) \n \n24.03\n \n127.7\n \n16.7\n \n24.4\n \n31.3\n \n17.61\n \n8.6\n \n7\n \n49.3\n \n9.3\n \n6.4\n \n8.1\n \n15.4\n \n92\n \nVitamin B12\n \n(µg)\n \nNil\n \nNil\n \nNil\n \nNil\n \nNil\n \nNil\n \n1.5\n \n1.5\n \n1.8\n \nNA\n \n2.8\n \n1.7\n \n1.4\n \n91.9\n \n \na  Mean values of nutrients from commonly consumed cereals (67% weightage) such as "
+      },
+      {
+        "page": 27,
+        "len": 0,
+        "start": ""
+      }
+    ]
+  },
+  {
+    "path": "C:\\Users\\rauna\\Desktop\\Baby RAG\\DGI_2024.pdf",
+    "pages": 148,
+    "pages_excerpt": [
+      {
+        "page": 8,
+        "len": 1604,
+        "start": "                                 Page No\nMessages \nIntroduction   \n                                                    i \nCurrent Diet and Nutrition Scenario  \n                                                   iii\nGUIDELINE 1    Eat a variety of foods to ensure a balanced diet\nGUIDELINE 2   Ensure provision of extra food and healthcare during pregnancy and lactation \n                             Ensure exclusive breastfeeding for the first six months and continue breastfeeding  \n                             till two years and beyond \n                             Start feeding homemade semi-solid complementary foods to the infant \n                             soon a fter six months of age \n                             Ensure adequate and appropriate diets for children and adolescents both in  \n                             health and sickness \nGUIDELINE 6   Eat plenty of vegetables and legumes\n                             Use oils/fats in moderation; choose a variety of oil seeds, nuts,"
+      },
+      {
+        "page": 9,
+        "len": 1115,
+        "start": "GUIDELINE 10  Be physically active and exercise regularly to maintain good health\nGUIDELINE 11    Restrict salt intake \nGUIDELINE 12   Consume safe and clean foods \nAnnexure I      Suggested measuring katori/cups and spoons \n                     \nAnnexure II    Raw food item measures using household utensils                     \nAnnexure III   Glycemic index\nAnnexure IV   Various foods categorized under different food groups\nAnnexure V     Suggested food groups for a balanced diet to meet the daily nutrient requirements\n                           for people with specific body weights \nGUIDELINE 13   Adopt appropriate pre-cooking and cooking methods\nGUIDELINE 14  Drink adequate quantity of water \nGUIDELINE 16   Include nutrient-rich foods in the diets of the elderly for health and wellness \n                               Minimize the consumption of high fat, sugar, salt (HFSS) and \n                               ultra-processed foods (UPFs)\nGUIDELINE 17   Read information on food labels"
+      },
+      {
+        "page": 10,
+        "len": 1398,
+        "start": "MESSAGE \n \nIt is my pleasure to write a message for the latest edition of the Dietary Guidelines for Indians. \nThese guidelines are a culmination of extensive research, consultation with experts, and a thorough \nreview of the latest scientific evidence on nutrition and health.\n \nThe dietary habits of Indians have undergone significant changes over the past few decades, \nleading to an increase in the prevalence of non-communicable diseases while some of the problems of \nundernutrition continue to haunt us. These guidelines aim to provide evidence-based recommendations \nto help Indians make informed food choices to maintain good health and prevent malnutrition in all \nforms.\n \nThe guidelines are designed to be flexible, accommodating the diverse cultural and regional \ndietary practices of India. They provide practical advice on the consumption of a variety of foods from \ndifferent food groups, emphasizing the importance of a balanced and diverse diet. The guidelines also \nprovide recomme"
+      },
+      {
+        "page": 11,
+        "len": 0,
+        "start": ""
+      },
+      {
+        "page": 12,
+        "len": 1708,
+        "start": "FOREWORD\nI am pleased to write this foreword and extend my heartiest congratulations to team ICMR-National Institute \nof Nutrition (ICMR-NIN) for this stellar achievement of formulating the ‘Dietary Guidelines for Indians’ (DGIs). \nThe institute has earlier brought out the nutrient requirements for Indians which in a way forms the basis for \nvarious national nutrition programmes and policies. With these new food-based guidelines, an excellent \nattempt has been made to simplify and express the principles of ‘Good Nutrition’ for Indians in terms of foods \nand food choices rather than specific nutrients.\nThis document provides practical advice and recommendations for individuals, families, communities, and \npolicymakers to promote healthy eating habits and reduce the burden of diet-related diseases and disorders \nin India. The guidelines emphasize the importance of consuming a variety of foods from all food groups. In \naddition to dietary recommendations, the guidelines provide informatio"
+      },
+      {
+        "page": 13,
+        "len": 0,
+        "start": ""
+      },
+      {
+        "page": 14,
+        "len": 4432,
+        "start": " \nAdequate intake of all the essential nutrients through a \nwell formulated balanced diet is needed to maintain good \nhealth. Nutrition plays an important role right from the time of \nthe baby's presence in the mother's womb till he/she reaches \nold age. A balanced diet prevents all the adverse effects of \nnutritional deficiencies and also ensures optimal growth and \ndevelopment. It also minimizes the risk of diet related non-\ncommunicable diseases (DR-NCDs) occurring in later life. \nSound optimal nutritional status of mother and child during the \nfirst 1000 days of life, starting from the conception till the child \ncompletes two years of age is closely linked to growth and \nlearning in the initial stages of development and to the reduced \nrisk of metabolic syndrome, diabetes and cardiovascular \ndiseases later in life. Appropriate dietary habits and physical \nactivity through all the stages of one's life are essential for the \nmaintenance of holistic health. \n \nA balanced diet fulfils "
+      },
+      {
+        "page": 15,
+        "len": 3451,
+        "start": " \nIn India, severe forms of undernutrition such as \nmarasmus, kwashiorkor and keratomalacia have largely \ndisappeared, yet subclinical manifestations of undernutrition \nand anaemia persist as public health issues. A significant \nproportion of children suffer impaired nutritional status. \nConcurrently, there is a rising prevalence of overweight and \nobesity in several states, creating a dual burden of malnutrition \nwhere both undernutrition and overweight/obesity coexist \nwithin the same communities and even within households \n(Tables I & II).\n \nEstimates show that 56.4% of total disease burden in \nIndia is due to unhealthy diets. Healthy diets and physical \nactivity can reduce a substantial proportion of coronary heart \ndisease (CHD) and hypertension (HTN) and prevent upto 80% \nof type 2 diabetes. A significant proportion of premature deaths \ncan be averted by following a healthy lifestyle.\n \nData from the Comprehensive National Nutrition \nSurvey 2019 (CNNS) highlights that a substanti"
+      },
+      {
+        "page": 16,
+        "len": 3125,
+        "start": "Table II. Undernutrition, overweight/obesity (WHO-Asian Cut-Offs), hypertension \nand diabetes among 18–69 year adults in India as per NFHS 5, 2021\nNutritional status/NCDs\nMen\nWomen\n2016\n2021\n2016\n2021\nCED\n23.8\n16.2\n23.0\n18.7\nOverweight/obesity\n21.9\n22.9\n28.7\n24.0\nHypertension\n20.2\n24.0\n15.3\n21.3\nDiabetes (Type 2)\n10.5\n15.6\n9.7\n13.5\nAbdominal obesity (as per NNMB)\n55.5\n47.7\n63.5\n56.7\nCED: Chronic energy deficiency or undernutrition among adults\n \nThe ICMR-NIN, 'My Plate for the Day' recommends \nsourcing of macronutrients and micronutrients from a \nminimum of eight food groups, with vegetables, fruits, green \nleafy vegetables, roots and tubers forming essentially half the \nplate of the recommended foods per day. The other major \nportion is occupied by cereals and millets, followed by pulses, \nflesh foods, eggs, nuts, oil seeds and milk/curd. Intake of cereals \nshould be limited to 45% of the total energy, while for pulses, \neggs and flesh foods, the total energy percentage should be \naro"
+      },
+      {
+        "page": 17,
+        "len": 0,
+        "start": ""
+      },
+      {
+        "page": 18,
+        "len": 2425,
+        "start": "1\nGUIDELINE\u00011\nEat\u0001a\u0001variety\u0001of\u0001foods\u0001to \nensure\u0001a\u0001balanced\u0001diet\nWhat is a 'Healthy Meal’ or ‘Healthy Food’?\n \nA healthy meal (food) includes generous amounts of \nvegetables, adequate whole grains and pulses or beans, along \nwith modest portions of nuts or seeds, complemented by a \nselection of fruits and plain fermented yogurt or curd. It is free \nof added sugars or contains very minimal amounts, and is \nseasoned with minimal oil/fats and salt for taste.\nWhat can make a 'Healthy Snack’?\n \nAn ideal healthy snack consists of vegetable or fruit \nsalads adorned with seeds or nuts, topped with yogurt. \nAdditionally, roasted or boiled beans, lobia, chickpeas, and \npeanuts can serve as nutritious snack options. \nWhat is a balanced diet and why do we need it?\n \n \nA balanced diet provides required calories, proteins, \nvitamins, minerals and adequate fibre. \n•\n A balanced diet is a wholesome and nutritionally adequate \ndiet. It provides a variety of nutrients that perform a wide \nrange of functi"
+      },
+      {
+        "page": 21,
+        "len": 749,
+        "start": "4\nFigure 1.2. Importance of balanced diet during different stages of life\nChildren (2 to 6 years)\n    For growth, development and cognition\nAdolescents (10 to 19 years)\n     For growth spurt, maturation and bone development\nAdults\n    For maintaining health, productivity and prevention of\n    diet-related diseases\nReproductive age\n    To meet the extra nutritional needs for child \n    bearing/rearing\nInfants & young children (6 months to 2 years)\n   For growth, development & cognition (Breast milk \n   and nutrient-rich complementary foods)\nInfants (0 to 6 months)\n   For growth and development (Exclusive breastfeeding)\n   \nElders\n    For being physically active and healthy\nICMR-National Institute of Nutrition\nDietary Guidelines for Indians\n"
+      },
+      {
+        "page": 26,
+        "len": 3999,
+        "start": "9\nbody is in the form of muscle and the rest is in bone, cartilage \nand skin. Proteins are complex molecules composed of 20 \ndifferent amino acids. Nine of these 20 amino acids are termed \n‘essential’ and have to be obtained from proteins in the diet, \nsince they are not synthesized in the human body. The \nremaining non-essential amino acids can be synthesized in the \nbody to build proteins. Proteins perform a wide range of \nfunctions and also provide energy (4 Kcal/g). Protein \nrequirements vary with age, physiological status and stress. \nMore proteins are required by growing infants and children, \nadolescents, pregnant women and individuals during \ninfections, illness and physical stress. Animal foods like milk, \nmeat, fish and eggs and plant foods such as pulses are rich \nsources of proteins. Animal proteins are of high quality as they \nare bioavailable and provide all the essential amino acids in \nright proportions, while plant or vegetable proteins are not of \nthe same quality bec"
+      }
+    ]
+  }
+]

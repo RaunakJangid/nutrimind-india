@@ -1,0 +1,7 @@
+For a {{ age_desc }}, the daily {{ nutrient }} requirement is {{ required_value }} {{ result.required_unit }}.
+
+The foods found in this query provide about {{ consumed_value }} {{ result.consumed_unit }}. The remaining gap is {{ gap_value }} {{ result.required_unit }} ({{ gap_percent }}% of the daily requirement).
+{% if result.unknown_foods %}
+
+I could not verify these foods, so they were not included: {{ result.unknown_foods | join(", ") }}.
+{% endif %}

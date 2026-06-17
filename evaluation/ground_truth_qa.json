@@ -1,0 +1,732 @@
+[
+  {
+    "id": "qa_001",
+    "query": "What is the daily vit b6 requirement for the 1-3 years age group?",
+    "expected_answer": "The daily vit b6 requirement for the 1-3 years age group is 0.9 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "vit_b6",
+    "age_months": null,
+    "age_group": "1-3_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_002",
+    "query": "What is the daily folate requirement for the 6-12 months age group?",
+    "expected_answer": "The daily folate requirement for the 6-12 months age group is 85 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "folate",
+    "age_months": null,
+    "age_group": "6-12_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_003",
+    "query": "What is the daily vit b6 requirement for the 4-6 years age group?",
+    "expected_answer": "The daily vit b6 requirement for the 4-6 years age group is 1.2 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "vit_b6",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_004",
+    "query": "What is the daily vit a requirement for the 0-6 months age group?",
+    "expected_answer": "The daily vit a requirement for the 0-6 months age group is 350 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "vit_a",
+    "age_months": null,
+    "age_group": "0-6_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_005",
+    "query": "What is the daily iron requirement for the 6-12 months age group?",
+    "expected_answer": "The daily iron requirement for the 6-12 months age group is 3 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "iron",
+    "age_months": null,
+    "age_group": "6-12_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_006",
+    "query": "What is the daily riboflavin requirement for the 6-12 months age group?",
+    "expected_answer": "The daily riboflavin requirement for the 6-12 months age group is 0.6 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "riboflavin",
+    "age_months": null,
+    "age_group": "6-12_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_007",
+    "query": "What is the daily folate requirement for the 4-6 years age group?",
+    "expected_answer": "The daily folate requirement for the 4-6 years age group is 135 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "folate",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_008",
+    "query": "What is the daily vit a requirement for the 4-6 years age group?",
+    "expected_answer": "The daily vit a requirement for the 4-6 years age group is 510 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "vit_a",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_009",
+    "query": "What is the daily zinc requirement for the 1-3 years age group?",
+    "expected_answer": "The daily zinc requirement for the 1-3 years age group is 3.3 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "zinc",
+    "age_months": null,
+    "age_group": "1-3_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_010",
+    "query": "What is the daily thiamine requirement for the 6-12 months age group?",
+    "expected_answer": "The daily thiamine requirement for the 6-12 months age group is 0.4 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "thiamine",
+    "age_months": null,
+    "age_group": "6-12_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_011",
+    "query": "What is the daily vit b12 requirement for the 0-6 months age group?",
+    "expected_answer": "The daily vit b12 requirement for the 0-6 months age group is 0.4 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "vit_b12",
+    "age_months": null,
+    "age_group": "0-6_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_012",
+    "query": "What is the daily riboflavin requirement for the 1-3 years age group?",
+    "expected_answer": "The daily riboflavin requirement for the 1-3 years age group is 1.1 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "riboflavin",
+    "age_months": null,
+    "age_group": "1-3_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_013",
+    "query": "What is the daily magnesium requirement for the 1-3 years age group?",
+    "expected_answer": "The daily magnesium requirement for the 1-3 years age group is 90 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "magnesium",
+    "age_months": null,
+    "age_group": "1-3_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_014",
+    "query": "What is the daily dietary fiber requirement for the 4-6 years age group?",
+    "expected_answer": "The daily dietary fiber requirement for the 4-6 years age group is 20 g.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "dietary_fiber",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_015",
+    "query": "What is the daily calcium requirement for the 1-3 years age group?",
+    "expected_answer": "The daily calcium requirement for the 1-3 years age group is 500 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "calcium",
+    "age_months": null,
+    "age_group": "1-3_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_016",
+    "query": "What is the daily zinc requirement for the 4-6 years age group?",
+    "expected_answer": "The daily zinc requirement for the 4-6 years age group is 4.5 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "zinc",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_017",
+    "query": "What is the daily iodine requirement for the 0-6 months age group?",
+    "expected_answer": "The daily iodine requirement for the 0-6 months age group is 100 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "iodine",
+    "age_months": null,
+    "age_group": "0-6_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_018",
+    "query": "What is the daily niacin requirement for the 6-12 months age group?",
+    "expected_answer": "The daily niacin requirement for the 6-12 months age group is 5 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "niacin",
+    "age_months": null,
+    "age_group": "6-12_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_019",
+    "query": "What is the daily iodine requirement for the 4-6 years age group?",
+    "expected_answer": "The daily iodine requirement for the 4-6 years age group is 90 µg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "iodine",
+    "age_months": null,
+    "age_group": "4-6_years",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_020",
+    "query": "What is the daily thiamine requirement for the 0-6 months age group?",
+    "expected_answer": "The daily thiamine requirement for the 0-6 months age group is 0.2 mg.",
+    "expected_sources": [
+      "RDA_2020"
+    ],
+    "nutrient": "thiamine",
+    "age_months": null,
+    "age_group": "0-6_months",
+    "foods": [],
+    "category": "rda_lookup"
+  },
+  {
+    "id": "qa_021",
+    "query": "Does 1 serving of papad meet the protein requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of papad provides 21.6 g of protein, exceeding the requirement of 12.5 g by 9.1 g.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "protein",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "papad"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_022",
+    "query": "Does 1 serving of palak paneer meet the protein requirement for a 9-month-old?",
+    "expected_answer": "For a 9-month-old, 1 serving of palak paneer provides 2.1 g of protein, leaving a gap of 8.4 g from the daily requirement of 10.5 g.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "protein",
+    "age_months": 9,
+    "age_group": "6-12_months",
+    "foods": [
+      "palak_paneer"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_023",
+    "query": "Does 1 serving of oats meet the calcium requirement for a 9-month-old?",
+    "expected_answer": "For a 9-month-old, 1 serving of oats provides 39.4 mg of calcium, leaving a gap of 260.6 mg from the daily requirement of 300.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 9,
+    "age_group": "6-12_months",
+    "foods": [
+      "oats"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_024",
+    "query": "Does 1 serving of kesari meet the calcium requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of kesari provides 29.4 mg of calcium, leaving a gap of 470.6 mg from the daily requirement of 500.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "kesari"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_025",
+    "query": "Does 1 serving of coconut rice meet the calcium requirement for a 9-month-old?",
+    "expected_answer": "For a 9-month-old, 1 serving of coconut rice provides 7.5 mg of calcium, leaving a gap of 292.5 mg from the daily requirement of 300.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 9,
+    "age_group": "6-12_months",
+    "foods": [
+      "coconut_rice"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_026",
+    "query": "Does 1 serving of coconut meet the calcium requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of coconut provides 8.0 mg of calcium, leaving a gap of 492.0 mg from the daily requirement of 500.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "coconut"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_027",
+    "query": "Does 1 serving of qubani ka meetha meet the calcium requirement for a 5-year-old?",
+    "expected_answer": "For a 5-year-old, 1 serving of qubani ka meetha provides 107.0 mg of calcium, leaving a gap of 443.0 mg from the daily requirement of 550.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 60,
+    "age_group": "4-6_years",
+    "foods": [
+      "qubani_ka_meetha"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_028",
+    "query": "Does 1 serving of spinach meet the zinc requirement for a 5-year-old?",
+    "expected_answer": "For a 5-year-old, 1 serving of spinach provides 0.2 mg of zinc, leaving a gap of 4.3 mg from the daily requirement of 4.5 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "zinc",
+    "age_months": 60,
+    "age_group": "4-6_years",
+    "foods": [
+      "spinach"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_029",
+    "query": "Does 1 serving of payasam meet the zinc requirement for a 5-year-old?",
+    "expected_answer": "For a 5-year-old, 1 serving of payasam provides 1.2 mg of zinc, leaving a gap of 3.3 mg from the daily requirement of 4.5 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "zinc",
+    "age_months": 60,
+    "age_group": "4-6_years",
+    "foods": [
+      "payasam"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_030",
+    "query": "Does 1 serving of imarti meet the protein requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of imarti provides 21.6 g of protein, exceeding the requirement of 12.5 g by 9.1 g.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "protein",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "imarti"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_031",
+    "query": "Does 1 serving of laiyya meet the calcium requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of laiyya provides 15.1 mg of calcium, leaving a gap of 484.9 mg from the daily requirement of 500.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "laiyya"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_032",
+    "query": "Does 1 serving of bajra meet the folate requirement for a 9-month-old?",
+    "expected_answer": "For a 9-month-old, 1 serving of bajra provides 36.1 µg of folate, leaving a gap of 48.9 µg from the daily requirement of 85.0 µg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "folate",
+    "age_months": 9,
+    "age_group": "6-12_months",
+    "foods": [
+      "bajra"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_033",
+    "query": "Does 1 serving of seviyan meet the protein requirement for a 5-year-old?",
+    "expected_answer": "For a 5-year-old, 1 serving of seviyan provides 9.7 g of protein, leaving a gap of 6.3 g from the daily requirement of 16.0 g.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "protein",
+    "age_months": 60,
+    "age_group": "4-6_years",
+    "foods": [
+      "seviyan"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_034",
+    "query": "Does 1 serving of papad meet the iron requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of papad provides 6.1 mg of iron, leaving a gap of 1.9 mg from the daily requirement of 8.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "iron",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "papad"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_035",
+    "query": "Does 1 serving of lentils meet the folate requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of lentils provides 50.0 µg of folate, leaving a gap of 70.0 µg from the daily requirement of 120.0 µg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "folate",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "lentils"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_036",
+    "query": "Does 1 serving of palak paneer meet the calcium requirement for a 6-month-old?",
+    "expected_answer": "For a 6-month-old, 1 serving of palak paneer provides 82.3 mg of calcium, leaving a gap of 217.7 mg from the daily requirement of 300.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "calcium",
+    "age_months": 6,
+    "age_group": "0-6_months",
+    "foods": [
+      "palak_paneer"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_037",
+    "query": "Does 1 serving of cauliflower meet the iron requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of cauliflower provides 1.0 mg of iron, leaving a gap of 7.0 mg from the daily requirement of 8.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "iron",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "cauliflower"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_038",
+    "query": "Does 1 serving of murmura meet the zinc requirement for a 9-month-old?",
+    "expected_answer": "For a 9-month-old, 1 serving of murmura provides 1.4 mg of zinc, leaving a gap of 1.1 mg from the daily requirement of 2.5 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "zinc",
+    "age_months": 9,
+    "age_group": "6-12_months",
+    "foods": [
+      "murmura"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_039",
+    "query": "Does 1 serving of samosa meet the folate requirement for a 5-year-old?",
+    "expected_answer": "For a 5-year-old, 1 serving of samosa provides 16.2 µg of folate, leaving a gap of 118.8 µg from the daily requirement of 135.0 µg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "folate",
+    "age_months": 60,
+    "age_group": "4-6_years",
+    "foods": [
+      "samosa"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_040",
+    "query": "Does 1 serving of sago meet the iron requirement for a 2-year-old?",
+    "expected_answer": "For a 2-year-old, 1 serving of sago provides 0.8 mg of iron, leaving a gap of 7.2 mg from the daily requirement of 8.0 mg.",
+    "expected_sources": [
+      "RDA_2020",
+      "IFCT_2017"
+    ],
+    "nutrient": "iron",
+    "age_months": 24,
+    "age_group": "1-3_years",
+    "foods": [
+      "sago"
+    ],
+    "category": "diet_check"
+  },
+  {
+    "id": "qa_041",
+    "query": "According to DGI 2024 guidance on Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 9: Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity. RATIONALE Besides overweight and general or overall obesity, abdominal obesity (increased waist circumference) that is indicative of excess fat in the peritoneum (abdominal cavity) with accumulation of fat in and around the internal organs is associated with risk of lifestyle diseases. Being physically active and following a healthy diet will help reduce abdominal obesity. ICMR-National Institute of Nutrition recommended that the BMI should be between 18.5 to 23Kg/M , since, they tend to have higher percentage body fat even at a given BMI compared to Caucasians and Europeans, which leaves them at a higher risk of NCDs. Central/abdominal obesity: Fat accumulation especially the distribution of fat around the abdomen (central obesity) and internal organs is now considered to be more harmful. Central obesity, as indicated by higher waist circumference, is considered as a risk factor for lifestyle diseases such as NCDs. Overweight: BMI ranging over 23 to 27.5 Kg/M is defined as overweight as per Asian cut-offs. Over 31% of urban and 16% of rural adults are overweight (NNMB). Figure 9.1. Suggested diet for normally nourished sedentary men (The menu is for reference individual weighing 65Kg & BMI 18.5–23 and with adequate physical activity) 8–10 am 1–2 pm Curd/Paneer 150ml 7–8pm 5pm DINNER (590 Kcal) EVENING BEVERAGE (35 Kcal) LUNCH (900 Kcal) BREAKFAST (570 Kcal) Soaked & boiled whole grains-90g; Boiled red / black beans, lobia / chickpea-35g; Green leafy vegetables-50g; Vegetables-50g; Nuts-20g Cereals (preferably whole grain)-100g; Pulses-30g; or meat Vegetables-150g; Green leafy vegetables-50g; (can be used in curries/chutney); Nuts/oil seeds-add 20g in curries; with cooking oil (15g) for flavour; Curd -150ml/Paneer equivalent to 150ml; Fruits-end your meal with 50g fruits Cereals-80g; Pulses-25g; Vegetables-100g; Oil-10g; Curd-100ml; Fruits-end your meal with 50g fruits Total Calorie: ~2080 Kcal Crude Protein: 72g (BMI 18.5–23 with body weight 65 kg) Milk 50ml Total calorie from the above diet is 2100 Kcal/day | Total protein provides 13.7% Kcal/day from the suggested diet | Quantities indicated are for raw ingredients * Measures: 1 cup/Katori =200ml | *Non-veg items like fish/egg/chicken can be consumed as per social acceptability & availability. In the meal preparation 30g oil and 5g iodized salt can be used | Prefer at least 50% cereals/millets as whole grain. ; It is preferable to take only two meals per day as per individual preferences & needs Timing and meal proportion given above are only indicative. One may consume sugar, but it must be restricted to 25–30 grams per day. To adjust the total calories, cereals must be reduced if sugar is taken. Note: Energy requirement depends on body weight and physical activity . | Added sugar must be restricted to less than 5% of daily energy Individuals with different body weight may refer to Table 1.6, Page no. 10 Refer: Annexure I & II for household measures Curd 100ml ICMR-National Institute of Nutrition Obesity: BMI above 27.5 Kg/M is defined as obesity as per the Asian cut-offs. Over 12% urban and 5% rural adults are obese (NNMB). The waist circumference is useful for assessment of central obesity. Several studies have shown direct correlation of central obesity with chronic lifestyle diseases or NCDs. Waist circumference of >90cm for men and >80cm for women is associated with increased risk of several chronic lifestyle diseases. Abdominal obesity is prevalent in 53% of urban and 19% of rural adults. What causes abdominal/overall obesity? It is well known that overeating along with decreased physical activity predisposes an individual to overweight/ obesity, but solely depending on highly refined grains, processed foods and high sugar intake deranges our metabolism and predisposes to obesity. Unhealthy dietary practices during infancy and childhood (such as overfeeding) play an important role in predisposing individuals to overweight/obesity in adulthood. Low and high birth weight (<2500g and >4000g), obesity during childhood and adolescence are also likely to cause overweight/obesity in adulthood. In addition, women are at higher risk of becoming overweight/ obese around pregnancy and after menopause. Genetic (familial) factors as well as complex behavioral and psychological factors that may influence eating patterns, may also contribute to overweight/obesity, but the effect of dietary and physical activity behavior is more profound than genetics. Several studies have suggested that inadequate and improper sleeping habits, along with more hours of screen time (spent in watching television / mobile phone) is strongly associated with weight gain in childhood, adolescence and adulthood. This is mostly due to the sedentary behavior, tendency to consume unhealthy foods during screen time and decreased sleep hours. In addition, regular consumption of unhealthy processed foods, influenced by aggressive marketing and advertising, also contributes to unhealthy dietary practices leading to overweight/obesity. It is necessary to maintain appropriate abdominal circumference and a desirable body weight by consuming just enough calories and being physically active. Body weight must be monitored periodically. Why should we prevent abdominal/overall obesity? There are several negative health consequences of obesity. Excessive body weight causes low-grade chronic inflammation and increases the risk of heart disease, hypertension, diabetes, gallstones, fatty liver disease, certain types of cancers, osteoarthritis, psycho-social problems and also impairs immunity. Obesity is often associated with increased levels of low-density lipoproteins ('bad' cholesterol), and triglycerides, apart from abnormal increase in glucose and insulin resistance. Considering the increasing trend in the prevalence of non-alcoholic fatty liver disease (NAFLD), coronary artery disease, hypertension and diabetes in India, it is important to maintain desirable body weight for height and prevent overweight and obesity. How to maintain appropriate body weight and waist circumference (abdominal adiposity/obesity)? To maintain appropriate weight and waist circumference, one must include fresh vegetables in every meal, consume whole grains, pulses and beans; and must avoid sugar, processed products, fruit juices and HFSS foods (refer to Guideline 15). Regular physical activity and yoga are crucial to maintain good health and weight. Weight reduction should be gradual. Weight reduction diets should not be less than 1000 Kcal/day and should provide all nutrients. A reduction of half a kilogram body weight per week is considered to be safe. Approaches of rapid weight loss and use of anti-obesity drugs should be avoided. This increases deposition of more & more fat Foods with high GI & GL Increase in blood sugar level, insulin levels & insulin resistance ICMR-National Institute of Nutrition ICMR-National Institute of Nutrition LUNCH (750 Kcal) Cereals (preferably whole grain)-80g; Pulses-20g; or meat Vegetables-150g; Green leafy vegetables-50g (can be used in curries / chutney); Nuts/oil seeds-add 10g in curries with cooking oil (15g) for flavour; Curd-150ml/paneer equivalent to 150ml; Fruits-end your meal with 50g fruits Figure 9.2. Suggested diet for normally nourished sedentary women* (The menu is for reference individual weighing 55Kg & BMI 18.5–23 and with adequate physical activity) Refer: Annexure I & II for household measures BREAKFAST (470 Kcal) DINNER (415 Kcal) Cereals-60g; Pulses-15g; Vegetables-50g; Oil-5g; Curd-100ml; Fruits-end your meal with 50g fruits Curd 100ml Total calorie from the above diet is 1660 Kcal/day | Total protein provides 13.8% Kcal/day from the suggested diet | Quantities indicated are for raw ingredients. * Measures: 1 cup/Katori =200ml | * non-veg items like fish/egg/chicken can be consumed as per social acceptability & availability. In the meal preparation 20g oil and 5g iodised salt can be used | Prefer at least 50% cereals/millets as whole grain. ; It is preferable to take only two meals per day as per individual preferences & needs Timing and meal proportion given above are only indicative. One may consume sugar, but it must be restricted to 25–30 grams per day. To adjust the total calories, cereals must be reduced if sugar is taken. Note: Energy requirement depends on body weight and physical activity . | Added sugar must be restricted to less than 5% of daily energy Individuals with different body weight * Non-pregnant and non-lactating | may refer to Table 1.6, Page no. 10 8–10 am pm –2 Curd/Paneer 150ml 7 8pm – 5pm EVENING BEVERAGE (35 Kcal) Total Calorie: ~1660 Kcal Crude Protein: 57g (BMI 18.5–23 with body weight 55 kg) Milk 50ml Soaked & boiled whole grains-60g; Boiled red/black beans, lobia/chickpea-30g; Green leafy vegetables-50g; Vegetables-100g; Nuts-20g However, consuming higher amounts of protein (15% energy from protein) may be important during typical energy- deficient weight loss diets (i.e., 500–750 Kcal/day deficit) to preserves muscle mass. Nevertheless, the protective effect of higher-protein diets on muscle mass is compromised if the energy deficit is more than 40% of daily energy needs, and the dietary proteins are oxidized for energy production. Hence, it is advisable not to go beyond 40% energy deficit of daily energy needs to support muscle mass maintenance and protein balance. Weight-reducing diets should be nutrient rich and nutritionally balanced. Foods containing high sugar/salt/fat/ refined cereals such as sweets, biscuits, cakes, candies, fruit juices or cool drinks (carbonated beverages) provide high calories and nil or low nutrients and hence should be avoided. Foods containing sugar or refined carbohydrates have high glycemic index (GI) and therefore promote rapid absorption of glucose, and increase glycemic load (GL). There is a sharp rise in insulin when high sugar / refined cereal foods are consumed. Regular intake of foods high in sugar at frequent intervals increases and maintains insulin at a higher than normal level. High insulin impairs metabolism, increases adipogenesis and promotes deposition of fat in and around organs, especially when physical activity is low. Adequate intake of micronutrients and fibre-rich foods such as pulses, nuts, chia seeds, flax seeds, whole grains including millets, vegetables and fruits improves satiety and helps to maintain levels of blood glucose, insulin, cholesterol as well as triglycerides. Pulses, nuts and moderate quantity of lean meat will also help maintain weight and health. Consumption of plenty of fruits and vegetables would not only result in satiety but also help maintain adequate fibre and micronutrient intake. How to choose healthy options? Please refer to figure 9.3 to choose healthy food options over unhealthy foods made of refined grains or containing high levels of added sugar and added cooking oils. Plan balanced meals with sufficient vegetables: Include whole grains like minimally processed rice, whole wheat roti, millets (nutricereals), barely, bamboo rice and include legumes like beans and lentils in the recommended cereal pulse ratio (3:1 or 5:1). There are rich in fibre and nutrients. They provide sustained energy and help you feel full, reducing the need for extra calories. Take more helpings of vegetables: In addition to salads, incorporate a variety of colorful vegetables into your meals. They are low in calories but high in vitamins, minerals, and fibre. Roasting, steaming, or stir-frying vegetables can enhance their flavor without adding much cooking oil. Practice portion control: Be mindful of portion sizes and prevent overeating. Snack smart: When snacking, reach for nutrient-dense options like a handful of nuts, plain yogurt, or cut vegetables with some spice added. Opt for lean meat, such as skinless poultry, lean cuts of meat and fish. These meat sources are lower in calories and saturated fats compared to fatty cuts of meat. Use healthy cooking methods: Opt for cooking methods like grilling, baking, steaming, or sautéing with minimal oil instead of frying. This reduces the energy density of your meals. Limit sugary beverages: Cut down on sugary drinks like soda, fruit juices, and energy drinks. Choose water, herbal tea, or unsweetened beverages instead. Read food labels: Check food labels for information on calories, saturated fats, added sugars, and sodium. Opt for products with lower amounts of these components. Adopt to healthy balanced diet and regular physical activity • For reducing weight, cut down on calorie from refined carbs and cooking oils and undertake physical activity on a regular basis. Figure 9.3. Swap high calorie foods with healthier foods Swap these Swap these With these With these Deep fried snacks (contains high levels of cooking oil/fat) Low calorie salads and sprouts (from whole grains & vegetables rich in nutrients) Traditional sweets & snacks made with whole grains, nuts, millets & oil seeds (having relatively lower fat & sugar) Foods with high calories and containing highly refined ingredients Nuts & seeds (healthy fats integrated in food) Foods containing highly refined ingredients, high fat & high sugar KETCHUP Jams, sauces and dips Fresh home made chutneys and dips Sugar sweetened carbonated & non-carbonated beverages, health drinks & energy drinks Natural foods like tender coconut water, buttermilk, fresh lemon juice, chia seeds soaked in lemon juice, etc. Whole fruits Fresh fruits juices Note: The foods circled in color if consumed may be taken occasionally in moderation RED ICMR-National Institute of Nutrition POINTS TO REGISTER · Prevention of overweight/obesity is important. · There is a tendency to gain weight mostly around 20 years of age; and among women after childbirth because of less physical activity and excess calorie intake. Obesity is also rapidly increasing among children and adolescence and therefore, one should be watchful during these periods. · Eat healthy (refer Guideline 1) and maintain appropriate body mass index or weight for height. · Regular yoga and physical activity are essential. · Slow and steady reduction in body weight is advisable. Extreme approaches for weight loss may lead to health hazards. · Cut down consumption of sugar, salt, excess refined oil, deep fried foods and refined foods. Avoid soft drinks and alcohol. · Increase consumption of fruits, vegetables and pulses. Prefer whole grains and millets to refined grains / ultra-processed foods. · Minimize non-essential screen time. · Healthy sleeping patterns (6–8 hrs/day) is necessary to avoid unhealthy eating behaviors and resultant weight gain.",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_09",
+    "chunk_title": "Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity"
+  },
+  {
+    "id": "qa_042",
+    "query": "According to DGI 2024 guidance on Eat plenty of vegetables and legumes, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 6: Eat plenty of vegetables and legumes. RATIONALE Vegetables and green leafy vegetables provide several vitamins and minerals and offer protection from micronutrient deficiencies and various diseases. ICMR-National Institute of Nutrition What are microgreens? Microgreens are young, tender plants of herbs, vegetables or even grains, with just one to two sets of leaves. Alternatively, microgreens are young plants that are harvested with in a week to ten days after sowing the seeds. Microgreens are rich sources of nutrients such as amino acids, fatty acids, micronutrients and various bioactive compounds and phytochemicals. These are emerging functional foods which when consumed even in small quantity have the potential to prevent various deficiencies and diseases. These microgreens can be used in salads, soups, sandwiches and minimally processed dishes to embellish various recipes/cuisines. Research on microgreens shows that they are high in aliphatic glycosylates, polyphenols and serve as dietary carriers to provide naturally occurring antioxidant compounds with strong antioxidant capacity e.g. amaranth, basil, mustard, peas, parsley, beet, coriander, broccoli, celery, etc. The microgreens of red cabbage have been shown to modulate the lipid profile favorably and that of fenugreek show anti-diabetic activity. What functions do the nutrients and phytonutrients in vegetables and fruits perform in our body? Iron is an essential element necessary for the formation of hemoglobin, the red pigment present in the red cells of blood. Hemoglobin plays an important role in the transportation of oxygen to the tissues. Reduction in hemoglobin in blood leads to anemia, a condition characterized by paleness and easy fatigue and increased susceptibility to infections. Iron is available in plenty in green leafy vegetables, but the absorption is limited. Vitamin C rich foods like guava or orange must be consumed after meals to improve iron absorption. Vitamin A: Carotenoids (precursors of vitamin A) are plentiful in fruits and vegetables that are green or deep yellow / orange in colour, such as green leafy vegetables, carrots, tomatoes, capsicum, orange-flesh, sweet potatoes, papaya, mango, etc. This fat-soluble vitamin is necessary for clear vision (even in dim light) and for maintenance of the integrity of epithelial tissues. In vitamin A deficiency, the white of the eye (conjunctiva) loses its luster, becomes dry and could manifest as Bitot's spots (foamy white patches). In severe vitamin A deficiency, the black area of the eye (cornea) gets ulcerated, leading to irreversible blindness in young children. Vitamin A also has a role in maintaining resistance of the body to common infections. Vitamin C is abundantly available in fresh citrus fruits, guava, amla and certain vegetables such as tomatoes. Vitamin C is an essential nutrient required for healthy bones and teeth. It also promotes iron absorption. Vitamin C deficiency is characterized by weakness, bleeding gums and defective bone growth. However, it is very susceptible to destruction by atmospheric oxidation. It is for this reason that when vegetables become dry and stale or cut and exposed to air or cooked and consumed, most of the vitamin originally present in destroyed. Folates / Folic acid: Green leafy vegetables are good sources of folates. It is a B vitamin essential for multiplication and maturation of red cells in our body and its deficiency also leads to anemia. Folic acid intake during pregnancy prevents neural tube defects in the fetus. It also promotes the birth weight of infants. Folic acid deficiency increases homocysteine levels in blood, thereby increasing the risk of stroke and heart disease. Calories: Many of the vegetables and fruits have low calories (<20 Kcal/100gm). Large intake of such vegetables and fruits can help in reducing calories in diet and help in obesity management. On the other hand, vegetables like colocasia, potato, tapioca, yam, sweet potato and fruits like banana, avocado, pear and mahua (buttercup) have 70 to 100 or more than 100 Kcal per 100g and should be consumed in moderate amounts. Phytonutrients: Vegetables provide phytonutrients and are of considerable health significance. Among these, dietary fibre, ICMR-National Institute of Nutrition antioxidants and other bio-active constituents require special mention. These phytonutrients delay the effects of ageing and prevent diseases such as cardio-vascular diseases, stroke, diabetes and cancer. Dietary fibre: Fresh fruits and vegetables are rich sources of dietary fibre. Dietary fibre is important for proper bowel function and reduces constipation and risk of developing piles. It also reduces the absorption of cholesterol, and has a protective role in coronary heart diseases, diabetes and obesity. The protective role of dietary fibre against colon cancer has long been recognized. Antioxidants: Vegetables and fruits are rich sources of antioxidants and restrict the damage to cell and cellular components. Raw and fresh vegetables like green leafy vegetables, carrots, fresh fruits including citrus and tomatoes have been identified as good sources of antioxidants. Vitamin C and carotenoids that are present in these vegetables are also potential antioxidants. Different colored vegetables provide different antioxidants. Green and orange colored vegetables provide beta-carotene, red vegetables provide lycopene, deep red ones provide battalions, blue and purple ones provide anthocyanins, etc. Vegetables and fruits play a major role in protecting from certain diseases, such as damage to blood vessels, cancer, inflammatory joint diseases, asthma and diabetes. How much fruits and vegetables should one consume? Taking into consideration the nutrient requirements, it is recommended that every individual should consume at least 400g of vegetables (GLV: 100g; Other vegetables: 250g; Roots and Tubers: 50g) and 100g of fresh fruits every day. During pregnancy, requirements of iron and folic acid are higher and therefore pregnant women should consume an additional 100g of leafy vegetables daily. Intake of tubers such as potato, yam, colocasia and cassava must be restricted. Which vegetables and fruits should be preferred? We should consume fresh, locally available and preferably seasonal vegetables and fruits. These have higher level of micronutrients and are also tastier. However, no single fruit or vegetable provides all the nutrients one needs. The key lies in eating a variety of them and with different colors. Include commonly consumed leafy greens, tomatoes, berries and other vegetables, apart from those which are yellow, orange, red, deep red and purple. Colored citrus fruits, being vitamin C rich enrich the diets significantly. Root vegetables like carrots, radish, beetroot, knol-kohl, and turnip should be preferred to tubers like potato, yam, colocasia and cassava. How to prevent cooking losses? Vegetables should be washed before cutting or peeling to prevent nutrient loss. Further, proper methods of cooking should be adopted to reduce the losses. Nutrient loss is high when the vegetables are washed after cutting or when they are cut into small pieces for cooking. Root vegetables like carrots, radish, beetroot, knol-kohl, and turnip should be preferred to tubers like potato, yam, colocasia and cassava. ICMR-National Institute of Nutrition POINTS TO REGISTER · To achieve consumption of atleast 400g of vegetables per day, include fresh vegetables and green leafy vegetables in every meal. · Incorporate GLVs in complementary feeds of infants. · Eat a variety of vegetables and fruits in all your meals in various forms (raw salad, curry, dry cooked vegetables, soups, as raita mixed with curd or added to pulse and cereal preparations). · Increase intake of vegetables and fruits during pregnancy. · Prefer root vegetables to tubers. · Fats are also known as 'lipids'. · There are three types of fatty acids (FA) in our diets, saturated fatty acids (SFA), mono unsaturated fatty acids (MUFA) and poly unsaturated fatty acids (PUFA). · Our body can synthesize SFAs, MUFAs besides obtaining them from the diet, while the PUFAs, namely, linoleic acid (also known as n-6 or omega 6 or LA) and alpha linolenic (also known as n-3 or omega 3 or ALA) cannot be synthesized. Hence, n-6 and n-3 are termed essential fatty acids (EFAs). · Our body depends on dietary sources for n-3 and n-6 FA as they are not made in our body. · High intake of saturated fats (SF) enhances calorie intake and increases the risk of heart diseases and stroke. · Trans fats (TF) are harmful and should be avoided. · Intake of oils and fats should be in moderation. Cooking methods such as sautéing, steaming, grilling, boiling or baking should be used instead of frying. · To enhance nutrition and flavor, o i l s e e d s a n d n u t s - p a s t e (wholesome and nutritious) can be used in place of extracted refined oils/fats. Why do we need fats/oils? · Lipid or fatty acids perform several important physiological and metabolic functions in the body. · Lipids constitute major components of many hormones and cell membranes along with proteins and are involved in many important cell-signalling functions and gene expression. What are the components of fat? Fatty acids are the simplest types of lipids. Triglycerides, phospholipids, glycolipids and cholesterol are all lipids. Fatty acids: All fats in foods provide mixtures of three types of fatty acids (SFA, MUFA, PUFA), which are the ‘building blocks’ of fats. Fatty acids are the primary constituents of all dietary fats in Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA) Trans fats (TF) are harmful and should be avoided.",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_06",
+    "chunk_title": "Eat plenty of vegetables and legumes"
+  },
+  {
+    "id": "qa_043",
+    "query": "According to DGI 2024 guidance on Ensure exclusive breastfeeding for the first six months and continue breastfeeding till two years and beyond, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 3: Ensure exclusive breastfeeding for the first six months and continue breastfeeding till two years and beyond. RATIONALE Exclusive breastfeeding for the first six months ensures nutritional adequacy for infant growth and development and also the health of the mother. As soon as the baby is born, skin contact and breastfeeding must be established at the earliest (within one hour of birth). Early Initiation of Breast Feeding (EIBF). ICMR-National Institute of Nutrition Infant should b e e x c l u s i v e l y breastfed (EBF) for the first 6 months and exclusively breastfed infants do not need water. Feeding water reduces the breast milk intake and increases the risk of diarrhea and is to be totally avoided. Water is not required, even if the climate is hot. An enabling environment should be created for the mother, both at home (by family members) and elsewhere for promotion of optimal breastfeeding. Breastfeeding should be continued at least for two years. What ensures an adequate supply of breast milk? On-demand feeding and frequent suckling ensure optimal breast milk production. Adequate growth of the baby indicates that there is adequate supply of breast milk. It is necessary that a woman is emotionally prepared during the pregnancy period for breastfeeding and is encouraged to eat a well-balanced diet. Anxiety and emotional disturbances must be avoided, and adequate rest should be ensured. Milk production of the mother is also influenced by appropriate feeding skills of the mother with respect to holding or positioning of the infant in her lap and latching the infant's mouth to the mothers' nipple. Frequent suckling by the baby and complete emptying of one breast prior to offering the second one is important for feeding nutrient concentrate and higher fat content of hind milk as well as for sustaining adequate breast milk output. This will also facilitate optimum consumption by the young infant. It is necessary to prepare the mother's breast, particularly the nipples, for effective breastfeeding. Expressed milk can be fed to a young infant within a few minutes at room temperature. A w o r k i n g m o t h e r c a n express her breast milk hygienically and store it safely under refrigerated o conditions (2–4 C) for upto 8 hours. What are the common myths and problems? Mothers usually feel breast milk is watery and less in quantity. A newborn's capacity to drink milk is limited as the stomach size is small. Hence, inadequate secretion of breast milk is only a misconception and mothers should not discontinue breastfeeding. Also, on-demand-feeding and frequent suckling will ensure optimal breast milk production. Complete emptying of one breast is important prior to offering the second breast in order to sustain adequate milk production. It is often misconstrued that breast milk should be discontinued when it appears stained with blood. However, breastfeeding should not be discontinued as the bloody stain will disappear gradually. In case pain is experienced while breastfeeding or blood staining persists consult healthcare personnel / doctor for treatment or advice. Breastfeeding should be continued during treatment and after. What are the advantages of breast milk? Breast milk contains all essential nutrients needed for an infant and protects from infections. Breast milk is natural and more easily digested and absorbed compared to formula milk prepared from other sources. Colostrum, which is the milk secreted during the first 3–4 days after birth, is rich in proteins, minerals, vitamins especially vitamin A and antibodies. In addition, breast milk adequately hydrates the baby, has a laxative effect and prevents constipation. Breastfeeding helps in birth spacing by delaying further pregnancies. Emotional Avoid feeding honey, glucose, water, or dilute milk formula before initiation of breastfeeding and anytime during the first 6 months. Giving water in addition to breastfeed in the first 6 months of EBF is not required, even if the climate is hot. Frequent suckling by the baby and complete emptying of one breast prior to offering the second one is important. Inadequate secretion of breast milk is only a misconception and mothers should not discontinue breastfeeding. ICMR-National Institute of Nutrition bond between mother and infant is positively influenced by breastfeeding. Evidence suggests that human milk confers long-term benefits such as lower risk of certain auto immune diseases, inflammatory bowel disease, obesity, and related disorders and probably some cancers. Therefore, 'breast milk is the best milk' for the newborn and growing infant. Breastfeeding is associated with better cognitive and brain development in infants. In addition to providing nutrients, breast milk has several special components such as growth factors, enzymes, hormones, and anti-infective factors. The amount of milk secreted increases gradually in the first few days after delivery, reaching the peak during the second month and it is maintained until about six months. An average Indian woman secretes about 750ml of milk per day during the first six months and 600ml of milk per day subsequently up to one year. How does breast milk protect against infections? Diseases and death among breastfed infants are much lower than those among non-breastfed infants. Exclusive breastfeeding protects against diarrhea and upper respiratory tract infections. The gut flora and the low pH of breast milk (pH 6.36–7.36) inhibit the growth of pathogens. The prebiotic bifidus factor in breast milk promotes the natural gut flora. Breast milk has immunoglobulins (IgA), lactoferrin, complement factors and lactoperoxidase, which protect the infant from several infections. Antibodies to E-coli and some viruses are found in breast milk, which protect the gut mucosa. Breastfeeding also protects infants from vulnerability to allergic reactions. What are the effects of maternal undernutrition on breast milk? • The nutritional composition of breast milk is usually maintained well within the normal limits, even in mild to moderate undernutrition. • However, if a mother is severely undernourished, quality and composition of breast milk as well as quantity may be affected. • Undernourished mothers should be given additional allowance of foods that are rich in nutrients, good quality proteins and essential fats (Table 3.1). • Provision of nutrition supplements should be initiated at the earliest to fulfill her requirements as well as the baby's nutritional needs. Are medicines and addictive substances secreted in breast milk? Many medicines (like antibiotics, painkillers and hormones) and addictive substances (caffeine, alcohol and psychotropic drugs) are secreted into breast milk and could prove harmful to breastfed infants. Hence, caution should be exercised by lactating mothers and appropriate medical guidance should be taken for the above referred medicines or addictive substances. Should HIV positive women breastfeed their babies? HIV may be transmitted from mothers to infants through breast milk. HIV positive mothers should be made aware of the risk of transmission of HIV through breast milk and its consequences. Based on the principle of informed choice, HIV infected women should be counseled about the risk of HIV transmission through breast milk and the risks and benefits of each of the feeding methods, with specific guidance in selecting the option that is considered to be most likely to be suitable in a specific situation. However, HIV positive mothers living in resource-poor settings may not have access to safe, hygienic and affordable replacement feeding options. In such situations, considering the important role of breast milk in child growth and development, every effort should be made to promote exclusive breastfeeding for up to four months followed by weaning and complete stoppage of breastfeeding at six months in order to restrict transmission through breastfeeding. In any case, mixed feeding ie., breastfeeding along with other feeds should be strictly discouraged as it increases the risk of HIV transmission. This is in agreement with National AIDS Control Organization (NACO) guidelines. ICMR-National Institute of Nutrition Should COVID-19 positive women breastfeed their babies? At present, data to conclude vertical transmission of COVID-19 through breastfeeding is not sufficient. In infants, the risk of COVID-19 infection is low, the infection is typically mild or asymptomatic, while the consequences of not breastfeeding and separation between mother and child can be significant. The benefits of breastfeeding and nurturing mother-infant interaction to prevent infection and promote health and development are especially important when health and other community services are themselves disrupted or limited. WHO recommends that mothers with suspected or confirmed COVID-19 should be encouraged to initiate or continue to breastfeed. WHO recommends that mothers with suspected or confirmed COVID-19 should be encouraged to initiate or continue to breastfeed. RISK OF NOT FEEDING BREAST MILK For infants: Not being breastfed is associated with an increased incidence of infections, higher risks of childhood obesity, type 1 and type 2 diabetes and leukemia. In some cases, it can also lead to sudden infant death syndrome. For mothers: Breastfeeding reduces risk of breast cancer and ovarian cancer, obesity, type 2 diabetes, metabolic syndrome and cardiovascular diseases such as stroke and heart attacks. ICMR-National Institute of Nutrition POINTS TO REGISTER • Early initiation of breastfeeding (EIBF) i.e. within an hour of birth is crucial. • Colostrum i.e. milk secreted in the first 3–4 days, is rich in nutrients and should not be discarded. • Infants should be exclusively breastfed (EBF) for the first six months. Do not give any other feed, not even water. • Infant should be breastfed frequently and on demand, to establish and maintain adequate breast milk supply. • Breastfeeding should be continued in addition to nutrient-rich complementary foods (weaning foods), preferably up to two years. • Lactating mothers with any disease should continue breastfeeding unless medically advised. • The family should actively support breastfeeding. • Ensure that the mother is counseled on how to hold a baby while breastfeeding. Additionally, mothers must be informed regarding the appropriate method of latching the baby to breast. • Ensure nutritionally adequate diet is consumed both during pregnancy and lactation. • During pregnancy and lactation period, medicines can be taken only on physician's advice. • A lactating mother should avoid addictive substances like tobacco (smoking and chewing), alcohol and psychotropic drugs. · Breast milk alone is not adequate for the infant to sustain optimal growth beyond six months of age. · Timely introduction of complementary foods with appropriate quality and adequate quantity will ensure optimal growth. · Feeding of adequate and appropriate complementary foods along with breastfeeding is essential for meeting increased nutrient requirements of growing infants soon after completion of six months of age. · Breastfeeding is recommended to be continued along with complementary foods for at least up to two years. · During complementary feeding, hygienic practices should be followed while preparing food and feeding in order to prevent diarrhea and infections. · Limit use of salt in complementary food preparations. · Avoid feeding foods and beverages with added sugar. Breast milk is the best and complete food for an infant. However, often, children are solely breastfed even beyond six months in the belief that breast milk alone is adequate for a child until the baby is able to pick up food and eat. Such a belief leads to poor complementary feeding practice that causes undernutrition among young children, since breast milk alone is not enough to fulfill the increase in nutrition requirements for optimal growth and development from six months onwards. Therefore, complementary foods prepared appropriately should be fed soon after six months. Feeding practices comprising selection of foods, quantity to be fed, consistency of feed and frequency of feeding are crucial. What is complementary feeding? Breast milk (mother's milk) alone or exclusive breastfeeding is not adequate for the growth and development of a baby when the baby turns six months. Hence, breast milk should be complemented with feeding semisolid foods to breastfed infants from 6 to 12 months. Why feed complementary foods and when? During the first six months of life, mother's milk alone or exclusive breastfeeding is adequate for the growth and development of a baby. Requirements of all nutrients per kg of body weight are higher for infants as they are in a rapid growth phase. Moreover, the volume as well as nutrient concentrations of breast milk gets reduced from six months onwards. Hence, to Start feeding homemade semi-solid complementary foods to the infant soon after six months of age",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_03",
+    "chunk_title": "Ensure exclusive breastfeeding for the first six months and continue breastfeeding till two years and beyond"
+  },
+  {
+    "id": "qa_044",
+    "query": "According to DGI 2024 guidance on Include nutrient-rich foods in the diets of the elderly for health and wellness, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 16: Include nutrient-rich foods in the diets of the elderly for health and wellness. RATIONALE To remain healthy and active, elderly persons need foods rich in vitamins and minerals along with adequate physical activity. • Healthy food habits and regular physical activity are required to maintain good health and improve the quality of life. • As age advances people become less active, their metabolism slows, and their energy requirement decreases. • Aging is often accompanied by a loss of appetite and changes in taste and smell, which can lead to lower intake of required foods. • For healthy ageing the elderly need nutrient dense foods that are rich in vitamins and minerals with adequate amounts of good quality proteins, complex carbohydrates and dietary fibre. • Ensure adequate water intake to avoid dehydration, which is common among elderly. Who is an elderly person? An elderly person is an individual of 60 years and over. As per the census 2011, the absolute number of elderly population has crossed the 100 million mark constituting 8.6 percent (Men: 8.2% and Women: 9%) of the total population of India and this number is expected to increase to 323 million by 2050, constituting 20% of the total population. What are the reasons for special nutritional needs for the elderly? The body of an ageing adult undergoes multiple physiological changes such as impaired digestion, and protein utilization, altered body composition, insulin resistance, inflammation and decreased bone density. The metabolism slows down after 60 years of age. Recent study found a 0.7 percent decrease in metabolism per year (i.e. energy expenditure). An elderly person needs fewer calories but more micronutrients than someone in mid-life. Hence, elderly people require less energy but more micronutrient rich foods such as vegetables, fruits, beans, nuts, eggs and fish. What are the health benefits of nutritionally adequate diets (balanced diet) and physical activity? In the elderly population, regular physical activity, healthy food choices and balanced diets have the potential to reduce the risk of most of the diseases like osteoporosis, diabetes, cardiovascular diseases (stroke and heart diseases), and certain neurological problems like parkinson's, dementia as well as ICMR-National Institute of Nutrition muscle wasting (sarcopenia) that may occur due to ageing. For healthy ageing and to reduce health risks, minimize or avoid highly or ultra-processed and HFSS foods. What type of diet should the elderly consume? Elderly population is advised to consume foods rich in proteins, calcium, micronutrients and fibre. Every day, apart from cereals (with at least one-third as whole grains) and pulses, at least 200–400ml of low-fat milk or milk products, a fist full of nuts and oilseeds and 400–500g of vegetables (including leafy vegetables) and fruits are recommended. Such a balanced diet has the potential to provide essential macronutrients, micronutrients, antioxidants and fibre. Inclusion of pulses, legumes, milk, fish, minced meat or egg increases protein quality and micronutrient intake. It is recommended to consume well cooked, soft food preparations with less salt and moderate amounts of spices (Tables 16.1 & 16.2 and Figures 16.1 & 16.2). Minimizing or avoiding highly or ultra-processed and HFSS foods will delay age-related diseases. Adequate water (two litres/day) should be consumed to avoid dehydration and constipation. Why is regular physical activity important? Regular physical activity along with moderate exercise is an integral part of maintaining healthy life. Regular physical activity helps to maintain muscle mass, bone density, maintains body weight, improves brain function and also reduces risk or progression of degenerative diseases. Yoga, meditation and other indoor/outdoor physical exercises are advisable. Exercise schedule should be decided in consultation with a physician. For healthy ageing and to reduce health risks, minimize or avoid highly ultra-processed and HFSS foods. Regular physical activity helps to maintain muscle mass, bone density, maintains body weight, improves brain function and also reduces risk or progression of degenerative diseases. Table 16.2. Composition and nutrient content of suggested balanced diet for an elderly woman weighing 55 kgs Nutrient values of suggested food groups Amount (g /day) Composition of food groups ~ 1500 Energy (kcal) Cereals & Millets ~ 56 Total Protein (g) Pulses (a portion of pulses can be replaced with egg/flesh foods) ~ 20 Visible fat (g) ~ 844 Calcium (mg) Green leafy vegetables ~ 22.1 Iron (mg) Other Vegetables ~ 10.2 Zinc (mg) Roots & Tubers-Vegetables (excluding potatoes) ~653 Magnesium (mg) Fruits ~162 Vitamin A (µg)/ -Carotene (µg) Milk ~9634 Fats & Oils ~1.4 Thiamine (mg) Oil seeds & Nuts (gingelly seeds & peanuts) 1.5 Riboflavin (mg) Spices ~11.9 Niacin (mg) 1.9 Vitamin B6 (mg) Vitamin C (mg) Total Folates (µg) 1.5 Vitamin B12 (µg)2 Table 16.1. Food groups and nutrient content of suggested balanced diet for an elderly man weighing 65 kgs Nutrient values of suggested food groups Amount (g/day) Composition of food groups ~ 1710 Energy (kcal) Cereals & Millets ~ 62 Total Protein (g) Pulses (a portion of pulses can be replaced with egg/flesh foods) ~ 20 Visible fat (g) ~ 844 Calcium (mg) Green leafy vegetables ~ 22.1 Iron (mg) Other Vegetables ~ 10.2 Zinc (mg) Roots & Tubers-Vegetables (excluding potatoes) ~ 653 Magnesium (mg) Fruits ~ 162 Vitamin A (µg)/ -Carotene (µg) Milk ~ 9634 Fats & Oils ~ 1.4 Thiamine (mg) Oil seeds & Nuts (gingelly seeds & peanuts) ~ 1.5 Riboflavin (mg) Spices ~ 11.9 Niacin (mg) ~ 1.9 Vitamin B6 (mg) ~ 220 Vitamin C (mg) ~ 445 Total Folates (µg) ~ 1.5 Vitamin B12 (µg)2 ICMR-National Institute of Nutrition Figure 16.1. Suggested diet for normally nourished elderly men (>60yrs) (The menu is for reference individual weighing 65Kg & BMI 18.5–23 and with adequate physical activity) Total Calorie from the above diet is 1740 Kcal/day | Total protein provides 14.3% Kcal/day from the suggested diet. *non-veg items like fish/egg/chicken can be consumed as per social acceptability & availability | * Measures: 1 cup/Katori =200ml. In the meal preparation 20g oil and 5g iodised salt can be used | Prefer at least 50% cereals/millets as whole grain. Quantities indicated are for raw ingredients may refer to Table 1.6, Page no. 10. | Individuals with different body weight Note: One may consume sugar, but it must be restricted to 25–30 grams per day. To adjust the total calories, cereals must be reduced if sugar is taken. Energy requirements depends on body weight and physical activity | Added sugar must be restrict to less than 5% of daily energy. Total Calorie: ~1740 Kcal Crude Protein: 62g 8–9 am BREAKFAST (420 Kcal) 100ml milk Soaked & boiled whole grains-50g; Boiled red / black beans, cowpea/chickpea-20g; Green leafy vegetables-50g; Vegetables-100g; Oil-5g; Nuts-10g; Milk 100ml pm –2 Curd 100ml LUNCH (760 Kcal) Cereals (preferably whole grain)-70g; Pulses-40g; or meat Vegetables-100g; Green leafy vegetables-50g (can be used in curries/chutney); Nuts/ Oil seeds-add 20g in curries; with cooking oil (10g) for flavour; Curd-100ml/Paneer equivalent to 100ml; Fruits-end your meal with 50g fruits; 7–8pm DINNER (490 Kcal) Curd 100ml Cereals-50g; Pulses-15g; Vegetables-100g; Oil-10g; Curd-100ml; Fruits-end your meal with 100g fruits (Fresh juice) 4.30 5 – pm EVENING BEVERAGE (70 Kcal) 100ml milk (tea/coffee with/without sugar-optional) Refer: Annexure I & II for household measures ICMR-National Institute of Nutrition Figure 16.2. Suggested diet for normally nourished elderly women (>60yrs) (The menu is for reference individual weighing 55Kg & BMI 18.5–23 and with adequate physical activity) 8–9 am pm –2 7–8pm 4.30 5 – pm Total Calorie from the above diet is 1530 Kcal/day. Total protein provides 14.7% Kcal/day from the suggested diet. Measures: 1 cup/Katori=200ml. Non-veg items like fish/egg/chicken can be consumed as per social acceptability & availability. In the meal preparation 15g oil and 5g iodised salt can be used. Prefer atleast 50% cereal/millet as whole grain. Quantities indicated are for raw ingredients. may refer to Table 1.6, Page no. 10. Individuals with different body weight EVENING BEVERAGE (70 Kcal) BREAKFAST (390 Kcal) LUNCH (660 Kcal) Total Calorie: ~1530 Kcal Crude Protein: 56g Soaked & boiled whole grains-40g; Boiled red/black beans, cowpea/chickpea-20g; Green leafy vegetables-50g; Vegetables-100g; Nuts-10g; Milk 100ml Cereals (preferably whole grain)-60g; Pulses-30g; or meat Vegetables-100g; Green Leafy vegetables-50g (can be used in curries / chutney); Nuts/ Oil seeds-add 20g in curries with cooking oil (10g) for flavour; Curd - 100ml/ Paneer equivalent to 100ml; Fruits-end your meal with 50g fruits 100ml milk Note: One may consume sugar, but it must be restricted to 25–30 grams per day. To adjust the total calories, cereals must be reduced if sugar is taken. Energy requirements depends on body weight and physical activity | Added sugar must be restrict to less than 5% of daily energy. 100ml milk (tea/coffee with/without sugar-optional) DINNER (425 Kcal) Curd 100ml Cereals-40g; Pulses-20g; Vegetables-100g; Oil-5g; Curd-100ml; Fruits-end your meal with 100g fruits (Fresh juice) Curd 100ml Refer: Annexure I & II for household measures ICMR-National Institute of Nutrition POINTS TO REGISTER · Eat a variety of nutrient-rich foods. · Ensure regular physical activity. · Avoid HFSS and UPF foods with high amounts of salt, sugar and fats. · Consume adequate water to avoid dehydration. ICMR-National Institute of Nutrition",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_16",
+    "chunk_title": "Include nutrient-rich foods in the diets of the elderly for health and wellness"
+  },
+  {
+    "id": "qa_045",
+    "query": "According to DGI 2024 guidance on Drink adequate quantity of water, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 14: Drink adequate quantity of water. RATIONALE Adequate water is important for maintaining good health. A normal healthy person needs to drink about eight glasses (approximately two litres) of water including beverages per day. • Water is the major constituent of the human body. • Water and other beverages such as tender coconut water or lemon water are useful to relieve thirst and meet the fluid requirements of the body. Why do we need water? Water accounts for 70% of our body weight. It is a constituent of blood and other vital body fluids. Water plays a key role in the elimination of body wastes and regulation of body temperature. The body loses water through sweat, urine and feces. This loss must be constantly made good with clean and potable water. A normal healthy person needs to drink about eight glasses (approximately two litres) of water including beverages per day. During very hot weather and while undertaking vigorous physical activity, this requirement increases as a considerable amount of water is lost through sweat. When is water considered safe? Water can be considered safe if it is free from disease- causing agents like bacteria, viruses, parasites, etc., and harmful chemical substances like pesticides, industrial wastes, heavy metals, nitrates, arsenic, silica and excess of fluoride. Fluorosis, a disease that causes bone deformities and dental problems, results from drinking water containing an excess of fluoride over long periods. Generally, a concentration of 1–1.5 mg of fluoride per litre of drinking water is considered safe. How is water rendered safe? The simplest and efficient method of rendering water safe is straining and keeping the water boiling for 10–15 minutes. The boiling process kills all disease-causing organisms and also removes temporary hardness. However, boiling will not remove chemical impurities. Tablets each containing 0.5g of chlorine can be used to disinfect 20 litres of water. There are many modern gadgets which could help in rendering water safe. Tender coconut water: Tender coconut water is a good hydrating beverage which contains several minerals and provides 15 Kcal/ 100ml. However, in patients prone to hyperkalemia (in kidney and heart diseases), tender coconut water should be avoided. What about consuming milk? Milk is a well-accepted and wholesome food and a beverage for all age groups. Milk is especially useful for feeding infants, toddlers, growing children, adolescents, expectant women and nursing mothers. Milk is a rich source of several nutrients necessary for growth and development. Milk is a good ICMR-National Institute of Nutrition source of calcium but not iron. All macro and micronutrients present in milk are easily digestible and absorbable. Since it is likely to get contaminated, use pasteurized or boiled milk to ensure safety. What are soft drinks? Soft drinks are non-alcoholic beverages either carbonated or non-carbonated, and may contain sugar or artificial sweetening agents, edible acids (malic acid, citric acid or vinegar, etc.) natural or artificial flavors and sometimes fruit juice. Compared to fresh fruit juices, most commercially available fruit juices may contain varying amounts of fruit pulp (as low as 7%). Carbonated beverages contain phosphoric acid and may damage the enamel of teeth, and affect appetite if taken in excessive amounts. Synthetic soft drinks are not substitutes for water or fresh fruits and therefore should be avoided. Beverages like buttermilk, lemon water, whole fruit juice (without added sugar) and coconut water are excellent alternatives to synthetic drinks. Consumption of soft drinks or commercially available fruit juices increases one's sugar and salt intake and hence must be avoided. Fresh fruit juices: Orange, lemon, grape, mango, pineapple, apple, pomegranate, etc., are generally used in making fruit juices. Fresh fruit juices (without added sugar) provide vitamins (like beta-carotenes and vitamin C) and minerals (potassium, calcium, etc.). However, they cannot be equated to whole fresh Figure 14.1. Avoid carbonated beverages, fruit juices with added sugar and replace them with whole fruits or freshly made juices* Tender Coconut Water Buttermilk Fresh Lemon Juice Orange Juice Watermelon Juice Fresh Mango Juice Pineapple Juice Pomegranate Juice AVOID CONSUME Chia seeds soaked in lemon juice Apple Juice Synthetic soft drinks are not substitutes for water or fresh fruits and therefore should be avoided. * Whole fruits are preferable as they contain fibre & other nutrients. Freshly made juices for one normal individual should be from not more than 100–150gm fruits fruits which in addition to vitamins and minerals provide dietary fibre and should be preferred to fresh fruit juices from not more than 100 to 150g whole fruits can be consumed occasionally by adults. Sugarcane juice, which is extensively consumed in India, particularly during summer, is high in sugar (13–15g/100ml) and hence its consumption should be minimized. What about tea and coffee? Tea and coffee contain caffeine, which stimulates the central nervous system and induces physiological dependence. A cup (150ml) of brewed coffee contains 80–120mg of caffeine, instant coffee contains 50–65mg and tea contains 30–65mg of caffeine. Moderation in tea and coffee consumption is advised so that caffeine intake does not exceed the tolerable limits (300mg/day). Tannin is also present in tea and coffee and is known to interfere with iron absorption. Hence, tea and coffee should be avoided at least for one hour before and after meals. Besides caffeine, tea (green or black) contains theobromine and theophylline, which are known to relax arteries and thereby promote blood circulation. They also contain flavonoids and other antioxidant polyphenols, which may reduce the risk of coronary heart disease and stomach cancer. These benefits can be best obtained if milk is not added to tea and if it is taken in moderation. Excessive consumption of coffee is known to increase blood pressure and cause abnormalities in heartbeat. In addition, an association between coffee consumption and elevated levels of total and LDL cholesterol ('bad' cholesterol), triglycerides and heart disease has been demonstrated. Similarly, excessive consumption of tea should also be avoided due to its caffeine content. Avoid alcoholic beverages Alcoholic beverages contain ethyl alcohol in varying proportions. Beer contains 2–5% and wine 8–10% of alcohol, while brandy, rum and whisky contain much higher concentrations (30–40%). Alcohol provides higher calories (7 Kcal/g) than carbohydrates and proteins and thus, can contribute to abdominal obesity. Ironically, excessive intake of alcohol is known to suppress appetite and interfere with absorption and metabolism of nutrients, leading to various nutritional deficiencies. Alcohol has been extensively abused as a sedative-hypnotic drink. Alcohol intake, which is usually initiated as an innocent social habit can gradually result in a serious addiction. People who regularly consume more than two measures (containing 30ml of ethyl alcohol in each measure) are at a higher risk for hypertension and stroke. Alcohol also increases serum triglyceride levels. Alcohol intake has also been shown to increase the risk of cancers of the mouth, larynx, oesophagus, prostate and of the breast in women. Excessive alcohol intake weakens the heart muscle (cardiomyopathy) and also causes fatty liver, damages the liver (cirrhosis), brain and peripheral nerves. ICMR-National Institute of Nutrition Fresh fruit juices from not more than 100 to 150g whole fruits can be consumed occasionally by adults. ICMR-National Institute of Nutrition POINTS TO REGISTER · Drink adequate quantities of safe water to meet the daily fluid requirements. · Boil water, when safety of the water is in doubt. · Consume fresh fruits rather than in juice form. · Prefer butter milk, tender coconut water, lemon water etc., as beverages in hot weather. Avoid synthetic soft drinks and carbonated beverages. · Synthetic soft drinks are not substitutes for water and therefore should be avoided. · Avoid alcoholic beverages. ICMR-National Institute of Nutrition",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_14",
+    "chunk_title": "Drink adequate quantity of water"
+  },
+  {
+    "id": "qa_046",
+    "query": "According to DGI 2024 guidance on Restrict salt intake, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 11: Restrict salt intake. RATIONALE Increased salt (sodium chloride - NaCl) intake poses a health risk and may lead to hypertension and related heart diseases and stroke. High intake of salt is associated with high blood pressure and related vascular and heart diseases. ICMR-National Institute of Nutrition blood pressure outcomes, when the sodium-to-potassium ratio is considered as against considering either sodium or potassium alone. For optimal health benefits, individuals need to decrease their sodium intake and increase their potassium intake, leading to a decreased Na:K ratio. The current Indian as well as WHO recommendation for sodium intake is 2300mg per day, which translates to around 5000mg or 5g (1 teaspoon) of common salt per day. At this level of intake of sodium, the potassium requirement would be around 3800mg per day. It can be easily met by consuming recommended level of vegetables (400g) and fruits (100g) per day which will also lower the Na:K ratio. Along with fruits and vegetables, nuts and flesh foods are also good sources of potassium. Though all foods contain some amount of sodium, the contribution to total dietary intakes from food sources is less than 10% and a major amount comes from added salt either through cooking or processing. Hence, sodium intake can be restricted easily by changing food habits. Further, since taste for salt is an acquired habit, salt consumption should be restricted from an early age for health benefits in later life. What are the health problems associated with excessive salt/ sodium intake? Existing evidence reveals a deleterious impact of high salt intake on blood vessels, blood pressure, bones and gastrointestinal tract. There is a strong association between salt intake and blood pressure. Prevalence of hypertension is low in populations consuming less than 3g salt per day. The usual increase in blood pressure with age is also not seen with such intakes. The amount of salt consumed is reflected in urinary sodium levels. Restriction of dietary salt decreases the risk of hypertension. Potassium-rich foods such as fresh vegetables and fruits decrease blood pressure. In fact, it is the ratio of sodium to potassium in the diet which is important. Besides increasing blood pressure, excessive salt may also affect stomach mucosa and increase the risk of gastritis, atrophy and gastric cancer. Higher sodium intake leads to greater calcium excretion, which may result in reduction in bone density. Salt intake in our population generally exceeds the requirement. It should not be more than 5g per day. How to avoid excess salt intake? Processed foods such as snack foods, savouries, soups, sauces, ketchup, salted butter, cheese, canned foods, papads, and salted dry fish, salted nuts/dry fruits contribute to higher intake of salt. Preserved meats/vegetables and ready-to-eat foods contain a lot of salt and sodium. Additives like baking soda (sodium bicarbonate), baking powder (mixture of sodium carbonate and sodium bicarbonate) and monosodium glutamate are other sources of sodium in processed foods. Hence their consumption should be limited. Are other varieties of salt any better? Technically, all salt come from sea salt - even edible salt, table salt or sodium chloride. Salt is available in two forms i.e. refined and unrefined salts, which are consumed with the purity of 99% and 96 % respectively. The most common form of salt used is finely grounded and processed with an anti- High BP leads to and / or kidney problems Risk of heart attack and stroke ICMR-National Institute of Nutrition caking agent that helps salt granules from falling apart. Salt often contains some essential trace minerals such as Magnesium, Calcium, Iron, Sulfur and Nitrogen. In addition to common white refined or non-refined salts, rock salt is also used for specific recipes or occasions. Rock salts are of two types; pink salt (sendha namak) and the other one is black salt (kala namak). Pink and black salts can be easily distinguished by their color, texture and smell. Pink salt is one of the purest forms of salts. Black salt upon storage grows darker. Assorted spices, charcoal, seeds and tree bark are used in the preservation of this salt. Therefore, irrespective of the variety of salt, their consumption should be limited as the sodium content in them is almost similar. Black salt Pink salt ICMR-National Institute of Nutrition POINTS TO REGISTER · Use iodized salt · Restrict the intake of added salt (sodium chloride) to a maximum of 5g per day. · Develop a taste for foods/diets that are low in salt from an early age. · Restrict intake of processed and preserved foods such as snack foods, sauces, ketchup, biscuits, chips, cheese and salted fish. · Eat plenty of vegetables and fruits. These are good sources of potassium, which helps in excretion of sodium and helps maintain the blood pressure. Consume safe and clean foods",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_11",
+    "chunk_title": "Restrict salt intake"
+  },
+  {
+    "id": "qa_047",
+    "query": "According to DGI 2024 guidance on Consume safe and clean foods, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 12: Consume safe and clean foods. RATIONALE Contaminated and adulterated foods cause several food-borne illnesses, chronic diseases and may also contribute to malnutrition. ICMR-National Institute of Nutrition • Consumption of safe and hygienic foods is essential for maintaining good health. • Environmental contaminants and adulterants in foods are health hazards. • Consumption of unsafe foods can lead to food-borne illnesses, intestinal damage as well as undernutrition. What makes food unsafe? Safety of foods can be compromised due to microbial contamination, chemical contamination and adulteration. Natural enzymes present in food also lead to its deterioration over time. Besides, insects, rodents, adulterants, natural toxins and various chemical residues, present beyond permissible levels, make the food unsafe. In addition, moisture present in the food and some environmental conditions like humidity, temperature, storage time also influence the quality of the food. Microbial contamination (bacterial, viral, fungal and protozoan) can occur due to unhygienic practices. Chemical (pesticides, fluoride) and heavy metal (lead, cadmium, mercury and arsenic) contamination can occur due to environmental pollution or presence of chemicals and heavy metals in soil and water in endemic areas. Adulteration could be intentional or incidental and can adversely affect the nature, substance and quality of foods. It can be due to addition, removal, abstraction, substitution or modification of a food item. Adulteration may make the food 'unsafe' or substandard. It may happen at any stage of food production, processing and handling from farm to plate. How do we select safe food? Selection of safe food is the first step to ensure a healthy and good quality diet. Food items purchased from reliable sources increase the chances of getting good quality and fresh food. Food should be free from infestation, moulds and foreign matter like rodent excreta and insect remains. It should be free from artificial colors. Some pre- packaged foods carry certification marks assuring good quality and purity. For example, AGMARK on some agricultural products like oils, spices, atta and honey, etc., and Bureau of Indian Standards (ISI) mark on bottled drinking water. Selection of safe food is the first step to ensure healthy and good quality diet. Vegetable cooking oils: There is a risk of adulteration when fats/oils are purchased loose from unsealed containers. Therefore, it is always safer to purchase from a reliable source. Milk and milk products: Butter, ghee and khoa should be purchased from reliable sources only. It is advisable to buy pasteurized milk only. Spices: Since powdered spices are more likely to be adulterated, whole spices, uniform in color, size and shape should be preferred. Always buy certified products. Fruits and vegetables that are discolored, physically damaged, shrunken, bruised or wilted and decayed, with visible evidence of insects and moulds, should be avoided. Eggs should be fresh and free from cracks. Meat/Poultry/Fish must be examined for their characteristic color, odor and texture and should be purchased fresh or frozen. Freshness of fish is indicated by a stiff body, bright, clear and bulging eyes, reddish gills, tight scales and absence of stale odor or discoloration. Fresh fish will not show any pitting on finger pressure. What are the best practices of storage? Food grains should be dried adequately and stored in airtight containers to protect them from moisture and to prevent damage from microbes like bacteria and toxin- producing moulds. Rodent attacks, and the presence of insects and microbes render the foods unsafe. Frequent and careful disinfestation of food storage areas is essential. Some traditional household practices such as placing dried neem leaves in storage bins are known to prevent some infestations. Why do food-borne illnesses occur? Food-borne illnesses are common particularly with consumption of foods prone to spoilage/contamination such as milk products like khoa, meat, poultry and even improperly stored cooked foods (like rice). Improper processing, handling and cooking, and keeping cooked food in warm conditions for several hours promote bacterial growth and bacterial toxin production, which when consumed can cause food-borne illnesses. How should perishable foods be handled? Perishable foods like milk, meat, fruits, vegetables and cooked foods, are prone to spoilage due to microbes. These foods should be refrigerated, o preferably at a temperature of less than 5 C, which retards multiplication of microorganisms. However, even refrigerated foods, if stored for long, can get stale. In case of cooked food that has to be stored for some time prior to consumption, it should be kept either hot (more o o than 60 C) or be cooled quickly (below 5 C). Most o microorganisms multiply at temperatures between 5 C and o 60 C. Refrigerated, cooked food should be heated thoroughly before consumption. However, repeated heating of stored, cooked food should be avoided. Bacterial contamination from raw foods such as greens, vegetables, meat, fish can occur if cooked food is not kept separately in the refrigerator. Why is personal hygiene of food handlers important? Traditionally in India, food is touched with bare hands while preparing and serving. Clean spoons and ladles should be used to serve food and to avoid contamination. Those who prepare and handle foods should observe good personal hygiene to maintain food safety. Washing hands well with soap and water, for at least 20 seconds, prior to touching cooking utensils or food is essential. In addition, hands should be free from obvious signs of poor hygiene such as dirty nails, wounds and sores. Hands should be washed thoroughly with soap and water (for at least 20 seconds) before preparation of food and after every interruption, as well as before consumption. Keep domestic animals away from places where food is cooked, stored and served. ICMR-National Institute of Nutrition Refrigerated cooked food should be heated thoroughly before consumption. However, repeated heating of stored, cooked food should be avoided. ICMR-National Institute of Nutrition What are the common adulterants? Foods may be adulterated with non-food material or inferior quality products. Frequently adulterated food items are milk and milk products, cereals, pulses and their products, edible oils and spices. At times, spoilt, stale or poor-quality food is made attractive and fresh in appearance by adding harmful colors or other chemicals. The different classes of adulterants include non-permitted colors like metanil yellow; non-edible oils like castor oil; extraneous matter like husk, sand and sawdust in spices; and metal contaminants like aluminum foil on sweets or iron filings in tea. How to minimize pesticide residue in foods? Pesticides, used during cultivation of crops, can remain as residues in foodstuffs, especially vegetables and fruits. Exposure of the population to pesticide residues may be harmful and can be minimized by washing the food stuffs thoroughly in running water or by peeling. Cooking and other processes can also reduce such residues. Insect control operations such as disinfestation in the kitchen by spraying pesticides is another source of contamination. Utmost care should be taken to ensure that food is well covered and protected from exposure to such harmful agents. How to ensure safety of foods stored in refrigerators? · Store raw and cooked food items in refrigerator separately in different compartments. · Cut the roots of green leafy vegetables before storing in refrigerator. · Preserve eggs in refrigerator after washing them thoroughly. · Maintain safe refrigerator temperature at <5 C. · Store cooked food in refrigerator in containers with lids, preferably in small portions. · Clean the refrigerator once a fortnight. Safe use of cookware A variety of cookware used in the kitchen are made of different materials like aluminum, iron, brass or copper. Small amounts of these materials that are likely to leach into food during cooking or storing need not be a cause of concern. However, storing acidic foods like pickles, chutneys, sambar, solkadi, khatta dal and others in aluminum, iron, untinned brass or copper vessels for prolonged time can make consumption of such foods unsafe. Non-stick pans coated with Teflon are a risk if they are heated to temperatures greater than 170°C. This might happen if an empty pan is left on a burner for some time. In this case, the coatings can give off irritating or poisonous fumes, which when inhaled over long periods of time can also cause health hazards (refer to Guideline 13 for more details). POINTS TO REGISTER · Wash hands with soap and water before touching food, utensils or cooking. · Buy food items from reliable sources after careful examination. · Wash vegetables and fruits thoroughly before use. · Wash the surface of eggs thoroughly before preserving and before preparation. · Wash and cook meat thoroughly. · Store raw and cooked foods separately and properly to prevent cross-contamination. · Refrigerate perishable food items. · Maintain good personal hygiene and keep the cooking and food storage areas clean and safe. · Always use thoroughly cleaned utensils, knives, chopping boards. · Consume cooked foods within 4–6 hours of preparation. If left at room temperature, reheat thoroughly before consuming. ICMR-National Institute of Nutrition Adopt appropriate pre-cooking and cooking methods",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_12",
+    "chunk_title": "Consume safe and clean foods"
+  },
+  {
+    "id": "qa_048",
+    "query": "According to DGI 2024 guidance on Adopt appropriate pre-cooking and cooking methods, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 13: Adopt appropriate pre-cooking and cooking methods. RATIONALE Healthy cooking practices are important for good health Cut vegetables, leafy vegetables and fruits should not be soaked in water as water-soluble minerals and vitamins tend to get lost. • Regional and socio-cultural practices influence cooking and dietary practices. • Good pre-cooking practices help in retaining nutrients and reducing contaminants. • Cooking makes food palatable, helps in easy digestion, and destroys harmful germs. • Cooking at high temperatures can destroy nutrients and form harmful substances as well. Why is pre-cooking process important? Foods in their natural state contain different nutrients in varying amounts. In the course of food preparation, depending on the recipe, foods are subjected to various processes such as washing, cutting, grinding, fermentation, germination, and cooking. In Indian cuisine, fermentation (idli, dosa and dhokla) and germination (sprouting) are common practices. These methods improve the digestibility and bioavailability of micronutrients. In addition, sprouting also increases the content of certain vitamins. Foods should be washed well, but not repeatedly, before cooking or consumption to remove contaminants like pesticide residues, parasites, and other extraneous material. Vegetables and fruits should be washed thoroughly with potable water before peeling or cutting. However, certain precautions need to be taken while washing and/or cutting, to minimize the loss of nutrients: · Avoid repeated washing of food grains like rice and pulses as it will result in loss of certain minerals and vitamins. · Cutting vegetables into small pieces exposes a greater surface area of the foodstuff to the atmosphere, resulting in loss of vitamins due to oxidation. · Cut vegetables and fruits should be consumed as early as possible as their shelf-life and nutrient contents reduce drastically. · Cut vegetables, leafy vegetables, and fruits should not be soaked in water as water-soluble minerals and vitamins tend to get lost. Are there any household methods of processing to improve and help retain nutrients in food? Soaking, popping, puffing, sprouting/germinating, malting and fermenting are some of the established household methods that improve the digestibility and bioavailability of nutrients from wholegrains and legumes. Sprouted whole grains and legumes contain all of the original bran, germ and e n d o s p e r m . T h e nutrients present in ICMR-National Institute of Nutrition Steaming is better than blanching of vegetables as the nutrient content is better retained. sprouts are more bioavailable than those in whole grains and can meet the requirements of vitamins and minerals. When sprouting grains for human consumption, the optimum growth of the sprout should be only as long as the grain kernel itself. If grown any longer, the sprout begins to use up the power-house of nutrients that were stored in the grain, and the nutrient content declines. Method for sprouting The common procedure for sprouting grains and legumes at households is given below: · Place the cleaned grains in a strainer, rinse well, and drain the water. · Soak the grains in a bowl with excess water so that the grain is completely submerged overnight at room temperature or at least for 12 hours. · Drain the water in a strainer. Rinse well and collect the grains. · Place the grains in a moist cotton cloth or a double layer of clean muslin moist cloth in a jar and cover. Cloth should cover the grains loosely to allow air circulation. · Keep it out of direct light and keep at room (warm) temperature. The grains should sprout in 1–3 days. · Sprouts can be consumed without further processing or by adding some garnish. Blanching or steaming, which is better? Blanching involves putting vegetables in boiling water or steam for a short time and cooling them immediately in cold water to stop enzyme actions which could cause loss of flavor or color or texture. This process increases the shelf life of the vegetables, but the nutrients might be lost along with water. Hence, steaming the vegetables and cooling them immediately in the refrigerator is advisable instead of blanching. This way the vegetables are not soaked in water and therefore there is no loss of nutrients. Steaming is better than blanching of vegetables as the nutrient content is better retained. ICMR-National Institute of Nutrition Open and closed lid cooking: In open lid cooking, food takes a longer time to get cooked and exposure to air accelerates nutrient loss. While in closed-lid cooking food gets cooked quickly and nutrients are better retained because of the shorter cooking time. Green vegetables and green leafy vegetables change color during closed lid cooking but minimize nutrient loss. Boiling and pressure cooking: Boiling or pressure cooking is the best way to improve the nutritional quality of pulses since anti-nutritional factors (enzyme inhibitors that do not allow nutrients to get digested) are destroyed during boiling and pressure cooking. Hence, these methods increase the digestibility and therefore protein availability. The concentration of phytic acid in cereals and legumes (which hinders the absorption of minerals) decreases to a great extent after boiling or pressure cooking making important minerals like iron, calcium, magnesium, and zinc absorbable on consumption. Boiling with just enough water, without having to drain the water, is the best method to retain folate in legumes. This method of cooking improves the palatability of pulses. However, pulses should not be overcooked or boiled for too long as this reduces the quality of proteins. Longer cooking causes a drop in the nutritive value of pulses as it results in the loss of lysine. Remember to add only the required amount of water during boiling. B complex vitamins and vitamin C may be lost if the cooking water after boiling is discarded. Prolonged boiling also results in the loss of vitamins. Mineral content is not dramatically altered with boiling. Steaming: In contrast to boiling, during the process of steaming, the food merely comes into contact with steam. Direct contact between vegetable tissue and water is thus avoided, which significantly minimizes the loss of water-soluble vitamins and phytochemical compounds through leaching. Steaming is the best cooking method to increase the level of both antioxidants and polyphenols (which have antioxidant activity) in vegetables and greens. Further, this process makes many nutrients like beta carotene, and lutein more readily available to the body. Open and closed-lid cooking Pressure cooking Steaming What are the various cooking methods? Cooking improves the digestibility of most foods. Foods get softened on cooking and become easily chewable. Proper methods of cooking make foods palatable by improving their appearance, taste, flavor, and texture, thereby enhancing acceptability. In addition, they help in destroying disease- causing organisms and eliminate natural inhibitors of digestion. It is well known that cooking alters the nutritional value of foods as the chemical structure of the nutrient is damaged to a certain degree depending on the method of cooking adopted. However, cooking also makes many nutrients more available to the body. Further, cooking kills several microbes and decreases the chance of food contamination. Some cooking methods are discussed below. B complex vitamins and vitamin C may be lost if the cooking water after boiling is discarded. ICMR-National Institute of Nutrition Frying: Due to the high temperatures in the frying process, changes occur in nutrients, such as proteins, vitamins, and antioxidants. Some water-soluble vitamins, such as vitamin C can be lost during water evaporation. Overall, there will be a moderate loss of vitamins, and antioxidants and a small loss of minerals. Extended exposure of oil to high temperatures and atmospheric air can generate highly oxidized, potentially toxic products. The main disadvantage of this method, if used often, is that it increases the consumption of fats and oils. High consumption of food rich in fat has been linked with an increased risk of heart disease, stroke, and type 2 diabetes. These conditions include increased blood pressure, high blood sugar, excess body fat around the waist, and abnormal cholesterol or triglyceride levels. Repeated use of oils used for frying should be avoided. Further, already used oils should not be mixed with fresh oils and reused. Shallow frying: Shallow frying has higher nutrient loss. Compared to deep frying, there is a lot more exposure to ambient oxygen (due a high surface-to-volume ratio as the cooking fat or oil is present in a very thin layer in the cooking vessel). This causes fats and oils to degrade significantly when combined with high temperatures; the rate of Polymeric Triglycerides (PTG) generation is higher than in deep frying. However, shallow frying only lasts a short while and the frying medium is usually not recycled or reused. Stir-frying: The process of cooking cut pieces of vegetables or meat with a little oil on high heat while constantly stirring is called stir-frying. Cooking for a short time without water prevents the loss of B vitamins and the addition of fat improves the absorption of plant compounds, antioxidants, and fat-soluble vitamins. This method preserves nutrients when compared to cooking in liquid. The rapid cooking and high temperature seals in the nutrients but heat-labile (easily destroyed by heat) vitamins will still begin to degrade. Vitamin C may be lost during stir-frying. Cooking time affects vitamin C losses more than the cooking method. The longer the cooking time the greater the loss of vitamin C. Microwave cooking: There are minimal nutritional differences between foods prepared by conventional and microwave methods. As cooking time is very less microwave cooking is one of the least likely forms of cooking to damage nutrients. The microwave uses a small amount of water and steams food from the inside-out. This retains more vitamins and minerals than any other cooking method as no leaching of nutrients occurs. Further, as the cooking time in the microwave is shorter, it helps preserve vitamin C and other nutrients that break down when heated. The nutritional effects of microwaves on protein, lipid, vitamins, and minerals are minimal. It is preferable to use glass or microwave safe ceramic vessels and to avoid plastic vessels. Repeated use of oils used for frying should be avoided. Further, already used oils should not be mixed with fresh oils and reused. Stir-frying Shallow frying Frying Microwave cooking ICMR-National Institute of Nutrition Roasting: Roasting is generally an intense temperature treatment, where food is heated o at temperatures in a 150–300 C range or higher in an oven. The use of the constant oven temperature of 150–160° C throughout the cooking period results in lower cooking loss when compared to a high starting temperature. Heat-labile vitamins are, of course, destroyed in large amounts. Minerals remain intact with roasting. Roasting has beneficial and detrimental effects on various components, and the reason for such an eclectic outcome can be accredited to the product treated and processing conditions employed. Barbecue and grilling: In the barbecue method of cooking, low indirect heat is used. In grilling, high direct heat is used for cooking. Charcoal and wood are commonly used in this method of cooking *Polycyclic Aromatic Hydrocarbons (PAHs) are compounds that can be found in foods that have been grilled or barbecued, notably meats. The type of heat source used for barbecuing has a significant impact on PAH concentrations and the final PAH profile in the barbecued meat products. Continuous barbecuing with the same charcoal results in higher concentration of certain carcinogens. Grilling helps lower calorie intake and may even help with weight loss. While grilling does not remove all the fat from meats, it causes the excess fat to melt and drip off the racks. Other cooking methods allow the meat to cook in its own fat, which can be reabsorbed. Grilling also helps food keep more of its vitamins and minerals and seals in moisture without the added fats. Charring foods, specifically meats, on the grill should be avoided by continuously turning them over. Grilled meat preserves more of the vitamins and minerals in the meat including vitamin A, vitamin D, zinc, magnesium and iron, riboflavin and thiamine (essential B vitamins that help your body process food into the fuel your body needs). The same goes for grilled vegetables, where vitamins and minerals are better kept by grilling rather than any other cooking method, especially those with low water content like broccoli and asparagus. Grilling with too much marinate is not good as this may mean consuming too much salt or sugar. A by-product of grilling meats is known as advanced glycation end products (AGEs), or glycotoxins. As food is grilled, the AGEs multiply and this when ingested, leads to increased levels of inflammation. Slow cooking: During slow cooking cell walls break down and there is a release of powerful antioxidants from vegetables like tomatoes, corn, spinach, etc. making them more available to the body. Boiling peanuts increases their antioxidant concentration up to four times more than that of raw and roasted peanuts. Further, cooking meat in a liquid at low heat can help reduce the number of cell-damaging compounds known as AGEs (advanced glycation end products) that are produced in the meat by 50 percent when compared to broiling or grilling. *PAHs have toxic, carcinogenic properties. PAHs are highly fat soluble and thus readily absorbed from the gastrointestinal tract. They are rapidly distributed in a wide variety of tissues and tend to stay in body fat. Slow cooking Barbecue and grilling Roasting ICMR-National Institute of Nutrition Air frying: Air frying simulates deep frying without the excess use of oil. Air frying significantly decreases the amount of oil absorbed into foods compared to deep frying. Less oil generally leads to less calories, which can reduce the risk of weight gain and obesity. An air fryer may be particularly helpful when cooking starchy foods like potatoes. Air-frying fish may lower the amount of polyunsaturated fatty acids (heart-healthy omega-3 fats) in them, and potentially increase the number of inflammatory compounds. Adding herbs to fish may help reduce the fat oxidation that happens when fish is air-fried. Air frying Non-stick pans coated with teflon are a risk if they are heated to temperatures greater than 170°C. This might happen if an empty pan is left on a burner for a long time. In this case, the coatings can give off irritating or poisonous fumes. The usage and cleaning instructions should be strictly followed for non-stick cookware, and they should be discarded when the coating is worn-out or damaged. These are generally considered safe for cooking purposes if used properly. It is widely used in kitchens around the world due to its various benefits, including its durability, resistance to corrosion, and non- reactivity with foods. It doesn't leach or react with acidic or alkaline foods, which means it is unlikely to impart metallic flavors or harmful substances to cooked foods. We use a variety of cookware, which are made of different materials. Some of these materials like aluminum, iron, brass or copper can enter the food when we cook or store food in them. Storing acidic foods like pickles, chutneys, sambar, sauces in aluminum, iron, unlined brass or copper vessels will make foods unsafe. These are the safest cookware. When using earthen pots, very little oil is required. They are environment-friendly and keep the food's nutritional content intact. Heat can circulate through the food in earthen pots, preserving the nutrition. How to safely use cookware? Earthen pots Metal cookware Stainless steel cookware Non-stick pans coated with polytetrafluoroethylene (PTFE) (Teflon) These cookware nowadays are substantially lighter than granite stone cookware from earlier generations. Granite stone cookware save time and energy. These cookware also retain heat well, even after the heat source is turned off. Unless the cookware contains teflon coating such as Perfluorooctanoic acid (PFOA), (PFOS) and perfluorooctane sulfonate polytetra-fluoroethylene (PTFE), it is regarded as safe. When using granite cookware, set the cookware's temperature to a maximum of medium-high, as the non-stick coating gets damaged at a high temperature. The non-stick coating will be protected at medium-high heat. ICMR-National Institute of Nutrition Granite stone cookware POINTS TO REGISTER · Do not wash food grains and legumes repeatedly before cooking. · Do not wash vegetables and fruits after cutting or peeling. · Do not soak the cut vegetables in water. · Do not cook in excess water and discard it after cooking. Use only enough water for cooking. · Always cover cooked foods with lids. · Prefer pressure/steam cooking instead of deep frying/roasting. · Consume more sprouted or fermented foods. · Do not use baking soda while cooking pulses and vegetables as it adds to the sodium content (just like salt) of foods. · Avoid reheating and reuse of left-over heated oils. · Prefer earthen cookware over others. ICMR-National Institute of Nutrition Drink adequate quantity of water",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_13",
+    "chunk_title": "Adopt appropriate pre-cooking and cooking methods"
+  },
+  {
+    "id": "qa_049",
+    "query": "According to DGI 2024 guidance on Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass, what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 8: Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass. RATIONALE Maintaining good muscle mass is crucial for good health. Consuming good quality protein (that provides all the EAA) and following resistance exercise routine for greater muscle mass development and preservation. ICMR-National Institute of Nutrition Why should we maintain good muscle mass and how to maintain? · Maintaining higher muscle mass keeps the bones strong. · S t r o n g a n d g o o d muscle mass helps joints move freely, and there is less strain on knee or hip joints; and protects joints from damage. · Maintaining higher muscle mass improves insulin sensitivity and decreases the risk of diabetes, stroke and heart attacks. · Maintaining higher muscle mass delays ageing. · Regular physical activity (including strength exercise) along with a good diet is important for maintaining good muscle mass and muscle function (ref. Guideline 10). How much proteins do we need? · The estimated average requirement (EAR) for protein intake is 0.66g of protein per kg/day for healthy men and women. · The recommended dietary allowance (RDA) for protein intake is 0.83g protein/kg/day for healthy men and women. · This translates to an EAR of 43g protein/day or RDA of 54g/day for a person weighing 65kg, regardless of physical activity or gender. The protein energy (P:E) ratio should be ideally 10% to 15%; that is, 10% to 15% energy should be from proteins in our daily diet. · The required quantity of protein and the PE ratio are easily met from the daily diverse diet, even when only consisting of plant foods (vegan diets). The challenge is the quality of the protein in the diets, since not all proteins are digested and absorbed equally well, nor are all proteins the same in their EAA content. Thus, some diets, mainly those that are predominantly cereal based, may not provide all the essential amino acids (may not have enough high-quality protein). Nevertheless, diverse food-based allowances are ideal for protein recommendations, as given below. How to obtain good quality protein from our diet? · Of the EAAs, cereals have lower levels of lysine but higher levels of sulphur-containing amino acids (methionine and cysteine). In case of pulses, the reverse is true; pulses have higher levels of lysine and lower levels of methionine and cysteine. · Therefore, an appropriate combination of cereals with pulses in the ratio of 3:1 (raw food weight) can meet the requirements of all EAA including other amino acids. Addition of 250ml milk in our daily diet can further enhance the intake of EAA and meet the requirements of all the EAA. · Non-vegetarians can easily source their high-quality protein from recommended level (700g to 900g/week of Maintaining higher muscle mass improves insulin sensitivity and decreases the risk of diabetes, stroke and heart attacks. Table 8.1. Limiting amino acids (AA) in plant foods Note: A meal containing both pulses and grains supplies all amino acids and is of higher quality than a diet containing pulses alone or grains alone. Compliment with other foods to obtain the limiting AA Limiting essential amino acids Foods Pulses, chickpea & beans which are rich in lysine, threonine and tryptophan Lysine, Threonine, Tryptophan Grains (cereals, millets) Cereals, millets, nuts and seeds which are rich in methionine Methionine Pulses Pulses, chickpea, beans (kidney beans, cowpeas) Lysine Nuts/seeds ICMR-National Institute of Nutrition fish, poultry or lean meat) of flesh food or egg consumption. · One should be physically active to ensure that the protein consumed is utilized (muscle atrophy sets in with low physical activity). Will just protein consumption help build muscle mass? · No, the dietary protein is not utilized efficiently even if one takes high proteins of good quality without adequate carbohydrate and fats in the diet. Hence, adequate energy from carbohydrates and fats is essential for dietary amino acids (proteins) to be utilized for muscle mass synthesis and for amino-acid related functions in the body. · In addition, without adequate physical activity or resistance exercise, proteins will not be used for muscle building. One should be physically active and perform strength exercises and ensure that the protein consumed is utilized (muscle atrophy sets in with low physical activity). · Even when doing resistance exercise, there is a limit to how much protein can be used for muscle building. Typically, it has been found that protein building in muscle after exercise stabilizes (muscle building does not increase further) after the typical protein intake which is in a diverse meal (balanced diet). Taking protein supplements on top of normal meal (balanced diet) intake is not going to build more muscle. How do vegans get enough protein? · Vegans eating varied diets containing vegetables, beans, grains, nuts, and seeds will have no difficulty in obtaining enough protein from regular diet. · Appropriate combination of cereals with pulses in the ratio of 3:1 (raw) is the most efficient way to obtain all the nine essential amino acids from a vegan diet. What are the sources of proteins? Dietary proteins can be derived from plant and animal sources. Some proteins, especially animal source (meat, poultry, fish, egg and milk) proteins contain all twenty amino acids, including nine EAA, required to make new proteins in the body. Pulses such as lentils, green gram, horse gram, black gram, chickpeas, kidney beans, cowpeas, soyabean and green peas are all rich sources of proteins. Nuts and seeds such as almonds, pistachios, cashews, walnuts, hazelnuts, chia seeds, pumpkin seeds, flax seeds, and sesame seeds also contain substantial quantity of protein. Flesh foods, eggs and milk are good sources of quality proteins. Pulses are very important sources of protein in balanced vegetarian Indian diets. Protein obtained from pulses is less expensive compared to meat-based, eggs or milk proteins. Protein quality of a diet is enhanced when pulses are eaten in combination with cereals or cereals are eaten in combination with flesh food, eggs or milk. Pulses are low-fat and high-fibre foods and also contain important vitamins and minerals like iron, potassium, zinc and magnesium. Most of the vegetarian foods have a protein digestibility range of 70%–85% and a balanced vegan diet for a moderately active man, provides more than 80g crude protein/day. This translates to approximately 60g of quality protein that meets the requirements of all the EAAs. What are protein powders or protein supplements? Protein powders are made from either eggs or dairy milk or whey (a by-product of cheese or paneer) or plant sources such as soyabeans, peas and rice. Some protein powders, marketed in packages as protein supplements, contain protein from multiple sources. Protein powders may also contain added sugars, non-caloric sweeteners and additives such as artificial flavoring. Whey protein is rich in branched chain amino acids (BCAAs). Recent evidence suggests that BCAAs may increase the risk of certain non-communicable diseases (NCDs). As mentioned above, adequate non-protein energy from carbohydrate and fat is essential for dietary proteins/AA to be utilized for protein synthesis and for related functions in the ICMR-National Institute of Nutrition body. Consuming high level of protein, especially in the form of protein supplement powders, is therefore not advisable. Many athletes consume very high amounts of protein, often as protein powders. Protein requirements are not as high as commonly perceived. In fact, research findings indicate that dietary protein supplementation is associated with only a small increase in muscle strength and size during prolonged resistance exercise training (RET) in healthy adults; and protein intake levels greater than ~1.6g/kg/day do not contribute any further to RET-induced gains in muscle mass. Most athletes can get the recommended amount of protein through food alone, without the use of supplements. Moreover, prolonged intake of a large amount of protein as a sole supplement is associated with potential dangers, such as bone mineral loss. Bone mineral loss occurs because of the acid generated when oxidizing excess amino acids in the body, and calcium is mobilized from bone to buffer this acid load. When one eats a balanced diet with fruits and vegetables, it helps to buffer this acid load. The important message is not to overdo any single supplement form of nutrient, and to eat a balanced diet with high-quality protein foods. Kidney damage, or worsening renal function with high protein intake, may occur in those who already have some renal disease; therefore high protein diets should be taken with care in such persons. As can be seen from the table 8.2, all the amino acids can be easily met if one consumes a healthy balanced diet, whether vegetarian or non-vegetarian. Appropriate combination of cereals: pulses in a ratio of 3:1 or by substituting 30g of recommended level of pulses with 80g meat per day would improve quality of protein to fulfil the needs of a normal person. Table 8.2. Essential amino acid profile of vegetarian and non-vegetarian diets “ICMR-NIN, My Plate for the Day” Protein (mg/g) from non-vegetarian* diet Protein (mg/g) from vegetarian diet ICMR-NIN, 2020 Nutrient recommendation (mg/g protein) Amino acids 24.8 24.1 Histidine 42.8 41.2 Isoleucine 86.6 84.0 Leucine 50.0 49.0 Lysine 18.8 17.2 Metheonine 12.4 11.2 Cysteine 31.2 28.4 Methionine + Cysteine 37.8 35.5 Threonine 89.6 87.9 Phenylalanine + Tyrosine 11.3 10.8 Tryptophan 53.4 51.3 Valine ICMR-National Institute of Nutrition Consuming high level of protein, especially in the form of protein supplement powders is not advisable. * Protein from animal source are more easily digestible and better absorption. POINTS TO REGISTER • Combining cereals with pulses in the ratio of 3:1 will improve the quality of protein in a meal. • Vegetarians can meet their quality protein needs by taking recommended level of pulses, beans, peas & milk/curd. • Non-vegetarians can meet their quality protein needs by taking recommended level of fish/poultry/meat/egg. • Most athletes can get the recommended amount of protein through appropriate selection of food items. Protein powders are unnecessary for normal healthy life. • Indiscriminate use of excess protein as supplements for prolonged periods can affect health. Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity · Marked increase in the prevalence of abdominal obesity (increased waist circumference), overweight, and obesity among all the age groups in rural and urban areas has occurred in the last few decades. · About 25% of Indians are either overweight or obese. · Excess energy intake and reduced physical activity leads to excess accumulation of fat in the body. · Individuals with abdominal obesity (adiposity) and overall obesity are at an enhanced risk of lifestyle diseases (chronic non-communicable diseases-NCDs) including type 2 diabetes, fatty liver disease, gallstones, joint disorders (osteoarthritis), hypertension, other cardiovascular diseases, certain cancers, and psycho-social problems. · As age advances, one needs fewer calories each year as the metabolism slows down and lean (muscle) mass decreases. However, inactivity slows down metabolism more rapidly and muscle mass atrophy is faster. Thus, one can maintain muscle mass and increase metabolism by being active. · Eat healthy (Guideline 1): Avoid or restrict foods containing high sugar, fat, salt and ultra-processed foods. These foods hasten the process of adiposity/obesity. · Being physically active and following a healthy diet will help reduce abdominal obesity (Figures 9.1 & 9.2). What is Body Mass Index (BMI)? BMI is the ratio of weight and height, which estimates total body mass and correlates highly with the percentage of body fat. It is computed by dividing the weight in kilograms by the square of the height in meters [BMI=Weight (Kg)÷Height (M) ]. The ideal ranges of weights for a given height are provided by WHO which is useful for categorizing persons as normal (ideal), undernourished and overweight or obese. The cut-off levels for categorizing overweight and obesity in children and adolescents are different since growth spurt in boys and girls occurs in different ages. Age and gender specific BMI Z-scores of reference population are used to assess their nutritional status. What is overweight and obesity? The definition of overweight and obesity is based on BMI. In general, BMI for adults, as per WHO, ranging from 18.5 to 25 Kg/M is considered to be normal. However, for Asians it is",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_08",
+    "chunk_title": "Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass"
+  },
+  {
+    "id": "qa_050",
+    "query": "According to DGI 2024 guidance on Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA), what is the recommendation?",
+    "expected_answer": "DGI 2024 guidance says: Guideline 7: Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA). RATIONALE Using a diverse variety of oil seeds, nuts and whole grains, provides a balance of all fatty acids (lipids). Refined or extracted oils are processed products; hence it is best to use them in moderation. ICMR-National Institute of Nutrition the form of triglycerides. Based on their structure, fatty acids are broadly grouped as saturated fatty acids (SFA), monounsaturated (MUFA) and polyunsaturated (PUFA). Coconut oil, palm oil, ghee, butter, lard, tallow, milk, milk products and meat contain SFA. Cholesterol is found only in animal-source foods. Cholesterol is synthesized in the liver from carbohydrates and fats in our diet. Liver cholesterol synthesis increases when the cholesterol intake in our diet is low; and the synthesis is suppressed when our intake is increased. Cholesterol is carried by lipoproteins in our blood: low density lipoprotein (LDL) and high density lipoprotein (HDL). What are the physiological/health implications of different fats/oils? PUFAs (n3 and n6): PUFAs are essential components of cell membranes. While n-6 PUFAs are predominant in all cells, the brain cells and nerve tissue have high levels of n-3 PUFA. The long chain PUFAs of n-3 (Docosa Hexaenoic Acid–DHA and Eicosa Pentaenoic Acid–EPA) and n-6 (Arachidonic acid–AA) are essential during growth and development. During the fetal and early infant development, there is a rapid accretion of AA and DHA in infant brain, DHA in retina and AA in the whole body for meeting the demands of rapidly growing tissues/ organs. Small amounts of DHA are also present in cell membranes throughout the body. AA and DHA have different and specific roles in neural and behavioral functions. DHA is crucial for the function of rhodopsin for vision and post- synaptic receptors for neurotransmission. Fish, sea foods and micro algae provide long chain n-3 fatty acids such as DHA and EPA. These are biologically more active than short-chain alpha-linolenic (n-3) fatty acid present in plant foods. These long chain n-3 fatty acids are important for vision and brain growth and development during fetal life. MUFA: MUFA decreases clot formation and atherogenesis. Saturated fatty acids: SFA are known to increase serum total and LDL-cholesterol levels, increase inflammation, reduce insulin sensitivity and enhance the tendency of clot formation (thrombogenicity) and increase the risk of heart attack and stroke. Cholesterol (lipid from animal source): Cholesterol plays an important role in the body cell membrane's fluidity and permeability. Cholesterol is also a precursor of many hormones and vitamin D. Cholesterol aids in cell signalling function and hormone activity. It is actively synthesized in the liver whenever required. High density lipoproteins (HDL) remove and transport excess cholesterol from the tissues to the liver for degradation, and are therefore, anti-atherogenic. However, high blood levels of LDL cholesterol result in accumulation of lipids in the cells and causes atherogenic effect. A healthy diet (balanced diet) and physical activity improve HDL and decrease LDL. Trans fatty acids (TFA): TFAs are fats that are produced during hydrogenation of vegetable cooking oils (example, vanaspati). TFA consumption alters lipid profile (dyslipidemia), endothelial dysfunction, decreases insulin sensitivity and increases risk of diabetes, breast cancer, colon cancer, preeclampsia, disorders of nervous system and vision in infants. Hence, one must avoid processed foods or bakery foods containing TFA. · Fats, also called lipids, promote absorption of fat-soluble vitamins (A, D, E and K). · In addition to important functions, fats contribute to energy, texture, flavor, taste and increase the palatability of the diet and impart a feeling of fullness and satisfaction and thus delay the onset of hunger. ICMR-National Institute of Nutrition Tallow Ghee · Fats increase the energy density of food as each gram of lipid gives energy of 9 Kcal, while protein or carbohydrates give only 4 Kcal for every gram. Dietary fats also contain minor components such as tocopherols, tocotrienols, sterols, etc. The natural flavor of fats/oils is largely due to these minor components. Since, most of the minor components are antioxidants, they prevent fats from going rancid. Tocotrienols in palm oil, lignans in sesame oil and oryzanol and tocotrienols in rice bran oil reduce blood cholesterol. Refining of oils, though does not alter their fatty acid composition, modifies the composition of minor components; for example, palm oil is extracted from the crude pulp of the fruit of oil palms. The color of the pulp is red as it is rich in beta carotene (precursor of vitamin A). These carotenes are lost during refining of crude palm oil. What are the sources of fats? Plant foods have no cholesterol and are fairly good sources of MUFAs and PUFAs. Some plant foods also have SFAs. In most cereals, millets, beans and pulses the fat content ranges between 1.5%–3%. In cereals, millets and most oilseeds, n-6 is the major PUFA. Pulses, beans, green leafy vegetables and oilseeds such as soyabean, rapeseed/mustard, flax seeds, perilla and fenugreek seeds are good sources of both n-6 and n-3 PUFAs. Animal foods such as butter, ghee, whole milk, cream, fatty cheese and fatty meats are sources of cholesterol and SFAs along with some quantities of MUFAs and PUFAs. Egg has cholesterol but is a good source of n-6 and n-3. Marine fish is a good source of LC n-3 PUFA Oil seeds, nuts, . fenugreek seeds, beans, cereals, millets, leafy vegetables, if consumed adequately, can meet the requirements of both n3 and n6 essential fatty acids. · Omega-6 is commonly found in most foods, while n-3 is available in walnuts, flax seeds, chia seeds, soyabean, fenugreek seeds, mustard and leafy vegetables (Table 7.1). · Marine fish, other sea foods and eggs are good natural sources of long chain PUFAs (DHA, DPA, EPA). Figure 7.1 Table 7.1. Approximate quantity of foods required to furnish minimum 100mg n-3 PUFAs g Vegetable oils (ALA) g Plant foods (ALA) 0.7 1.5 0.5 0.2 Mustard/Rapeseed Soyabean Canola Flaxseed 1.4 Cereal/Millet Wheat & Bajra Oats Wheat – –50 LC n-3 PUFAs from animal foods Fish Low/medium fat fish Oily fish (>5% fat) Pulses Black gram, Rajmah & Cowpea Soyabean Other pulses Vegetables Green leafy Purslane Radish seed (sprouted) Spirulina (dried) 2 3 eggs 1 egg 1/3rd egg Poultry egg Standard DHA enriched (flaxseed) DHA enriched (meal from marine sources) Chicken Spices Fenugreek seed Mustard seed Nuts Walnuts Almonds Lean meats Lamb, sheep, goat, beef, pork 0.5 0.5 Unconventional oilseeds Flaxseed (linseed) Perilla seed ICMR-National Institute of Nutrition Fats/oils that are used for cooking (vegetable oils, vanaspati, butter and ghee) or added to foods at the time of consumption/ dressing, are termed as ‘visible’ fats. Fats that are present as integral components of various foods (such as nuts, seeds, pulses, cereals and millets) are referred to as ‘invisible’ fats. Cereals contain only 2%–3% of invisible fat, however, their contribution to overall fat intake is significant as they contribute to bulk of our Indian diets. Most animal foods provide high amounts of saturated fat; hence it is advisable to choose lean cut meats. How much visible fats do we need? If one consumes adequate amounts of nuts, oilseeds, pulses and beans, the required amounts of 6.6g of n-6 PUFA and 2.2g of n-3 PUFA are easily met for all the essential functions in the body; and hence, there is no need for visible fats. However, today's dietary patterns and consumption habits are such that almost all recipes are made with visible fats. Therefore, visible fats cannot be avoided, but can be limited. The visible fat (cooking oil) must be limited to 20–50g (4–10 teaspoon full) per person/ day depending on the level of energy (calorie) requirement, which is based on physical activity and physiological status. (For example, not more than 27–30g visible fat/cooking oil is required for a 2000 Kcal diet/day). It is recommended that adult women or men with sedentary lifestyle limit daily fat intake to 20g and 30g of visible fat, respectively. Adult men with moderate and heavy physical activity may consume visible fat up to 40g and 50g respectively, while adult women with moderate and heavy physical activity may consume up to 30g and 40g respectively. During pregnancy and lactation, intake of oil seeds, nuts, beans and fish consumption must be encouraged to meet the daily needs of the higher fat and EFA requirement of fetus and infants. During these periods, visible fat should be restricted, while TFA should be avoided. Does processing alter the quality of oils? In general, all extracted seed (vegetable) oils must be used in moderation as extraction procedures (whether crude or refined) may contain undesirable substances. Crude vegetable oils are likely to contain several undesirable compounds, hence, the crude oil is subjected to a series of ‘refining process’ (using chemicals) to remove these undesirable compounds so that vegetable oils are suitable for human consumption. ‘Refining’ also removes the odor and extends the shelf life of vegetable oils. During the refining process, small amounts of minor components such as antioxidants, phytosterols etc. are also removed without altering the fatty acid composition. Processing or refining of extracted oils removes undesirable compounds found in crude extracted oils, but the refining process adds several additives including preservatives. Requirement of fatty acids (FA) for health PUFA (Essential FA) • n-6 PUFA: Minimum requirement is 3% energy/day. This implies 60 Kcal or 6.6g n-6 PUFA for a 2000 Kcal diet. • n-3 PUFA: Minimum requirement is 0.6% to 1.2% energy/day. This implies approximately 20 Kcal or 2.2g n-3 PUFA for a 2000 Kcal diet. • The above requirement is met from a balanced healthy diet and adequate intake of nuts and oil seeds (refer My Plate for the Day & Table 6). • Additional cooking oils/fats containing MUFA, PUFA or ghee/butter can be added for taste and flavor, upto 27 to 30g for a 2000 Kcal diet. • Limit ghee or butter to just 1 to 2 teaspoons/day or avoid, if possible. ICMR-National Institute of Nutrition 'Crude vegetable oils' are the vegetable oils extracted from seeds (sunflower, soyabean, mustard, sesame, etc.) or fruits like palm and olive by mechanical expelling. Crude vegetable oils are likely to contain several undesirable compounds such as free fatty acids, gums, waxes, mono and diacylglycerides, phospholipids, hydrocarbons, pesticide residues, aflatoxins and allergens. 'Virgin oils' are produced by mechanical procedures, (expeller pressing) and the application of heat. However, virgin oils also contain undesirable compounds (details above), similar to crude oil. Nutrients such as antioxidants and phytonutrients are preserved, since use of mechanical procedures does not alter the nature of the oil. ‘Cold pressed oils' (Kachi ghani tel), also contain undesirable compounds, similar to crude oil. However, nutrients such as antioxidants and phytonutrients are preserved as they are obtained without altering the nature of the oil by mechanical procedures, (expeller pressing), without the application of heat. What about hydrogenated fat? Hydrogenated fat is prepared by partial hydrogenation of vegetable oils (often referred to as 'vegetable shortening'). During hydrogenation, the liquid oils become solid because MUFA and PUFA are converted into SFA and isomers called trans fatty acids. Vanaspati is used as a substitute for ghee/ butter in cooking and the preparation of sweets, snack foods and bakery products. Current evidence indicates that intake of trans-fatty acids can increase the risk of heart disease and stroke and are more harmful than SFA. Repeated heating of oils The practice of 'reusing' vegetable oils for cooking, (which have been repeatedly heated during food preparations) is very common, both at homes and in commercial establishments. Repeated heating of vegetable oils/fat, results in oxidation of PUFA, leading to the generation of compounds which are harmful/toxic and may increase the risk of cardiovascular diseases and cancer. At household level, vegetable oil once used for frying, should be filtered and may be used for curry preparation but using the same oil for frying again should be avoided. Also, such oils should be consumed in a day or two. Storing 'used' oils for a long time should be avoided, as the rate of deterioration is high in such oils. ICMR-National Institute of Nutrition Figure 7.2. Fatty acid composition of vegetable oils (g/100g oils) Mustard Safflower Sunflower Sesame Corn Soyabean Groundnut Rice bran Cotton seed Palmolein Ghee Coconut SFA MUFA n-6 PUFA n-3 PUFA Ref: IFCT, 2017 POINTS TO REGISTER · Include foods rich in alpha-linolenic (ALA)/n-3 PUFA such as nuts & seeds, soyabeans, grains/millets, green leafy vegetables and fenugreek seeds. · Prefer marine fish such as salmon, mackerel, trout and tuna (~200gm/week) which are good sources of preferred LC n-3 fatty acids. · Moderate the use of high n-6 PUFA containing oils. · Limit the use of high saturated-fat containing oils/fats such as ghee, butter etc. · Minimize consumption of ready-to-eat fast foods, bakery foods and processed foods which may contain trans fats and saturated fats. · Avoid using partially hydrogenated fats (vanaspati) as the cooking medium as they may contain trans-fats and saturated fats. · Repeated heating of cooking oils generates harmful oxidative (polar) compounds and hence must be avoided. · Daily diet of an adult often provides 60g to 70g of protein a day, which is higher than what we require. · However, quality of protein and meeting requirements of all essential amino acids (EAA) is the primary challenge. · Of the twenty amino acids (AA) that are required for all the functions in the body, nine are essential; which cannot be synthesized in our body. Hence, it is important to consume diverse groups of foods to obtain all the essential nine AA. · Of the nine, four amino acids are the ones which are limiting in plant foods (vegetarian) (Table 8.1). · Vegetarian diets with appropriate combination of cereals and pulses and with the inclusion of nuts and seeds can provide all the EAA. Inclusion of milk in daily diet would further enhance protein quality. · Non-vegetarian diets can provide quality protein by appropriate combination of cereals, pulses, nuts along with recommended level of fish/poultry/meat/egg (flesh foods and egg contain all the EAA). Why do we need proteins and EAA? Every part of our body including all the organs have proteins. Proteins are essential for many functions such as making enzymes, hormones, cell membrane components and carrier proteins such as hemoglobin (carries oxygen to tissues). Proteins are also required to replace tissues that are broken down. In addition to the above, growing children require dietary protein for growth to build muscles and bones. Human body requires only 20 AA. Thousands of different types of proteins are made from these 20 AA. Of the 20, nine amino acids are not synthesized in the body, hence these should be obtained from the dietary sources, and these are termed essential amino acids (EAA). A diet with all 20 amino acids, including 9 EAA referred to as good quality proteins, is essential in the maintenance of good muscle mass. Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass",
+    "expected_sources": [
+      "DGI_2024"
+    ],
+    "nutrient": null,
+    "age_months": null,
+    "age_group": null,
+    "foods": [],
+    "category": "general_question",
+    "chunk_id": "dgi_guideline_07",
+    "chunk_title": "Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA)"
+  }
+]

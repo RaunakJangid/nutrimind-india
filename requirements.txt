@@ -1,0 +1,12 @@
+streamlit>=1.28
+pandas>=2.0
+numpy>=1.24
+pydantic>=2.0
+python-dotenv>=1.0
+rapidfuzz>=3.0
+jinja2>=3.1
+google-generativeai>=0.3
+sentence-transformers>=2.2
+faiss-cpu>=1.7
+ragas>=0.1
+pytest>=7.0

@@ -1,0 +1,10 @@
+{
+  "model": "llama",
+  "note": "Development placeholder metrics. Run with real RAGAS dependencies and real data for paper results.",
+  "num_questions": 50,
+  "faithfulness": null,
+  "relevance": null,
+  "precision": null,
+  "recall": null,
+  "context_utilization": null
+}
