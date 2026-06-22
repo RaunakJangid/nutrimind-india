@@ -23,6 +23,7 @@ from core.context_merger import merge_context
 from core.decomposer import decompose
 from core.retriever import retrieve_all
 from core.synthesizer import synthesize_answer
+from core.verifier import verify as run_verify
 
 # Import ragas metrics if available
 RAGAS_AVAILABLE = False
@@ -83,9 +84,8 @@ def run_full_pipeline(query_text: str, model_backend: str, qid: str) -> dict:
         except Exception:
             contexts.append(f"RDA_2020 structured data: {json.dumps(rda)}")
 
-    # 2. KEEP SEMANTIC CHUNKS — skip for diet_check (answer is deterministic;
-    # no semantic chunk is ever referenced, they only dilute precision).
-    if merged_context.semantic and entities.intent != "diet_check":
+    # 2. KEEP SEMANTIC CHUNKS (optional but good)
+    if merged_context.semantic:
         contexts.extend([chunk.text for chunk in merged_context.semantic])
 
     # 3. IFCT raw per-100g strings — for non-diet_check items only.
@@ -126,23 +126,28 @@ def run_full_pipeline(query_text: str, model_backend: str, qid: str) -> dict:
         print("calculation_result is None")
 
     # 4. CALCULATION-GROUNDED CONTEXT STRINGS — diet_check only.
-    # RDA (required) is already in block 1; only add consumed + gap here.
-    # Three total chunks for diet_check: RDA (block 1) + consumed + gap.
-    # All three map 1-to-1 to claims in the answer → precision should hit ~1.0.
+    # Injected here (after calculate_gap) so we can use calculation_result
+    # values formatted with the same :.1f rstrip as render_response().
+    # This is the root fix for faithfulness: answer says '21.6 g', context
+    # must also say '21.6 g', not '21.55 g' (raw IFCT) or '21.6000...' (float).
     if calculation_result and getattr(calculation_result, "intent", None) == "diet_check":
         _fv = lambda v: f"{v:.1f}".rstrip("0").rstrip(".")
-        _nutrient = calculation_result.nutrient.replace("_", " ")
-        _unit     = getattr(calculation_result, "required_unit",
-                            getattr(calculation_result, "consumed_unit", "g"))
+        _nutrient  = calculation_result.nutrient.replace("_", " ")
+        _unit      = getattr(calculation_result, "required_unit",
+                             getattr(calculation_result, "consumed_unit", "g"))
+        _age_grp   = getattr(calculation_result, "age_group", "")
 
+        # Required — same format as block 1 but guaranteed to match the answer
+        contexts.append(
+            f"RDA_2020 structured data: {_nutrient} requirement"
+            f"{' for ' + _age_grp if _age_grp else ''} "
+            f"= {_fv(calculation_result.required_value)} {_unit}"
+        )
+
+        # Consumed — total intake value, same rounding as answer (NOT per-100g raw)
         contexts.append(
             f"IFCT calculation: total {_nutrient} consumed from food intake"
             f" = {_fv(calculation_result.consumed_value)} {_unit}"
-        )
-        contexts.append(
-            f"Calculated nutritional gap: {_nutrient} gap"
-            f" = {_fv(calculation_result.gap_value)} {_unit}"
-            f" ({calculation_result.gap_percent:.0f}% of RDA)"
         )
 
         # Gap — derived value; include it explicitly so RAGAS can verify the
@@ -208,10 +213,21 @@ def run_full_pipeline(query_text: str, model_backend: str, qid: str) -> dict:
         print(f"{'═' * _W}\n")
     # ── END DIAGNOSTIC ────────────────────────────────────────────────────────
 
+    # Run verifier for diet_check/rda_lookup items; records which checks pass
+    # without changing the answer. N/A for general_question (no calculation).
+    verify_checks: dict | None = None
+    if calculation_result:
+        try:
+            vr = run_verify(calculation_result, synthesis.answer, merged_context)
+            verify_checks = {chk.name: chk.passed for chk in vr.checks}
+        except Exception as _ve:
+            print(f"  [verify error: {_ve}]")
+
     return {
         "answer": synthesis.answer,
         "contexts": contexts,
-        "model_backend": synthesis.model_backend
+        "model_backend": synthesis.model_backend,
+        "verify_checks": verify_checks,
     }
 
 
@@ -269,7 +285,8 @@ def main() -> None:
                 "user_input": item["query"],
                 "response": pipeline_out["answer"],
                 "retrieved_contexts": pipeline_out["contexts"],
-                "reference": item["expected_answer"]
+                "reference": item["expected_answer"],
+                "_verify_checks": pipeline_out["verify_checks"],
             })
             print(f"Done (Backend: {pipeline_out['model_backend']}).")
         except Exception as e:
@@ -333,7 +350,8 @@ def main() -> None:
         for i, row in enumerate(eval_data):
             print(f"\nEvaluating item {i + 1}/{len(eval_data)}: {row['user_input'][:70]}...")
             try:
-                single_ds = Dataset.from_list([row])
+                ragas_row = {k: v for k, v in row.items() if not k.startswith("_")}
+                single_ds = Dataset.from_list([ragas_row])
                 result = evaluate(
                     single_ds,
                     metrics=metrics,
@@ -345,6 +363,7 @@ def main() -> None:
                 res_df = result.to_pandas()
                 item_scores = {
                     "user_input": row["user_input"],
+                    "verify_checks": row.get("_verify_checks"),
                     "faithfulness": _col(res_df, "faithfulness"),
                     "answer_relevancy": _col(res_df, "answer_relevancy"),
                     "context_precision": _col(res_df, "context_precision"),
@@ -360,6 +379,7 @@ def main() -> None:
                 print(f"  ✗ RAGAS failed for this item: {e}")
                 item_scores = {
                     "user_input": row["user_input"],
+                    "verify_checks": row.get("_verify_checks"),
                     "error": str(e),
                     "faithfulness": None,
                     "answer_relevancy": None,
@@ -390,6 +410,14 @@ def main() -> None:
             vals = [s[key] for s in scored if s.get(key) is not None]
             return float(sum(vals) / len(vals)) if vals else 0.0
 
+        def _vcheck(key, invert=False):
+            vals = []
+            for s in scored:
+                vc = s.get("verify_checks")
+                if vc is not None and key in vc:
+                    vals.append(not vc[key] if invert else bool(vc[key]))
+            return float(sum(vals) / len(vals)) if vals else None
+
         final_result = {
             "model": args.model,
             "offset": args.offset,
@@ -398,7 +426,10 @@ def main() -> None:
             "relevance": _avg("answer_relevancy"),
             "precision": _avg("context_precision"),
             "recall": _avg("context_recall"),
-            "context_utilization": None,
+            "rda_match_rate":     _vcheck("rda_exact_match"),
+            "math_check_rate":    _vcheck("math_check"),
+            "conflict_flag_rate": _vcheck("conflict_check", invert=True),
+            "llm_grounding_rate": _vcheck("llm_grounding"),
             "per_item": all_item_scores,
         }
 

@@ -215,19 +215,20 @@ def run_pipeline_variant(
     synthesis = synthesize_answer(query_text, merged_context, calculation_result, model_backend)
 
     # ── Verify (skipped for no_verifier) ──────────────────────────────────────
-    verification_passed: bool | None = None
+    verify_checks: dict | None = None
 
     if variant == "no_verifier":
         # Intentional skip — N/A in results is correct, not a silent crash.
         # Confirmed path: this branch is taken, verification_passed stays None.
         if calculation_result and entities.intent == "diet_check":
             print(f"    [no_verifier] verify() intentionally skipped for {qid}")
+        # verification_passed stays None → N/A in output (intentional, not a crash)
 
     elif calculation_result:
         try:
             import traceback as _tb
             vr = run_verify(calculation_result, synthesis.answer, merged_context)
-            verification_passed = vr.verified
+            verify_checks = {chk.name: chk.passed for chk in vr.checks}
 
             # ── DIAGNOSTIC: show per-check breakdown for diet_check items ────────
             # Runs on every diet_check item so we can see WHICH check fails and WHY.
@@ -272,7 +273,7 @@ def run_pipeline_variant(
         "answer":               synthesis.answer,
         "contexts":             contexts,
         "model_backend":        synthesis.model_backend,
-        "verification_passed":  verification_passed,
+        "verify_checks":        verify_checks,
     }
 
 
@@ -310,7 +311,7 @@ def evaluate_variant(
                 "reference":           item["expected_answer"],
                 # Private fields (stripped before RAGAS, kept for reporting)
                 "_backend":            out["model_backend"],
-                "_verification_passed": out["verification_passed"],
+                "_verify_checks":      out["verify_checks"],
             })
             print(f"ok  [{out['model_backend']}]")
         except Exception as exc:
@@ -346,7 +347,7 @@ def evaluate_variant(
                 "user_input":          row["user_input"],
                 "variant":             variant,
                 "backend":             row["_backend"],
-                "verification_passed": row["_verification_passed"],
+                "verify_checks":       row.get("_verify_checks"),
                 "faithfulness":        _col(res_df, "faithfulness"),
                 "answer_relevancy":    _col(res_df, "answer_relevancy"),
                 "context_precision":   _col(res_df, "context_precision"),
@@ -367,7 +368,7 @@ def evaluate_variant(
                 "answer_relevancy":    None,
                 "context_precision":   None,
                 "context_recall":      None,
-                "verification_passed": row["_verification_passed"],
+                "verify_checks":       row.get("_verify_checks"),
             }
 
         all_item_scores.append(item_scores)
@@ -387,23 +388,33 @@ def evaluate_variant(
     # ── Aggregate ──────────────────────────────────────────────────────────────
     scored = [s for s in all_item_scores if "error" not in s]
 
-    verified_items = [s for s in all_item_scores if s.get("verification_passed") is not None]
-    verify_rate = (
-        sum(1 for s in verified_items if s["verification_passed"]) / len(verified_items)
-        if verified_items else None
-    )
+    def _vcheck(items, check_name, invert=False):
+        """Fraction of items where verify_checks[check_name] is True (or False if invert)."""
+        vals = []
+        for s in items:
+            vc = s.get("verify_checks")
+            if vc is not None and check_name in vc:
+                vals.append(not vc[check_name] if invert else bool(vc[check_name]))
+        return float(sum(vals) / len(vals)) if vals else None
 
     summary = {
-        "variant":               variant,
-        "description":           VARIANT_DESC[variant],
-        "status":                "complete",
-        "num_questions":         len(eval_data),
-        "faithfulness":          _avg(scored, "faithfulness"),
-        "relevance":             _avg(scored, "answer_relevancy"),
-        "precision":             _avg(scored, "context_precision"),
-        "recall":                _avg(scored, "context_recall"),
-        "verification_pass_rate": verify_rate,
-        "per_item":              all_item_scores,
+        "variant":             variant,
+        "description":         VARIANT_DESC[variant],
+        "status":              "complete",
+        "num_questions":       len(eval_data),
+        "faithfulness":        _avg(scored, "faithfulness"),
+        "relevance":           _avg(scored, "answer_relevancy"),
+        "precision":           _avg(scored, "context_precision"),
+        "recall":              _avg(scored, "context_recall"),
+        # Per-check verification rates — reported separately so each check
+        # is interpretable on its own rather than blended into one number.
+        # conflict_flag_rate: higher = more structured/semantic conflicts
+        # detected; this is a sensitivity metric, not a failure rate.
+        "rda_match_rate":      _vcheck(scored, "rda_exact_match"),
+        "math_check_rate":     _vcheck(scored, "math_check"),
+        "conflict_flag_rate":  _vcheck(scored, "conflict_check", invert=True),
+        "llm_grounding_rate":  _vcheck(scored, "llm_grounding"),
+        "per_item":            all_item_scores,
     }
     output_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"\n  ✓ Saved {output_path.name}  "
@@ -429,12 +440,15 @@ def build_comparison(results_dir: Path) -> dict:
         if data.get("status") != "complete":
             continue
         comparison[variant] = {
-            "faithfulness":           data.get("faithfulness"),
-            "relevance":              data.get("relevance"),
-            "precision":              data.get("precision"),
-            "recall":                 data.get("recall"),
-            "verification_pass_rate": data.get("verification_pass_rate"),
-            "num_questions":          data.get("num_questions"),
+            "faithfulness":          data.get("faithfulness"),
+            "relevance":             data.get("relevance"),
+            "precision":             data.get("precision"),
+            "recall":                data.get("recall"),
+            "rda_match_rate":        data.get("rda_match_rate"),
+            "math_check_rate":       data.get("math_check_rate"),
+            "conflict_flag_rate":    data.get("conflict_flag_rate"),
+            "llm_grounding_rate":    data.get("llm_grounding_rate"),
+            "num_questions":         data.get("num_questions"),
         }
     return comparison
 
@@ -451,13 +465,12 @@ def print_comparison_table(comparison: dict) -> None:
         f"{'Relev':>{col_w}}"
         f"{'Prec':>{col_w}}"
         f"{'Recall':>{col_w}}"
-        f"{'Verif%':>{col_w}}"
         f"{'N':>5}"
     )
     sep = "═" * len(header)
 
     print(f"\n{sep}")
-    print("ABLATION COMPARISON")
+    print("ABLATION COMPARISON — RAGAS METRICS")
     print(sep)
     print(header)
     print("─" * len(header))
@@ -465,17 +478,14 @@ def print_comparison_table(comparison: dict) -> None:
     for variant in VARIANTS:
         if variant not in comparison:
             continue
-        r   = comparison[variant]
-        vp  = (f"{r['verification_pass_rate']:.0%}"
-               if r.get("verification_pass_rate") is not None else "  N/A")
-        n   = r.get("num_questions", "?")
+        r = comparison[variant]
+        n = r.get("num_questions", "?")
         print(
             f"{variant:<18}"
             f"{_fmt(r.get('faithfulness')):>{col_w}}"
             f"{_fmt(r.get('relevance')):>{col_w}}"
             f"{_fmt(r.get('precision')):>{col_w}}"
             f"{_fmt(r.get('recall')):>{col_w}}"
-            f"{vp:>{col_w}}"
             f"{n:>5}"
         )
 
@@ -507,6 +517,49 @@ def print_comparison_table(comparison: dict) -> None:
             f"{'':>5}"
         )
     print(sep)
+
+    # ── Verification breakdown table ────────────────────────────────────────
+    vcheck_keys = [
+        ("rda_match_rate",     "RDA match",       False),
+        ("math_check_rate",    "Math check",      False),
+        ("conflict_flag_rate", "Conflict flagged", True),
+        ("llm_grounding_rate", "LLM grounding",   False),
+    ]
+    has_any_vcheck = any(
+        comparison.get(v, {}).get(k) is not None
+        for v in comparison
+        for k, _, _ in vcheck_keys
+    )
+    if has_any_vcheck:
+        vh = (
+            f"{'Variant':<18}"
+            f"{'RDA match':>11}"
+            f"{'Math check':>11}"
+            f"{'Conflict%':>11}"
+            f"{'LLM ground':>11}"
+        )
+        vsep = "═" * len(vh)
+        print(f"\n{vsep}")
+        print("VERIFICATION BREAKDOWN  "
+              "(rda/math/llm: higher=better | conflict: higher=more flags)")
+        print(vsep)
+        print(vh)
+        print("─" * len(vh))
+        for variant in VARIANTS:
+            if variant not in comparison:
+                continue
+            r = comparison[variant]
+            def _vfmt(k):
+                v = r.get(k)
+                return f"{v:.0%}" if v is not None else "  N/A"
+            print(
+                f"{variant:<18}"
+                f"{_vfmt('rda_match_rate'):>11}"
+                f"{_vfmt('math_check_rate'):>11}"
+                f"{_vfmt('conflict_flag_rate'):>11}"
+                f"{_vfmt('llm_grounding_rate'):>11}"
+            )
+        print(vsep)
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
