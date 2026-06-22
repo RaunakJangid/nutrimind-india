@@ -1,0 +1,11 @@
+representing this as the locked-in interim result, clearly labeled as free-tier/dev numbers pending the paid-judge confirmation pass.
+
+#RAGAS judge LLM: free-tier aggregation proxy (FreeLLMAPI), auto-routing across multiple providers (Gemini, Groq, Cerebras, etc). Judge-model 
+#identity varies per call based on real-time availability — confirmed 
+#via repeated identical batches showing score variance (e.g. same 10-item 
+#general_question batch: faithfulness 0.875 vs 1.0 across two runs). 
+#Final reported numbers reflect free-tier judge variance; a paid, pinned 
+#judge model (e.g. GPT-4o-mini) is the planned next step for a fully 
+#reproducible final evaluation, pending budget/instructor access.
+the latest result as final-for-now
+IntentFaithfulnessPrecisionRecallrda_lookup (0-19)1.00.87-0.951.0diet_check (20-29)0.880.950.875diet_check (30-39)0.830.960.83general_question (40-49)1.01.01.0

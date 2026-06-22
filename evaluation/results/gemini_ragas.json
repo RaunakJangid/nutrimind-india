@@ -1,10 +1,86 @@
 {
   "model": "gemini",
-  "note": "Development placeholder metrics. Run with real RAGAS dependencies and real data for paper results.",
-  "num_questions": 50,
-  "faithfulness": null,
-  "relevance": null,
-  "precision": null,
-  "recall": null,
-  "context_utilization": null
+  "offset": 30,
+  "num_questions": 10,
+  "faithfulness": 0.8333333333333334,
+  "relevance": 0.7396076484872361,
+  "precision": 0.9583333332907408,
+  "recall": 0.8333333333333334,
+  "context_utilization": null,
+  "per_item": [
+    {
+      "user_input": "Does 1 serving of laiyya meet the calcium requirement for a 2-year-old?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7444793962167519,
+      "context_precision": 0.9166666666361111,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of bajra meet the folate requirement for a 9-month-old?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7872735202763661,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of seviyan meet the protein requirement for a 5-year-old?",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    },
+    {
+      "user_input": "Does 1 serving of papad meet the iron requirement for a 2-year-old?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7243739032863162,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of lentils meet the folate requirement for a 2-year-old?",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    },
+    {
+      "user_input": "Does 1 serving of palak paneer meet the calcium requirement for a 6-month-old?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7280029948557198,
+      "context_precision": 0.9999999999,
+      "context_recall": 0.0
+    },
+    {
+      "user_input": "Does 1 serving of cauliflower meet the iron requirement for a 2-year-old?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7344645182239903,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of murmura meet the zinc requirement for a 9-month-old?",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    },
+    {
+      "user_input": "Does 1 serving of samosa meet the folate requirement for a 5-year-old?",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    },
+    {
+      "user_input": "Does 1 serving of sago meet the iron requirement for a 2-year-old?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7190515580642726,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    }
+  ]
 }

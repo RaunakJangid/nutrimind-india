@@ -202,6 +202,15 @@ def retrieve_all(query_entities: QueryEntities, query_text: str = "") -> Retriev
         except LookupError as exc:
             result.errors.append(str(exc))
 
-    semantic_query = query_text or " ".join(filter(None, [query_entities.nutrient, age_group or "", *query_entities.foods]))
-    result.semantic = [SemanticChunk.model_validate(item) for item in semantic_search(semantic_query, int(os.getenv("MAX_RETRIEVAL_CHUNKS", "5")))]
+    semantic_query = query_text or " ".join(
+        filter(None, [query_entities.nutrient, age_group or "", *query_entities.foods])
+    )
+    _k = int(os.getenv("MAX_RETRIEVAL_CHUNKS", "5"))
+    if getattr(query_entities, "intent", None) == "general_question":
+        _k = max(_k, 7)  # DGI guideline chunks rank below default cutoff;
+                         # bump to 7 to recover the missing reference claim
+    result.semantic = [
+        SemanticChunk.model_validate(item)
+        for item in semantic_search(semantic_query, _k)
+    ]
     return result

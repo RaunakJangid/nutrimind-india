@@ -1,0 +1,113 @@
+{
+  "variant": "no_semantic",
+  "description": "FAISS/semantic_search() disabled \u2014 structured lookups only",
+  "status": "complete",
+  "num_questions": 10,
+  "faithfulness": 0.0,
+  "relevance": 0.0,
+  "precision": 0.0,
+  "recall": 0.016666666666666666,
+  "verification_pass_rate": null,
+  "per_item": [
+    {
+      "user_input": "According to DGI 2024 guidance on Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity, what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Eat plenty of vegetables and legumes, what is the recommendation?",
+      "variant": "no_semantic",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Ensure exclusive breastfeeding for the first six months and continue breastfeeding till two years and beyond, what is the recommendation?",
+      "variant": "no_semantic",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.06666666666666667
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Include nutrient-rich foods in the diets of the elderly for health and wellness, what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "Invalid json output: The output string did not satisfy the constraints given in the prompt. Fix the output string and return it. Please return the output in a JSON format that complies with the following schema as specified in JSON Schema: {\"properties\": {\"text\": {\"title\": \"Text\", \"type\": \"string\"}}, \"required\": [\"text\"], \"title\": \"StringIO\", \"type\": \"object\"} Do not use single quotes in your response but double quotes, properly escaped with a backslash. ----------------------------- Now perform the same with the following input input: { \"output_string\": \"<think>\\nOkay, let's tackle this problem. The user wants me to generate a question based on the given answer and determine if the answer is noncommittal. The answer provided is: \\\"I found general nutrition context, but not enough structured data for a verified calculation. [Source: ICMR-NIN Text]\\\"\\n\\nFirst, I need to figure out what question this answer is responding to. The answer mentions general nutrition context and structured data for a calculation. So the question might be asking for a specific calculation or data related to nutrition. Maybe something like, \\\"What is the exact nutritional value of [something]?\\\" or \\\"Can you provide a verified calculation for [specific nutrient]?\\\"\\n\\nLooking at the example, when the answer was about Einstein's birthplace, the question was straightforward. Here, the answer is more about the lack of sufficient data. The user is probably asking for a specific calculation or data point that the responder can't provide because the data isn't structured enough. So the question could be, \\\"What is the verified calculation for [specific nutrition aspect] based on structured data?\\\"\\n\\nNow, checking if the answer is noncommittal. The answer says they found general context but not enough structured data. This is a bit vague because they're not confirming or denying the possibility but stating a limitation. Phrases like \\\"not enough structured data\\\" indicate that they can't provide a verified calculation, which is a noncommittal response. The responder isn't giving a direct answer but explaining the lack of data. So noncommittal would be 1 here.\\n\\nPutting it all together, the question should be something like, \\\"What is the verified calculation for [specific nutrition aspect] based on structured data?\\\" and noncommittal is 1.\\n</think>\\n\\n{\\n    \\\"question\\\": \\\"What is the verified calculation for a specific nutrition aspect based on structured data?\\\",\\n    \\\"noncommittal\\\": 1\\n}\"\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE ",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Drink adequate quantity of water, what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "Failed to parse StringIO from completion {\"statements\": [\"The ICMR-NIN Text found general nutrition context.\", \"The ICMR-NIN Text does not provide enough structured data for a verified calculation.\"]}. Got: 1 validation error for StringIO\ntext\n  Field required [type=missing, input_value={'statements': ['The ICMR...verified calculation.']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE ",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Restrict salt intake, what is the recommendation?",
+      "variant": "no_semantic",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Consume safe and clean foods, what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Adopt appropriate pre-cooking and cooking methods, what is the recommendation?",
+      "variant": "no_semantic",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass, what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA), what is the recommendation?",
+      "variant": "no_semantic",
+      "error": "Failed to parse StringIO from completion {\"classifications\": [{\"statement\": \"DGI 2024 guidance says: Guideline 7: Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA).\", \"reason\": \"The statement is directly quoted from the provided context.\", \"attributed\": 1}, {\"statement\": \"RATIONALE Using a diverse variety of oil seeds, nuts and whole grains, provides a balance of all fatty acids (lipids).\", \"reason\": \"The rationale is explicitly mentioned in the context following the guideline.\", \"attributed\": 1}, {\"statement\": \"Refined or extracted oils are processed products; hence it is best to use them in moderation.\", \"reason\": \"This is explicitly stated in the context as part of the rationale for Guideline 7.\", \"attributed\": 1}, {\"statement\": \"ICMR-National Institute of Nutrition the form of triglycerides.\", \"reason\": \"This sentence is incomplete and does not clearly align with the context. The context mentions triglycerides but not in this exact phrasing.\", \"attributed\": 0}, {\"statement\": \"Based on their structure, fatty acids are broadly grouped as saturated fatty acids (SFA), monounsaturated (MUFA) and polyunsaturated (PUFA).\", \"reason\": \"This classification of fatty acids is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Coconut oil, palm oil, ghee, butter, lard, tallow, milk, milk products and meat contain SFA.\", \"reason\": \"The context lists these as sources of SFA.\", \"attributed\": 1}, {\"statement\": \"Cholesterol is found only in animal-source foods.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Cholesterol is synthesized in the liver from carbohydrates and fats in our diet.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Liver cholesterol synthesis increases when the cholesterol intake in our diet is low; and the synthesis is suppressed when our intake is increased.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Cholesterol is carried by lipoproteins in our blood: low density lipoprotein (LDL) and high density lipoprotein (HDL).\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"What are the physiological/health implications of different fats/oils?\", \"reason\": \"This is a question posed in the context, not a statement to classify.\", \"attributed\": 0}, {\"statement\": \"PUFAs (n3 and n6): PUFAs are essential components of cell membranes.\", \"reason\": \"This is explicitly stated in the context under the physiological implications section.\", \"attributed\": 1}, {\"statement\": \"While n-6 PUFAs are predominant in all cells, the brain cells and nerve tissue have high levels of n-3 PUFA.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"The long chain PUFAs of n-3 (Docosa Hexaenoic Acid\u2013DHA and Eicosa Pentaenoic Acid\u2013EPA) and n-6 (Arachidonic acid\u2013AA) are essential during growth and development.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"During the fetal and early infant development, there is a rapid accretion of AA and DHA in infant brain, DHA in retina and AA in the whole body for meeting the demands of rapidly growing tissues/ organs.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Small amounts of DHA are also present in cell membranes throughout the body.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"AA and DHA have different and specific roles in neural and behavioral functions.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"DHA is crucial for the function of rhodopsin for vision and post- synaptic receptors for neurotransmission.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Fish, sea foods and micro algae provide long chain n-3 fatty acids such as DHA and EPA.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"These are biologically more active than short-chain alpha-linolenic (n-3) fatty acid present in plant foods.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"These long chain n-3 fatty acids are important for vision and brain growth and development during fetal life.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"MUFA: MUFA decreases clot formation and atherogenesis.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Saturated fatty acids: SFA are known to increase serum total and LDL-cholesterol levels, increase inflammation, reduce insulin sensitivity and enhance the tendency of clot formation (thrombogenicity) and increase the risk of heart attack and stroke.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Cholesterol (lipid from animal source): Cholesterol plays an important role in the body cell membrane's fluidity and permeability.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Cholesterol is also a precursor of many hormones and vitamin D.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Cholesterol aids in cell signalling function and hormone activity.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"It is actively synthesized in the liver whenever required.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"High density lipoproteins (HDL) remove and transport excess cholesterol from the tissues to the liver for degradation, and are therefore, anti-atherogenic.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"However, high blood levels of LDL cholesterol result in accumulation of lipids in the cells and causes atherogenic effect.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"A healthy diet (balanced diet) and physical activity improve HDL and decrease LDL.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Trans fatty acids (TFA): TFAs are fats that are produced during hydrogenation of vegetable cooking oils (example, vanaspati).\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"TFA consumption alters lipid profile (dyslipidemia), endothelial dysfunction, decreases insulin sensitivity and increases risk of diabetes, breast cancer, colon cancer, preeclampsia, disorders of nervous system and vision in infants.\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"Hence, one must avoid processed foods or bakery foods containing TFA.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}, {\"statement\": \"Fats, also called lipids, promote absorption of fat-soluble vitamins (A, D, E and K).\", \"reason\": \"This is explicitly stated in the context.\", \"attributed\": 1}, {\"statement\": \"In addition to important functions, fats contribute to energy, texture, flavor, taste and increase the palatability of the diet and impart a feeling of fullness and satisfaction and thus delay the onset of hunger.\", \"reason\": \"This is explicitly mentioned in the context.\", \"attributed\": 1}]}. Got: 1 validation error for StringIO\ntext\n  Field required [type=missing, input_value={'classifications': [{'st...xt.', 'attributed': 1}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE ",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    }
+  ]
+}

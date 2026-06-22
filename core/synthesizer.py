@@ -39,10 +39,12 @@ def render_response(calculation_result: CalculationResult, intent: str | None = 
 
 def build_prompt(query: str, merged_context: MergedContext, calculation_result: CalculationResult | None = None) -> str:
     prompt_template = (TEMPLATE_DIR / "prompts" / "v1_rag_prompt.txt").read_text(encoding="utf-8")
+
     rda_context = merged_context.rda or {}
     ifct_context = "\n".join(str(food) for food in merged_context.foods) or "No IFCT food context retrieved."
     semantic_context = "\n\n".join(chunk.text for chunk in merged_context.semantic) or "No semantic context retrieved."
     conflicts = "\n".join(conflict.description for conflict in merged_context.conflicts) or "None."
+
     return prompt_template.format(
         icmr_rda_context=rda_context,
         ifct_context=ifct_context,
@@ -59,9 +61,53 @@ def synthesize_answer(
     calculation_result: CalculationResult | None,
     model_backend: str,
 ) -> SynthesisResult:
+
+    # =========================
+    # STRICT MODE: rda_lookup
+    # =========================
+    if calculation_result and calculation_result.intent == "rda_lookup":
+        value = f"{calculation_result.required_value:.1f}".rstrip("0").rstrip(".")
+        unit = calculation_result.required_unit
+        nutrient = calculation_result.nutrient.replace("_", " ")
+        age_group = calculation_result.age_group.replace("_", " ")
+
+        answer = (
+            f"The daily {nutrient} requirement for the {age_group} age group "
+            f"is {value} {unit}."
+        )
+
+        return SynthesisResult(
+            answer=answer,
+            citations=[],
+            model_backend="deterministic_rda",
+            prompt_version="v1"
+        )
+
+    # =========================
+    # FIX 1: STRICT diet_check
+    # =========================
+    if calculation_result and calculation_result.intent == "diet_check":
+        answer = render_response(calculation_result, intent="diet_check")
+
+        return SynthesisResult(
+            answer=answer,
+            citations=[],
+            model_backend="deterministic_diet_check",
+            prompt_version="v1"
+        )
+
+    # =========================
+    # LLM MODE: general_question
+    # =========================
     prompt = build_prompt(query, merged_context, calculation_result)
-    context = {"merged_context": merged_context.model_dump(), "calculation": calculation_result.model_dump() if calculation_result else None}
+
+    context = {
+        "merged_context": merged_context.model_dump(),
+        "calculation": calculation_result.model_dump() if calculation_result else None
+    }
+
     backend = get_backend(model_backend)
+
     try:
         answer = backend.generate(prompt, context)
         used_backend = backend.name
@@ -70,4 +116,10 @@ def synthesize_answer(
         used_backend = f"{backend.name}->deterministic"
 
     citations = sorted(set(re.findall(r"\[Source:\s*([^\]]+)\]", answer)))
-    return SynthesisResult(answer=answer, citations=citations, model_backend=used_backend, prompt_version="v1")
+
+    return SynthesisResult(
+        answer=answer,
+        citations=citations,
+        model_backend=used_backend,
+        prompt_version="v1"
+    )

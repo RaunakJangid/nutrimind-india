@@ -10,42 +10,99 @@ from core.models import QueryEntities
 from core.retriever import FOOD_MAP, normalize_key
 
 
+# NOTE: these must match exact column names in data/processed/icmr_rda.csv.
+# Renamed vitamin_c/vitamin_d/vitamin_a -> vit_c/vit_d/vit_a to match CSV
+# convention (vit_b6 was already correct). VERIFY against actual CSV headers.
 NUTRIENTS = {
     "iron",
     "protein",
     "calcium",
-    "vitamin_c",
-    "vitamin_d",
-    "vitamin_a",
+    "vit_c",
+    "vit_d",
+    "vit_a",
     "zinc",
     "folate",
+    "vit_b6",
+    "vit_b12",
+    "riboflavin",
+    "thiamine",
+    "iodine",
+    "niacin",
+    "magnesium",
+    "dietary_fiber",
 }
+
 NUTRIENT_ALIASES = {
-    "vitamin c": "vitamin_c",
-    "vit c": "vitamin_c",
-    "vitamin d": "vitamin_d",
-    "vitamin a": "vitamin_a",
+    "vitamin c": "vit_c",
+    "vit c": "vit_c",
+    "vitamin d": "vit_d",
+    "vit d": "vit_d",
+    "vitamin a": "vit_a",
+    "vit a": "vit_a",
+    "vitamin b6": "vit_b6",
+    "vit b6": "vit_b6",
+    "b6": "vit_b6",
+    "vitamin b12": "vit_b12",
+    "vit b12": "vit_b12",
+    "b12": "vit_b12",
+    "vitamin b2": "riboflavin",
+    "vit b2": "riboflavin",
+    "riboflavin": "riboflavin",
+    "vitamin b1": "thiamine",
+    "vit b1": "thiamine",
+    "thiamine": "thiamine",
+    "vitamin b3": "niacin",
+    "vit b3": "niacin",
+    "niacin": "niacin",
+    "iodine": "iodine",
+    "magnesium": "magnesium",
+    "dietary fiber": "dietary_fiber",
+    "dietary fibre": "dietary_fiber",
+    "fiber": "dietary_fiber",
+    "fibre": "dietary_fiber",
 }
-AGE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*[- ]?\s*(year|years|yr|yrs|y|month|months|mo|mos|m)", re.I)
+
+# Range form: "1-3 years", "6-12 months"
+AGE_RANGE_RE = re.compile(r"(\d+)\s*-\s*(\d+)\s*(months?|years?|yrs?)", re.I)
+# Single form: "2-year-old", "9-month-old", "6 month old"
+AGE_SINGLE_RE = re.compile(r"(\d+)\s*-?\s*(months?|years?|yrs?)\s*-?\s*old", re.I)
+
 QTY_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(bowl|cup|plate|piece|roti|chapati|glass|spoon|egg)s?", re.I)
 
 
 def _extract_age_months(text: str) -> int | None:
-    match = AGE_RE.search(text)
-    if not match:
-        return None
-    value = float(match.group(1))
-    unit = match.group(2).lower()
-    if unit.startswith(("year", "yr")) or unit == "y":
-        return int(round(value * 12))
-    return int(round(value))
+    # Try range form first ("1-3 years")
+    match = AGE_RANGE_RE.search(text)
+    if match:
+        start = int(match.group(1))
+        end = int(match.group(2))
+        unit = match.group(3).lower()
+        mid = (start + end) / 2
+        if "month" in unit:
+            return int(mid)
+        else:  # years
+            return int(mid * 12)
+
+    # Try single-age form ("2-year-old", "9-month-old")
+    match = AGE_SINGLE_RE.search(text)
+    if match:
+        value = int(match.group(1))
+        unit = match.group(2).lower()
+        if "month" in unit:
+            return value
+        else:  # years
+            return value * 12
+
+    return None
 
 
 def _extract_nutrient(text: str) -> str | None:
     normalized_text = text.lower().replace("-", " ")
-    for alias, nutrient in NUTRIENT_ALIASES.items():
+    # Check multi-word aliases first (longest match wins to avoid "vit b1"
+    # matching inside "vit b12" etc. -- sort by alias length descending)
+    for alias in sorted(NUTRIENT_ALIASES, key=len, reverse=True):
         if alias in normalized_text:
-            return nutrient
+            return NUTRIENT_ALIASES[alias]
     for nutrient in NUTRIENTS:
         if nutrient.replace("_", " ") in normalized_text or nutrient in normalized_text:
             return nutrient
@@ -139,6 +196,27 @@ def decompose(query_text: str) -> QueryEntities:
         )
 
     fallback = _decompose_with_gemini(query_text)
-    if fallback:
+    # Only use Gemini if it gives something useful
+    if fallback and (fallback.age_months or fallback.nutrient):
         return fallback
-    return QueryEntities(nutrient=nutrient, age_months=age_months, foods=foods, servings=servings, intent="unknown", confidence=0.0)
+
+    query_lower = query_text.lower()
+
+    if nutrient and any(word in query_lower for word in ["requirement", "rda", "daily"]):
+        return QueryEntities(
+            nutrient=nutrient,
+            age_months=age_months,
+            foods=[],
+            servings={},
+            intent="rda_lookup",
+            confidence=0.5,
+        )
+
+    return QueryEntities(
+        nutrient=nutrient,
+        age_months=age_months,
+        foods=foods,
+        servings=servings,
+        intent="unknown",
+        confidence=0.0,
+    )

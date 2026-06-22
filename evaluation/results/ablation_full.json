@@ -1,0 +1,113 @@
+{
+  "variant": "full",
+  "description": "complete pipeline (baseline)",
+  "status": "complete",
+  "num_questions": 10,
+  "faithfulness": 0.8240740740740741,
+  "relevance": 0.7406095399729442,
+  "precision": 0.929012345649897,
+  "recall": 0.8333333333333334,
+  "verification_pass_rate": 0.0,
+  "per_item": [
+    {
+      "user_input": "Does 1 serving of papad meet the protein requirement for a 2-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7217689201327916,
+      "context_precision": 0.999999999975,
+      "context_recall": 0.5
+    },
+    {
+      "user_input": "Does 1 serving of palak paneer meet the protein requirement for a 9-month-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.7153926014057244,
+      "context_precision": 0.99999999995,
+      "context_recall": 0.0
+    },
+    {
+      "user_input": "Does 1 serving of oats meet the calcium requirement for a 9-month-old?",
+      "variant": "full",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": false
+    },
+    {
+      "user_input": "Does 1 serving of kesari meet the calcium requirement for a 2-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7274382865829159,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of coconut rice meet the calcium requirement for a 9-month-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7900508687876755,
+      "context_precision": 0.9166666666361111,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of coconut meet the calcium requirement for a 2-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7520646244535705,
+      "context_precision": 0.8055555555287036,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of qubani ka meetha meet the calcium requirement for a 5-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.697517786664562,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of spinach meet the zinc requirement for a 5-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.7766802325027342,
+      "context_precision": 0.6388888888675925,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of payasam meet the zinc requirement for a 5-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7849660403569526,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "Does 1 serving of imarti meet the protein requirement for a 2-year-old?",
+      "variant": "full",
+      "backend": "deterministic_diet_check",
+      "verification_passed": false,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6996064988695715,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    }
+  ]
+}

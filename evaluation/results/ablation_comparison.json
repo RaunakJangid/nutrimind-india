@@ -1,0 +1,42 @@
+{
+  "full": {
+    "faithfulness": 0.8240740740740741,
+    "relevance": 0.7406095399729442,
+    "precision": 0.929012345649897,
+    "recall": 0.8333333333333334,
+    "verification_pass_rate": 0.0,
+    "num_questions": 10
+  },
+  "no_semantic": {
+    "faithfulness": 0.0,
+    "relevance": 0.0,
+    "precision": 0.0,
+    "recall": 0.016666666666666666,
+    "verification_pass_rate": null,
+    "num_questions": 10
+  },
+  "no_structured": {
+    "faithfulness": 0.8095238095238096,
+    "relevance": 0.6440027829225221,
+    "precision": 0.7958333332981598,
+    "recall": 0.6666666666666666,
+    "verification_pass_rate": null,
+    "num_questions": 10
+  },
+  "no_merger": {
+    "faithfulness": 0.8541666666666666,
+    "relevance": 0.7025963292424584,
+    "precision": 0.8479166666333159,
+    "recall": 0.8263324299909666,
+    "verification_pass_rate": null,
+    "num_questions": 10
+  },
+  "no_verifier": {
+    "faithfulness": 0.9975490196078431,
+    "relevance": 0.6111029260340544,
+    "precision": 0.8194444444161296,
+    "recall": 0.8186746987951806,
+    "verification_pass_rate": null,
+    "num_questions": 10
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "variant": "no_verifier",
+  "description": "verifier.verify() skipped \u2014 answer returned without math check",
+  "status": "complete",
+  "num_questions": 10,
+  "faithfulness": 0.9975490196078431,
+  "relevance": 0.6111029260340544,
+  "precision": 0.8194444444161296,
+  "recall": 0.8186746987951806,
+  "verification_pass_rate": null,
+  "per_item": [
+    {
+      "user_input": "According to DGI 2024 guidance on Adopt a healthy lifestyle to prevent abdominal obesity, overweight and overall obesity, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8729734703950384,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Eat plenty of vegetables and legumes, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.19928393168392283,
+      "context_precision": 0.19999999998,
+      "context_recall": 0.012048192771084338
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Ensure exclusive breastfeeding for the first six months and continue breastfeeding till two years and beyond, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7273904112611355,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Include nutrient-rich foods in the diets of the elderly for health and wellness, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4419338895038792,
+      "context_precision": 0.9666666666473333,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Drink adequate quantity of water, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 0.9852941176470589,
+      "answer_relevancy": 0.7972270110519764,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Restrict salt intake, what is the recommendation?",
+      "variant": "no_verifier",
+      "backend": "gemini->deterministic",
+      "verification_passed": null,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6278088423083739,
+      "context_precision": 0.9166666666361111,
+      "context_recall": 0.9
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Consume safe and clean foods, what is the recommendation?",
+      "variant": "no_verifier",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Adopt appropriate pre-cooking and cooking methods, what is the recommendation?",
+      "variant": "no_verifier",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Obtain good quality proteins and essential amino acids (EAA) through appropriate combination of foods and avoid protein supplements to build muscle mass, what is the recommendation?",
+      "variant": "no_verifier",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    },
+    {
+      "user_input": "According to DGI 2024 guidance on Use oils/fats in moderation; choose a variety of oil seeds, nuts, nutricereals, and legumes to meet daily needs of fats and essential fatty acids (EFA), what is the recommendation?",
+      "variant": "no_verifier",
+      "error": "The LLM generation was not completed. Please increase the max_tokens and try again.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null,
+      "verification_passed": null
+    }
+  ]
+}
