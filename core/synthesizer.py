@@ -12,6 +12,22 @@ from core.models import CalculationResult, MergedContext, SynthesisResult
 TEMPLATE_DIR = Path(__file__).resolve().parents[1] / "templates"
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR), autoescape=select_autoescape())
 
+# Dedicated prompt for general_question intent.
+# Intentionally NOT a file template — it's short, stable, and keeping it
+# inline makes the parent-friendly tone constraint explicit and reviewable.
+# Top-2 chunks only are passed in (see synthesize_answer) to avoid walls
+# of text that confuse both the LLM and the reader.
+_GQ_PROMPT = (
+    "You are a helpful nutrition advisor for Indian parents.\n"
+    "Based on the following ICMR-NIN dietary guidelines, answer this question "
+    "for a parent asking about infant or child nutrition.\n\n"
+    "Question: {query}\n\n"
+    "Guidelines:\n{context}\n\n"
+    "Give a clear, concise, parent-friendly answer in 2-3 sentences. "
+    "Use simple language and avoid jargon. "
+    "If the guidelines do not cover the question, say so honestly."
+)
+
 
 def age_desc(age_months: int) -> str:
     if age_months < 12:
@@ -99,21 +115,47 @@ def synthesize_answer(
     # =========================
     # LLM MODE: general_question
     # =========================
-    prompt = build_prompt(query, merged_context, calculation_result)
-
-    context = {
-        "merged_context": merged_context.model_dump(),
-        "calculation": calculation_result.model_dump() if calculation_result else None
-    }
+    # Uses a dedicated parent-friendly prompt with the top-2 most relevant
+    # FAISS chunks only. Rationale for top-2:
+    #   - merged_context.semantic is already ranked by similarity score
+    #   - dumping 5–7 chunks produces walls of text that degrade LLM output
+    #   - retrieval still fetches 7 chunks (for RAGAS recall measurement);
+    #     we only narrow here at synthesis time, not at retrieval time
+    top_chunks = merged_context.semantic[:2]
+    ctx_text = (
+        "\n\n".join(chunk.text for chunk in top_chunks)
+        if top_chunks else "No relevant ICMR-NIN guidelines retrieved."
+    )
+    gq_prompt = _GQ_PROMPT.format(query=query, context=ctx_text)
 
     backend = get_backend(model_backend)
+    print(f"[GQ] backend={backend.name!r}  chunks_used={len(top_chunks)}")
 
     try:
-        answer = backend.generate(prompt, context)
+        answer = backend.generate(gq_prompt, {})
+        # Diagnostic: confirm LLM returned real content, not a canned stub
+        print(f"[GQ] backend.generate() OK  len={len(answer)}  "
+              f"preview={answer[:120].replace(chr(10),' ')!r}")
         used_backend = backend.name
-    except Exception:
-        answer = DeterministicBackend().generate(prompt, context)
-        used_backend = f"{backend.name}->deterministic"
+
+    except Exception as _exc:
+        # backend.generate() raised — most common cause: no API key set,
+        # so get_backend() returned DeterministicBackend which has no LLM
+        # and its generate() returns a canned message unrelated to the query.
+        # Instead, build a readable answer directly from the retrieved chunks
+        # so the user sees real guideline text, not a confusing stub.
+        print(f"[GQ] backend.generate() FAILED: {_exc!r}  — using chunk fallback")
+        if top_chunks:
+            answer = (
+                "Based on ICMR-NIN dietary guidelines: "
+                + " ".join(chunk.text for chunk in top_chunks)
+            )
+        else:
+            answer = (
+                "I don't have specific ICMR-NIN guidelines for this question. "
+                "Please consult a pediatric nutritionist."
+            )
+        used_backend = f"{backend.name}->chunk_fallback"
 
     citations = sorted(set(re.findall(r"\[Source:\s*([^\]]+)\]", answer)))
 

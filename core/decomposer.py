@@ -65,9 +65,19 @@ NUTRIENT_ALIASES = {
 # Range form: "1-3 years", "6-12 months"
 AGE_RANGE_RE = re.compile(r"(\d+)\s*-\s*(\d+)\s*(months?|years?|yrs?)", re.I)
 # Single form: "2-year-old", "9-month-old", "6 month old"
-AGE_SINGLE_RE = re.compile(r"(\d+)\s*-?\s*(months?|years?|yrs?)\s*-?\s*old", re.I)
+# "old" suffix is optional — also matches "18 month baby", "18 months", "3 year child"
+AGE_SINGLE_RE = re.compile(r"(\d+)\s*-?\s*(months?|years?|yrs?)(?:\s*-?\s*old)?\b", re.I)
 
 QTY_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(bowl|cup|plate|piece|roti|chapati|glass|spoon|egg)s?", re.I)
+
+# Keywords that signal a general information request.
+# "get", "source/s", "how to", etc. cover "where can I get vitamin D"-style
+# queries that the original list missed entirely.
+_GQ_KEYWORDS = [
+    "feed", "diet", "meal", "nutrition", "balanced",
+    "get", "source", "sources", "how to", "food for",
+    "which food", "foods that", "rich in", "contain", "provide",
+]
 
 
 def _extract_age_months(text: str) -> int | None:
@@ -165,6 +175,7 @@ def decompose(query_text: str) -> QueryEntities:
     nutrient = _extract_nutrient(query_text)
     foods = _extract_foods(query_text)
     servings = _extract_servings(query_text, foods)
+    query_lower = query_text.lower()
 
     if age_months is not None and nutrient and foods:
         return QueryEntities(
@@ -185,7 +196,10 @@ def decompose(query_text: str) -> QueryEntities:
             confidence=0.8,
         )
 
-    if any(keyword in query_text.lower() for keyword in ["feed", "diet", "meal", "nutrition", "balanced"]):
+    # Expanded keyword list catches "get", "source", "how to", "rich in",
+    # etc. — natural phrasings for "where can I find nutrient X" queries
+    # that the original list missed.
+    if any(kw in query_lower for kw in _GQ_KEYWORDS):
         return QueryEntities(
             nutrient=nutrient,
             age_months=age_months,
@@ -200,8 +214,6 @@ def decompose(query_text: str) -> QueryEntities:
     if fallback and (fallback.age_months or fallback.nutrient):
         return fallback
 
-    query_lower = query_text.lower()
-
     if nutrient and any(word in query_lower for word in ["requirement", "rda", "daily"]):
         return QueryEntities(
             nutrient=nutrient,
@@ -209,6 +221,20 @@ def decompose(query_text: str) -> QueryEntities:
             foods=[],
             servings={},
             intent="rda_lookup",
+            confidence=0.5,
+        )
+
+    # Nutrient extracted but no age and no foods → can't be rda_lookup
+    # (needs age) or diet_check (needs food). Almost always a general info
+    # request ("how will he get vitamin D?"). Default to general_question
+    # rather than unknown so the LLM path fires instead of rejecting the query.
+    if nutrient and age_months is None and not foods:
+        return QueryEntities(
+            nutrient=nutrient,
+            age_months=None,
+            foods=[],
+            servings={},
+            intent="general_question",
             confidence=0.5,
         )
 

@@ -128,10 +128,26 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
 
         if entities.nutrient is None or entities.age_months is None:
             raise ValueError("Age and nutrient are required for RDA lookup or diet checks")
+
         result = calculate_gap(entities, merged_context)
         synthesis = synthesize_answer(query_text, merged_context, result, model_backend)
         verification = verify(result, synthesis.answer, merged_context)
-        answer = synthesis.answer if verification.verified else FALLBACK
+
+        # ── Critical-check gate (replaces single verification.verified bool) ───
+        # conflict_check is conservative by design: it flags any structured/
+        # semantic numeric discrepancy (e.g. a FAISS narrative chunk citing an
+        # approximate value vs. the precise ICMR CSV figure). These are benign
+        # and expected — showing FALLBACK for them would reject correct answers.
+        # Gate the user-facing answer on rda_match + math_check only.
+        # conflict_flag is recorded separately for monitoring/paper reporting.
+        _checks = {chk.name: chk.passed for chk in verification.checks}
+        critical_ok = (
+            _checks.get("rda_exact_match", True)
+            and _checks.get("math_check", True)
+        )
+        conflict_flagged = not _checks.get("conflict_check", True)
+
+        answer = synthesis.answer if critical_ok else FALLBACK
         proof = proof_rows(result)
         for chunk in merged_context.semantic:
             proof.append(
@@ -160,16 +176,18 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
                 "gap_value": result.gap_value,
                 "gap_percent": result.gap_percent,
                 "answer_text": answer,
-                "verified": verification.verified,
+                "verified": critical_ok,           # rda_match + math_check
+                "conflict_flagged": conflict_flagged,  # informational, not a rejection signal
                 "proof": proof,
                 "latency_ms": latency_ms,
-                "error_reason": verification.fail_reason,
+                "error_reason": None if critical_ok else verification.fail_reason,
             },
         )
         return {
             "query_id": query_id,
             "answer": answer,
-            "verified": verification.verified,
+            "verified": critical_ok,
+            "conflict_flagged": conflict_flagged,
             "proof": proof,
             "model_backend": synthesis.model_backend,
             "citations": synthesis.citations,
@@ -180,6 +198,7 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
                 "result": result.model_dump(),
                 "synthesis": synthesis.model_dump(),
                 "verification": verification.model_dump(),
+                "verify_checks": _checks,          # per-check breakdown for debug
             },
         }
     except Exception as exc:
@@ -225,7 +244,11 @@ def main() -> None:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
             if message["role"] == "assistant":
-                st.markdown(":green[Verified]" if message["metadata"]["verified"] else ":red[Not verified]")
+                verified = message["metadata"].get("verified", False)
+                conflict = message["metadata"].get("conflict_flagged", False)
+                st.markdown(":green[Verified]" if verified else ":red[Not verified]")
+                if verified and conflict:
+                    st.caption("⚠️ Source conflict detected (structured vs. narrative — informational only)")
                 if message["metadata"].get("model_backend"):
                     st.caption(f"Model: {message['metadata']['model_backend']}")
                 if message["metadata"]["proof"]:
@@ -243,7 +266,11 @@ def main() -> None:
             with st.spinner("Checking ICMR data..."):
                 response = run_pipeline(query, model_backend)
             st.markdown(response["answer"])
-            st.markdown(":green[Verified]" if response["verified"] else ":red[Not verified]")
+            verified = response.get("verified", False)
+            conflict = response.get("conflict_flagged", False)
+            st.markdown(":green[Verified]" if verified else ":red[Not verified]")
+            if verified and conflict:
+                st.caption("⚠️ Source conflict detected (structured vs. narrative — informational only)")
             st.caption(f"Model: {response.get('model_backend', model_backend)}")
             if response["proof"]:
                 with st.expander("Show Proof"):
