@@ -1,3 +1,14 @@
+---
+title: NutriMind India
+emoji: 🥗
+colorFrom: green
+colorTo: blue
+sdk: docker
+pinned: false
+---
+
+# NutriMind-India
+
 markdown# NutriMind-India
 
 **A verified RAG system for infant and child nutrition queries (ages 0–5), 
