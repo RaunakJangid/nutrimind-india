@@ -124,15 +124,19 @@ def _decompose_with_gemini(query_text: str) -> QueryEntities | None:
     if not api_key or api_key == "your_key_here":
         return None
     try:
-        import google.generativeai as genai
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-2.0-flash")
+        from google import genai
+        from google.genai import types
+        client = genai.Client(api_key=api_key)
         prompt = (
             "Extract nutrition query entities as JSON with keys nutrient, age_months, "
             "foods, servings, intent. Intent is rda_lookup, diet_check, or unknown. "
             f"Query: {query_text}"
         )
-        response = model.generate_content(prompt, request_options={"timeout": 5})
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(max_output_tokens=200),
+        )
         raw = response.text.strip().removeprefix("```json").removesuffix("```").strip()
         return QueryEntities.model_validate(json.loads(raw))
     except (Exception, ValidationError):

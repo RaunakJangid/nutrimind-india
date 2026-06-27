@@ -22,14 +22,19 @@ class GeminiBackend(LLMBackend):
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key or api_key == "your_key_here":
             raise RuntimeError("GEMINI_API_KEY is not configured")
-        import google.generativeai as genai
 
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-2.0-flash")   # updated: 1.5-flash deprecated
-        response = model.generate_content(
-            prompt,
-            generation_config={"temperature": 0.1, "max_output_tokens": 512},
-            request_options={"timeout": 30},                # increased: 5s was too tight
+        # Migrated from deprecated google-generativeai to google-genai SDK
+        from google import genai
+        from google.genai import types
+
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.1,
+                max_output_tokens=512,
+            ),
         )
         return response.text.strip()
 
@@ -37,15 +42,12 @@ class GeminiBackend(LLMBackend):
 class LlamaBackend(LLMBackend):
     """
     Uses FreeLLMAPI (OpenAI-compatible endpoint at localhost:3001/v1).
-    Previously targeted Ollama's /api/generate format — incompatible with
-    FreeLLMAPI. Updated to /v1/chat/completions so this backend works the
-    same way RAGAS evaluation does (proven working).
     """
     name = "llama"
 
     def generate(self, prompt: str, context: dict) -> str:
         base_url = os.getenv("LLAMA_BASE_URL", "http://localhost:3001/v1").rstrip("/")
-        api_key  = os.getenv(
+        api_key = os.getenv(
             "LLAMA_API_KEY",
             "freellmapi-62ac52438261a2c3f941ed0d2cd42518e7daa3b40b01d451",
         )
