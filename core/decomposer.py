@@ -126,7 +126,7 @@ def _decompose_with_gemini(query_text: str) -> QueryEntities | None:
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         prompt = (
             "Extract nutrition query entities as JSON with keys nutrient, age_months, "
             "foods, servings, intent. Intent is rda_lookup, diet_check, or unknown. "

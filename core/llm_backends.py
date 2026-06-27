@@ -25,40 +25,51 @@ class GeminiBackend(LLMBackend):
         import google.generativeai as genai
 
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.0-flash")   # updated: 1.5-flash deprecated
         response = model.generate_content(
             prompt,
             generation_config={"temperature": 0.1, "max_output_tokens": 512},
-            request_options={"timeout": 5},
+            request_options={"timeout": 30},                # increased: 5s was too tight
         )
         return response.text.strip()
 
 
 class LlamaBackend(LLMBackend):
+    """
+    Uses FreeLLMAPI (OpenAI-compatible endpoint at localhost:3001/v1).
+    Previously targeted Ollama's /api/generate format — incompatible with
+    FreeLLMAPI. Updated to /v1/chat/completions so this backend works the
+    same way RAGAS evaluation does (proven working).
+    """
     name = "llama"
 
     def generate(self, prompt: str, context: dict) -> str:
-        base_url = os.getenv("LLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
-        payload = json.dumps(
-            {
-                "model": "llama3.1:8b",
-                "prompt": prompt,
-                "stream": False,
-                "options": {"temperature": 0.1, "num_predict": 512},
-            }
-        ).encode("utf-8")
+        base_url = os.getenv("LLAMA_BASE_URL", "http://localhost:3001/v1").rstrip("/")
+        api_key  = os.getenv(
+            "LLAMA_API_KEY",
+            "freellmapi-62ac52438261a2c3f941ed0d2cd42518e7daa3b40b01d451",
+        )
+        payload = json.dumps({
+            "model": "auto",
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.1,
+            "max_tokens": 512,
+        }).encode("utf-8")
         request = urllib.request.Request(
-            f"{base_url}/api/generate",
+            f"{base_url}/chat/completions",
             data=payload,
-            headers={"Content-Type": "application/json"},
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {api_key}",
+            },
             method="POST",
         )
         try:
-            with urllib.request.urlopen(request, timeout=5) as response:
+            with urllib.request.urlopen(request, timeout=30) as response:
                 data = json.loads(response.read().decode("utf-8"))
         except (urllib.error.URLError, TimeoutError) as exc:
-            raise RuntimeError(f"Ollama Llama backend unavailable: {exc}") from exc
-        return str(data.get("response", "")).strip()
+            raise RuntimeError(f"FreeLLMAPI backend unavailable: {exc}") from exc
+        return str(data["choices"][0]["message"]["content"]).strip()
 
 
 class DeterministicBackend(LLMBackend):

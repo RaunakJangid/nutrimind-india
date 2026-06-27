@@ -177,9 +177,8 @@ def synthesize_answer(
         used_backend = backend.name
 
     except Exception as _exc:
-        # LLM unavailable (quota/key) — build a useful answer directly from
-        # chunk text so the parent sees real ICMR-NIN content, not a canned stub.
-        print(f"[GQ] FAILED: {_exc!r} — chunk_fallback")
+        # Print exact exception so we can diagnose the real failure cause
+        print(f"GQ LLM ERROR: {type(_exc).__name__}: {_exc}")
         if top_chunks:
             prefix = f"Based on ICMR-NIN dietary guidelines{' for a ' + age_ctx.rstrip('. ') + ':' if age_ctx else ':'} "
             answer = prefix + " ".join(chunk.text for chunk in top_chunks)
