@@ -5,6 +5,12 @@ import sys
 import time
 from pathlib import Path
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 import pandas as pd
 import streamlit as st
 
@@ -80,10 +86,24 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
     try:
         retrieval = retrieve_all(entities, query_text)
         merged_context = merge_context(retrieval)
+
         if entities.intent == "general_question":
             synthesis = synthesize_answer(query_text, merged_context, None, model_backend)
-            verified = bool(merged_context.semantic) and check_llm_grounding(synthesis.answer, merged_context)
-            answer = synthesis.answer if verified else FALLBACK
+
+            # For general_question: ALWAYS show the answer (never block with FALLBACK).
+            # chunk_fallback = Gemini failed, show raw chunk but mark Not verified.
+            # Real Gemini answer = show and check grounding for the Verified badge.
+            # Grounding check affects only the badge, not whether answer is shown.
+            is_chunk_fallback = synthesis.model_backend.endswith("chunk_fallback")
+            if is_chunk_fallback:
+                verified = False
+            else:
+                verified = (
+                    bool(merged_context.semantic)
+                    and check_llm_grounding(synthesis.answer, merged_context)
+                )
+            answer = synthesis.answer  # always show — never replace with FALLBACK
+
             proof = [
                 {
                     "Item": chunk.title or chunk.chunk_id,
@@ -108,7 +128,9 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
                     "verified": verified,
                     "proof": proof,
                     "latency_ms": latency_ms,
-                    "error_reason": None if verified else "llm_grounding_failed",
+                    "error_reason": None if verified else (
+                        "chunk_fallback" if is_chunk_fallback else "llm_grounding_failed"
+                    ),
                 },
             )
             return {
@@ -133,13 +155,10 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
         synthesis = synthesize_answer(query_text, merged_context, result, model_backend)
         verification = verify(result, synthesis.answer, merged_context)
 
-        # ── Critical-check gate (replaces single verification.verified bool) ───
-        # conflict_check is conservative by design: it flags any structured/
-        # semantic numeric discrepancy (e.g. a FAISS narrative chunk citing an
-        # approximate value vs. the precise ICMR CSV figure). These are benign
-        # and expected — showing FALLBACK for them would reject correct answers.
-        # Gate the user-facing answer on rda_match + math_check only.
-        # conflict_flag is recorded separately for monitoring/paper reporting.
+        # ── Critical-check gate ───────────────────────────────────────────────
+        # conflict_check is conservative by design — flags structured/semantic
+        # discrepancies that are benign and expected. Gate only on rda_match +
+        # math_check. conflict_flag recorded separately for monitoring/paper.
         _checks = {chk.name: chk.passed for chk in verification.checks}
         critical_ok = (
             _checks.get("rda_exact_match", True)
@@ -176,8 +195,8 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
                 "gap_value": result.gap_value,
                 "gap_percent": result.gap_percent,
                 "answer_text": answer,
-                "verified": critical_ok,           # rda_match + math_check
-                "conflict_flagged": conflict_flagged,  # informational, not a rejection signal
+                "verified": critical_ok,
+                "conflict_flagged": conflict_flagged,
                 "proof": proof,
                 "latency_ms": latency_ms,
                 "error_reason": None if critical_ok else verification.fail_reason,
@@ -198,7 +217,7 @@ def run_pipeline(query_text: str, model_backend: str = "gemini") -> dict:
                 "result": result.model_dump(),
                 "synthesis": synthesis.model_dump(),
                 "verification": verification.model_dump(),
-                "verify_checks": _checks,          # per-check breakdown for debug
+                "verify_checks": _checks,
             },
         }
     except Exception as exc:
