@@ -11,105 +11,76 @@ from core.retriever import FOOD_MAP, normalize_key
 
 
 # NOTE: these must match exact column names in data/processed/icmr_rda.csv.
-# Renamed vitamin_c/vitamin_d/vitamin_a -> vit_c/vit_d/vit_a to match CSV
-# convention (vit_b6 was already correct). VERIFY against actual CSV headers.
 NUTRIENTS = {
-    "iron",
-    "protein",
-    "calcium",
-    "vit_c",
-    "vit_d",
-    "vit_a",
-    "zinc",
-    "folate",
-    "vit_b6",
-    "vit_b12",
-    "riboflavin",
-    "thiamine",
-    "iodine",
-    "niacin",
-    "magnesium",
-    "dietary_fiber",
+    "iron", "protein", "calcium", "vit_c", "vit_d", "vit_a",
+    "zinc", "folate", "vit_b6", "vit_b12", "riboflavin", "thiamine",
+    "iodine", "niacin", "magnesium", "dietary_fiber",
 }
 
 NUTRIENT_ALIASES = {
-    "vitamin c": "vit_c",
-    "vit c": "vit_c",
-    "vitamin d": "vit_d",
-    "vit d": "vit_d",
-    "vitamin a": "vit_a",
-    "vit a": "vit_a",
-    "vitamin b6": "vit_b6",
-    "vit b6": "vit_b6",
-    "b6": "vit_b6",
-    "vitamin b12": "vit_b12",
-    "vit b12": "vit_b12",
-    "b12": "vit_b12",
-    "vitamin b2": "riboflavin",
-    "vit b2": "riboflavin",
-    "riboflavin": "riboflavin",
-    "vitamin b1": "thiamine",
-    "vit b1": "thiamine",
-    "thiamine": "thiamine",
-    "vitamin b3": "niacin",
-    "vit b3": "niacin",
-    "niacin": "niacin",
-    "iodine": "iodine",
-    "magnesium": "magnesium",
-    "dietary fiber": "dietary_fiber",
-    "dietary fibre": "dietary_fiber",
-    "fiber": "dietary_fiber",
-    "fibre": "dietary_fiber",
+    "vitamin c": "vit_c",    "vit c": "vit_c",
+    "vitamin d": "vit_d",    "vit d": "vit_d",
+    "vitamin a": "vit_a",    "vit a": "vit_a",
+    "vitamin b6": "vit_b6",  "vit b6": "vit_b6",  "b6": "vit_b6",
+    "vitamin b12": "vit_b12","vit b12": "vit_b12", "b12": "vit_b12",
+    "vitamin b2": "riboflavin","vit b2": "riboflavin","riboflavin": "riboflavin",
+    "vitamin b1": "thiamine","vit b1": "thiamine",  "thiamine": "thiamine",
+    "vitamin b3": "niacin",  "vit b3": "niacin",    "niacin": "niacin",
+    "iodine": "iodine",      "magnesium": "magnesium",
+    "dietary fiber": "dietary_fiber","dietary fibre": "dietary_fiber",
+    "fiber": "dietary_fiber","fibre": "dietary_fiber",
 }
 
 # Range form: "1-3 years", "6-12 months"
 AGE_RANGE_RE = re.compile(r"(\d+)\s*-\s*(\d+)\s*(months?|years?|yrs?)", re.I)
-# Single form: "2-year-old", "9-month-old", "6 month old"
-# "old" suffix is optional — also matches "18 month baby", "18 months", "3 year child"
+
+# Single form — "old" is optional so "18 month baby", "18 months", "2-year-old" all match
 AGE_SINGLE_RE = re.compile(r"(\d+)\s*-?\s*(months?|years?|yrs?)(?:\s*-?\s*old)?\b", re.I)
 
 QTY_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(bowl|cup|plate|piece|roti|chapati|glass|spoon|egg)s?", re.I)
 
 # Keywords that signal a general information request.
-# "get", "source/s", "how to", etc. cover "where can I get vitamin D"-style
-# queries that the original list missed entirely.
+# Covers source queries ("get","source"), safety ("avoid","safe"),
+# feeding advice ("feed","eat"), and child-context words ("baby","toddler")
+# so age-free but clearly child-nutrition queries still route to
+# general_question rather than unknown.
 _GQ_KEYWORDS = [
-    "feed", "diet", "meal", "nutrition", "balanced",
+    # dietary advice
+    "feed", "feeding", "diet", "meal", "nutrition", "balanced",
+    "eat", "eating", "food", "foods",
+    # source / availability
     "get", "source", "sources", "how to", "food for",
     "which food", "foods that", "rich in", "contain", "provide",
+    # safety / avoidance
+    "avoid", "safe", "good for", "bad for",
+    "introduce", "start",
+    # child-context (no age number but clearly infant/child topic)
+    "baby", "babies", "infant", "infants",
+    "toddler", "toddlers", "child", "children",
+    # health / wellbeing
+    "healthy", "growth", "development",
 ]
 
 
 def _extract_age_months(text: str) -> int | None:
-    # Try range form first ("1-3 years")
     match = AGE_RANGE_RE.search(text)
     if match:
-        start = int(match.group(1))
-        end = int(match.group(2))
+        start, end = int(match.group(1)), int(match.group(2))
         unit = match.group(3).lower()
         mid = (start + end) / 2
-        if "month" in unit:
-            return int(mid)
-        else:  # years
-            return int(mid * 12)
+        return int(mid) if "month" in unit else int(mid * 12)
 
-    # Try single-age form ("2-year-old", "9-month-old")
     match = AGE_SINGLE_RE.search(text)
     if match:
         value = int(match.group(1))
         unit = match.group(2).lower()
-        if "month" in unit:
-            return value
-        else:  # years
-            return value * 12
+        return value if "month" in unit else value * 12
 
     return None
 
 
 def _extract_nutrient(text: str) -> str | None:
     normalized_text = text.lower().replace("-", " ")
-    # Check multi-word aliases first (longest match wins to avoid "vit b1"
-    # matching inside "vit b12" etc. -- sort by alias length descending)
     for alias in sorted(NUTRIENT_ALIASES, key=len, reverse=True):
         if alias in normalized_text:
             return NUTRIENT_ALIASES[alias]
@@ -139,7 +110,9 @@ def _extract_servings(text: str, foods: list[str]) -> dict[str, float]:
         if unit in {"roti", "chapati", "egg"} and unit in foods:
             servings[unit] = amount
     for food in foods:
-        pattern = re.compile(rf"(\d+(?:\.\d+)?)\s+(?:\w+\s+)?{re.escape(food.replace('_', ' '))}", re.I)
+        pattern = re.compile(
+            rf"(\d+(?:\.\d+)?)\s+(?:\w+\s+)?{re.escape(food.replace('_', ' '))}", re.I
+        )
         match = pattern.search(text)
         if match:
             servings[food] = float(match.group(1))
@@ -152,7 +125,6 @@ def _decompose_with_gemini(query_text: str) -> QueryEntities | None:
         return None
     try:
         import google.generativeai as genai
-
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel("gemini-1.5-flash")
         prompt = (
@@ -171,78 +143,99 @@ def decompose(query_text: str) -> QueryEntities:
     if not query_text.strip():
         return QueryEntities(intent="unknown", confidence=0.0)
 
-    age_months = _extract_age_months(query_text)
-    nutrient = _extract_nutrient(query_text)
-    foods = _extract_foods(query_text)
-    servings = _extract_servings(query_text, foods)
+    age_months  = _extract_age_months(query_text)
+    nutrient    = _extract_nutrient(query_text)
+    foods       = _extract_foods(query_text)
+    servings    = _extract_servings(query_text, foods)
     query_lower = query_text.lower()
 
+    # ── Priority cascade ───────────────────────────────────────────────────────
+    # If age_months is extracted, the parent mentioned their child's age.
+    # NutriMind MUST attempt a useful answer in every such case — never unknown.
+
+    # RULE 1: age + nutrient + food → diet_check (full gap calculation)
     if age_months is not None and nutrient and foods:
         return QueryEntities(
-            nutrient=nutrient,
-            age_months=age_months,
-            foods=foods,
-            servings=servings,
-            intent="diet_check",
-            confidence=0.9,
+            nutrient=nutrient, age_months=age_months,
+            foods=foods, servings=servings,
+            intent="diet_check", confidence=0.9,
         )
+
+    # RULE 2: age + nutrient (no food) → rda_lookup
     if age_months is not None and nutrient:
         return QueryEntities(
-            nutrient=nutrient,
-            age_months=age_months,
-            foods=[],
-            servings={},
-            intent="rda_lookup",
-            confidence=0.8,
+            nutrient=nutrient, age_months=age_months,
+            foods=[], servings={},
+            intent="rda_lookup", confidence=0.8,
         )
 
-    # Expanded keyword list catches "get", "source", "how to", "rich in",
-    # etc. — natural phrasings for "where can I find nutrient X" queries
-    # that the original list missed.
+    # RULE 3: age + food (no nutrient) → diet_check, default nutrient = protein
+    # "is dal good for my 6 month old" — we know food + age, protein is the
+    # most universal concern. Falls to FALLBACK gracefully if IFCT lookup fails.
+    if age_months is not None and foods:
+        return QueryEntities(
+            nutrient="protein", age_months=age_months,
+            foods=foods, servings=servings,
+            intent="diet_check", confidence=0.7,
+        )
+
+    # RULE 4: age present, no nutrient, no food → general_question
+    # "what should I feed my 9 month old" — DGI semantic search surfaces
+    # age-appropriate feeding guidelines. Never return unknown for these.
+    if age_months is not None:
+        return QueryEntities(
+            nutrient=nutrient, age_months=age_months,
+            foods=foods, servings=servings,
+            intent="general_question", confidence=0.6,
+        )
+
+    # ── No age extracted ───────────────────────────────────────────────────────
+
+    # RULE 5: GQ keywords → general_question
+    # Catches "healthy eating for toddlers", "is dal good for babies",
+    # "how to get vitamin D", "foods rich in iron", etc.
     if any(kw in query_lower for kw in _GQ_KEYWORDS):
         return QueryEntities(
-            nutrient=nutrient,
-            age_months=age_months,
-            foods=foods,
-            servings=servings,
-            intent="general_question",
-            confidence=0.6,
+            nutrient=nutrient, age_months=age_months,
+            foods=foods, servings=servings,
+            intent="general_question", confidence=0.6,
         )
 
+    # Gemini fallback (only when key is configured)
     fallback = _decompose_with_gemini(query_text)
-    # Only use Gemini if it gives something useful
     if fallback and (fallback.age_months or fallback.nutrient):
         return fallback
 
-    if nutrient and any(word in query_lower for word in ["requirement", "rda", "daily"]):
+    # RDA keyword fallback ("daily requirement", "rda for iron")
+    if nutrient and any(w in query_lower for w in ["requirement", "rda", "daily"]):
         return QueryEntities(
-            nutrient=nutrient,
-            age_months=age_months,
-            foods=[],
-            servings={},
-            intent="rda_lookup",
-            confidence=0.5,
+            nutrient=nutrient, age_months=age_months,
+            foods=[], servings={},
+            intent="rda_lookup", confidence=0.5,
         )
 
-    # Nutrient extracted but no age and no foods → can't be rda_lookup
-    # (needs age) or diet_check (needs food). Almost always a general info
-    # request ("how will he get vitamin D?"). Default to general_question
-    # rather than unknown so the LLM path fires instead of rejecting the query.
-    if nutrient and age_months is None and not foods:
+    # RULE 5b: nutrient extracted but no age → general info request
+    # "how will he get vitamin D", "sources of calcium"
+    if nutrient:
         return QueryEntities(
-            nutrient=nutrient,
-            age_months=None,
-            foods=[],
-            servings={},
-            intent="general_question",
-            confidence=0.5,
+            nutrient=nutrient, age_months=None,
+            foods=[], servings={},
+            intent="general_question", confidence=0.5,
         )
 
+    # RULE 6: food extracted but no age, no nutrient → general_question
+    # "is dal good for babies" when "babies" keyword also missed
+    if foods:
+        return QueryEntities(
+            nutrient=None, age_months=None,
+            foods=foods, servings=servings,
+            intent="general_question", confidence=0.5,
+        )
+
+    # RULE 7: truly nothing extracted — unrelated query (e.g. "hello nutri")
+    # Only place where unknown is returned.
     return QueryEntities(
-        nutrient=nutrient,
-        age_months=age_months,
-        foods=foods,
-        servings=servings,
-        intent="unknown",
-        confidence=0.0,
+        nutrient=nutrient, age_months=age_months,
+        foods=foods, servings=servings,
+        intent="unknown", confidence=0.0,
     )
